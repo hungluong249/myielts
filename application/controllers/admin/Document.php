@@ -101,7 +101,7 @@ class Document extends Admin_Controller {
 
 	public function edit($id = null){
         $detail = $this->document_model->get_by_id($id);
-        if(!$detail){
+        if(!$detail['id']){
             redirect('admin/document/index','refresh');
         }
 
@@ -171,7 +171,9 @@ class Document extends Admin_Controller {
         $this->load->library('form_validation');
 
         $detail = $this->document_model->get_by_id($id);
-
+        if(!$detail['id']){
+            redirect('admin/document/index','refresh');
+        }
         $detail = build_language('document', $detail, $this->request_language_template, $this->page_languages);
 
         $this->data['detail'] = $detail;

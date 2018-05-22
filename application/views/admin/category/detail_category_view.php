@@ -5,12 +5,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Khóa học
+            Danh Mục Bài Viết
             <small>Chi tiết</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li><a href="#"><i class="fa fa-dashboard"></i> Khóa học</a></li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Danh Mục Bài Viết</a></li>
             <li class="active">Chi tiết</li>
         </ol>
     </section>
@@ -22,31 +22,17 @@
             <div class="col-md-9">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Chi tiết Khóa học</h3>
+                        <h3 class="box-title">Chi tiết Danh Mục Bài Viết</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="row">
-                            <div class="detail-image col-md-6">
-                                <label>Hình ảnh</label>
-                                <div class="row">
-                                    <div class="item col-md-12">
-                                        <div class="mask-lg">
-                                            <img src="<?php echo base_url('assets/upload/courses/'. $detail['image'] ) ?>" alt="Image Detail">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="detail-info col-md-6">
+                            <div class="detail-info col-md-12">
                                 <div class="table-responsive">
                                     <label>Thông tin</label>
                                     <table class="table table-striped">
                                         <tr>
                                             <th colspan="2">Thông tin cơ bản</th>
-                                        </tr>
-                                        <tr>
-                                            <th>Học Phí</th>
-                                            <td><?php echo number_format($detail['price']) ?> <strong> VND</strong></td>
                                         </tr>
                                         <tr>
                                             <th>Slug</th>
@@ -89,14 +75,6 @@
                                                         <th style="width: 100px">Tiêu đề: </th>
                                                         <td><?php echo $detail['title_vi'] ?></td>
                                                     </tr>
-                                                    <tr>
-                                                        <th style="width: 100px">Giới thiệu: </th>
-                                                        <td><?php echo $detail['description_vi'] ?></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th style="width: 100px">Nội dung: </th>
-                                                        <td><?php echo $detail['content_vi'] ?></td>
-                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -108,14 +86,6 @@
                                                     <tr>
                                                         <th style="width: 100px">Title: </th>
                                                         <td><?php echo $detail['title_en'] ?></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th style="width: 100px">Description: </th>
-                                                        <td><?php echo $detail['description_en'] ?></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th style="width: 100px">Content: </th>
-                                                        <td><?php echo $detail['content_en'] ?></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -139,7 +109,7 @@
                         <h3 class="box-title">Edit Information</h3>
                     </div>
                     <div class="box-body">
-                        <a href="<?php echo base_url('admin/courses/edit/'.$detail['id']) ?>" class="btn btn-warning" role="button">Chỉnh sửa</a>
+                        <a href="<?php echo base_url('admin/category/edit/'.$detail['id']) ?>" class="btn btn-warning" role="button">Chỉnh sửa</a>
                     </div>
                 </div>
             </div>

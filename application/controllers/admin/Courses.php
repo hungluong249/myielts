@@ -67,6 +67,7 @@ class Courses extends Admin_Controller {
                     $shared_request = array(
                         'image' => $image,
                         'slug' => $unique_slug,
+                        'price' => str_replace(',','',$this->input->post('price_shared')),
                         'meta_keywords' => $this->input->post('metakeywords_shared'),
                         'meta_description' => $this->input->post('metadescription_shared')
                     );
@@ -100,10 +101,9 @@ class Courses extends Admin_Controller {
 
 	public function edit($id = null){
         $detail = $this->courses_model->get_by_id($id);
-        if(!$detail){
+        if(!$detail['id']){
             redirect('admin/courses/index','refresh');
         }
-
         $detail = build_language('courses', $detail, $this->request_language_template, $this->page_languages);
 
         $this->data['detail'] = $detail;
@@ -125,6 +125,7 @@ class Courses extends Admin_Controller {
                     $image = $this->upload_image('image_shared', $_FILES['image_shared']['name'], 'assets/upload/courses', 'assets/upload/courses/thumb');
                     $shared_request = array(
                         'slug' => $unique_slug,
+                        'price' => str_replace(',','',$this->input->post('price_shared')),
                         'meta_keywords' => $this->input->post('metakeywords_shared'),
                         'meta_description' => $this->input->post('metadescription_shared'),
                         'updated_at' => $this->author_data['updated_at'],
@@ -170,7 +171,9 @@ class Courses extends Admin_Controller {
         $this->load->library('form_validation');
 
         $detail = $this->courses_model->get_by_id($id);
-
+        if(!$detail['id']){
+            redirect('admin/courses/index','refresh');
+        }
         $detail = build_language('courses', $detail, $this->request_language_template, $this->page_languages);
 
         $this->data['detail'] = $detail;

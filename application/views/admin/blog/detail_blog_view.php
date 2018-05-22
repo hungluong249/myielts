@@ -5,13 +5,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Khóa học
-            <small>Chi tiết</small>
+            Tài liệu
+            <small>Bài viết</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li><a href="#"><i class="fa fa-dashboard"></i> Khóa học</a></li>
-            <li class="active">Chi tiết</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Tài liệu</a></li>
+            <li class="active">Bài viết</li>
         </ol>
     </section>
 
@@ -22,7 +22,7 @@
             <div class="col-md-9">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Chi tiết Khóa học</h3>
+                        <h3 class="box-title">Bài viết Tài liệu</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -32,7 +32,7 @@
                                 <div class="row">
                                     <div class="item col-md-12">
                                         <div class="mask-lg">
-                                            <img src="<?php echo base_url('assets/upload/courses/'. $detail['image'] ) ?>" alt="Image Detail">
+                                            <img src="<?php echo base_url('assets/upload/blogs/'. $detail['image'] ) ?>" alt="Image Detail">
                                         </div>
                                     </div>
                                 </div>
@@ -45,8 +45,8 @@
                                             <th colspan="2">Thông tin cơ bản</th>
                                         </tr>
                                         <tr>
-                                            <th>Học Phí</th>
-                                            <td><?php echo number_format($detail['price']) ?> <strong> VND</strong></td>
+                                            <th>Danh Mục</th>
+                                            <td><?php echo $detail['cate_title'] ?></td>
                                         </tr>
                                         <tr>
                                             <th>Slug</th>
@@ -139,7 +139,7 @@
                         <h3 class="box-title">Edit Information</h3>
                     </div>
                     <div class="box-body">
-                        <a href="<?php echo base_url('admin/courses/edit/'.$detail['id']) ?>" class="btn btn-warning" role="button">Chỉnh sửa</a>
+                        <a href="<?php echo base_url('admin/blog/edit/'.$detail['id']) ?>" class="btn btn-warning" role="button">Chỉnh sửa</a>
                     </div>
                 </div>
             </div>

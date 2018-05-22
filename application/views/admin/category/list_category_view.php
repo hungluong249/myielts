@@ -5,7 +5,7 @@
     <section class="content-header">
         <h1>
             Danh sách
-            <small>Khóa học</small>
+            <small>Danh Mục Bài Viết</small>
         </h1>
 <!--        <ol class="breadcrumb">-->
 <!--            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>-->
@@ -34,15 +34,15 @@
             <div class="col-md-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Khóa học</h3>
+                        <h3 class="box-title">Danh Mục Bài Viết</h3>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6">
-                            <a href="<?php echo base_url('admin/courses/create') ?>" class="btn btn-primary" role="button">Thêm mới</a>
+                            <a href="<?php echo base_url('admin/category/create') ?>" class="btn btn-primary" role="button">Thêm mới</a>
                         </div>
                         <div class="col-md-6">
-                            <form action="<?php echo base_url('admin/courses/index') ?>" method="get">
+                            <form action="<?php echo base_url('admin/category/index') ?>" method="get">
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Tìm kiếm ..." name="search" value="">
                                     <span class="input-group-btn">
@@ -61,40 +61,32 @@
                                 <thead>
                                 <tr>
                                     <th>No.</th>
-                                    <th>Hình ảnh</th>
                                     <th>Tiêu đề</th>
-                                    <th>Học phí</th>
                                     <th>Detail</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php if($courses): ?>
+                                <?php if($result): ?>
                                 <?php $i = 1; ?>
-                                <?php foreach ($courses as $key => $value): ?>
+                                <?php foreach ($result as $key => $value): ?>
                                     <tr class="remove_<?php echo $value['id'] ?>">
                                         <td><?php echo $i++ ?></td>
-                                        <td>
-                                            <div class="mask_sm">
-                                                <img src="<?php echo base_url('assets/upload/courses/'. $value['image']) ?>" alt="anh-cua-<?php echo $value['slug'] ?>" width=150 >
-                                            </div>
-                                        </td>
                                         <td><?php echo $value['title'] ?></td>
-                                        <td><?php echo number_format($value['price']) ?> <strong> VND</strong></td>
                                         <td>
-                                            <a href="<?php echo base_url('admin/courses/detail/'.$value['id']) ?>"
+                                            <a href="<?php echo base_url('admin/category/detail/'.$value['id']) ?>"
                                             <button class="btn btn-default btn-sm" type="button" data-toggle="collapse" data-target="#collapse_1" aria-expanded="false" aria-controls="collapse_1" target="_blank" >Xem Chi Tiết</button>
                                         </td>
                                         <td>
-                                            <a href="<?php echo base_url('admin/courses/edit/'. $value['id']) ?>" class="dataActionEdit"><i class="fa fa-pencil" aria-hidden="true"></i> </a>
-                                            <a href="javascript:void(0);" class="dataActionDelete btn-remove" data-controller="courses" data-id="<?php echo $value['id'] ?>" ><i class="fa fa-remove" aria-hidden="true"></i> </a>
+                                            <a href="<?php echo base_url('admin/category/edit/'. $value['id']) ?>" class="dataActionEdit"><i class="fa fa-pencil" aria-hidden="true"></i> </a>
+                                            <a href="javascript:void(0);" class="dataActionDelete btn-remove" data-controller="category" data-id="<?php echo $value['id'] ?>" ><i class="fa fa-remove" aria-hidden="true"></i> </a>
                                         </td>
 
                                     </tr>
                                 <?php endforeach ?>
                                 <?php else: ?>
                                     <tr>
-                                        Chưa có Khóa học
+                                        Chưa có Danh Mục Bài Viết
                                     </tr>
                                 <?php endif; ?>
 
@@ -102,9 +94,7 @@
                                 <tfoot>
                                 <tr>
                                     <th>No.</th>
-                                    <th>Hình ảnh</th>
                                     <th>Tiêu đề</th>
-                                    <th>Học phí</th>
                                     <th>Detail</th>
                                     <th>Action</th>
                                 </tr>

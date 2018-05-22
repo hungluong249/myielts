@@ -63,6 +63,7 @@ class MY_Controller extends CI_Controller {
             $config['upload_path'] = $upload_path;
             $config['allowed_types'] = 'jpg|jpeg|png';
             $config['file_name'] = $image_name;
+            $config['encrypt_name'] = TRUE;
 
             $this->load->library('upload', $config);
             $this->upload->initialize($config);

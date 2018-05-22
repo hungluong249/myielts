@@ -53,11 +53,7 @@ class About extends Admin_Controller {
                     if($check_upload == true){
                         $image = $this->upload_multiple_image('./assets/upload/about', 'image_shared', 'assets/upload/about/thumb');
                         $shared_request = array(
-                            'slug' => $this->input->post('slug_shared'),
-                            'created_at' => $this->author_data['created_at'],
-                            'created_by' => $this->author_data['created_by'],
-                            'updated_at' => $this->author_data['updated_at'],
-                            'updated_by' => $this->author_data['updated_by']
+                            'slug' => $this->input->post('slug_shared')
                         );
                         if($image){
                             $new_image = array();
@@ -72,7 +68,7 @@ class About extends Admin_Controller {
                         }
                         $this->db->trans_begin();
 
-                        $update = $this->about_model->common_update($id, $shared_request);
+                        $update = $this->about_model->common_update($id, array_merge($shared_request, $this->author_data));
                         if($update){
                             $requests = handle_multi_language_request('about_id', $id, $this->request_language_template, $this->input->post(), $this->page_languages);
                             foreach ($requests as $key => $value){

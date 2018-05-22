@@ -61,3 +61,14 @@ if (!function_exists('handle_common_author_data')) {
         return $detail;
     }
 }
+
+if (!function_exists('handle_common_author_data')) {
+    function build_array_for_dropdown($data = array(), $id = null){
+        foreach ($data as $key => $value) {
+            $new_data[$value['id']] = $value['title'];
+
+        }
+        unset($new_data[$id]);
+        return $new_data;
+    }
+}

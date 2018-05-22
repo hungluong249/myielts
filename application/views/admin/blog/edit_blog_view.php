@@ -27,7 +27,7 @@
                             <?php
                             echo form_label('Ảnh đại diện đang sử dụng', 'image_old_shared');
                             ?>
-                            <img src="<?php echo base_url('assets/upload/courses/'.$detail['image']) ?>" alt="anh-cua-<?php echo $detail['slug'] ?>" style="display: block;" width=150>
+                            <img src="<?php echo base_url('assets/upload/blogs/'.$detail['image']) ?>" alt="anh-cua-<?php echo $detail['slug'] ?>" style="display: block;" width=150>
                             <br>
                         </div>
 
@@ -42,9 +42,9 @@
                         <div class="form-group col-xs-12">
                             <div class="form-group col-xs-12">
                                 <?php
-                                echo form_label('Học phí (VND)', 'price_shared');
-                                echo form_error('price_shared');
-                                echo form_input(array('type' => 'text', 'name' => 'price_shared'), set_value('price_shared'), 'class="form-control" id="price_shared"');
+                                echo form_label('Danh mục bài viết', 'category_shared');
+                                echo form_error('category_shared');
+                                echo form_dropdown('category_shared', $category, $detail['category_id'], 'class="form-control"');
                                 ?>
                             </div>
                         </div>

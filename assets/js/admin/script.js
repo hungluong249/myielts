@@ -1,3 +1,10 @@
+switch(window.location.origin){
+    case 'http://myielts.vn':
+        var HOSTNAME = 'http://myielts.vn/';
+        break;
+    default:
+        var HOSTNAME = 'http://localhost/myielts/';
+}
 $(document).ready(function(){
     "use strict";
 

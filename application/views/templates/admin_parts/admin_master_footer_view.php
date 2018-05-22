@@ -16,5 +16,6 @@
 
 <script src="<?php echo site_url('assets/js/admin/script.js') ?>"></script>
 <script src="<?php echo site_url('assets/js/admin/image.js') ?>"></script>
+<script src="<?php echo site_url('assets/js/admin/common.js') ?>"></script>
 
 </html>

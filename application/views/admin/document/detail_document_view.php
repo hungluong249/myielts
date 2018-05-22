@@ -5,12 +5,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Khóa học
+            Tài liệu
             <small>Chi tiết</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li><a href="#"><i class="fa fa-dashboard"></i> Khóa học</a></li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Tài liệu</a></li>
             <li class="active">Chi tiết</li>
         </ol>
     </section>
@@ -22,7 +22,7 @@
             <div class="col-md-9">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Chi tiết Khóa học</h3>
+                        <h3 class="box-title">Chi tiết Tài liệu</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -32,7 +32,7 @@
                                 <div class="row">
                                     <div class="item col-md-12">
                                         <div class="mask-lg">
-                                            <img src="<?php echo base_url('assets/upload/courses/'. $detail['image'] ) ?>" alt="Image Detail">
+                                            <img src="<?php echo base_url('assets/upload/document/'. $detail['image'] ) ?>" alt="Image Detail">
                                         </div>
                                     </div>
                                 </div>
@@ -55,6 +55,14 @@
                                         <tr>
                                             <th>Meta Description</th>
                                             <td><?php echo $detail['meta_description'] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Phân Loại</th>
+                                            <td><?php echo ($detail['type'] == 0)? 'Miễn phí' : 'Yêu cầu đăng ký tài khoản' ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Url</th>
+                                            <td><?php echo $detail['url'] ?></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -135,7 +143,7 @@
                         <h3 class="box-title">Edit Information</h3>
                     </div>
                     <div class="box-body">
-                        <a href="<?php echo base_url('admin/courses/edit/'.$detail['id']) ?>" class="btn btn-warning" role="button">Chỉnh sửa</a>
+                        <a href="<?php echo base_url('admin/document/edit/'.$detail['id']) ?>" class="btn btn-warning" role="button">Chỉnh sửa</a>
                     </div>
                 </div>
             </div>

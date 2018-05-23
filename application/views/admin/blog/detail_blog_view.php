@@ -5,12 +5,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Tài liệu
+            Chi tiết
             <small>Bài viết</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li><a href="#"><i class="fa fa-dashboard"></i> Tài liệu</a></li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Chi tiết</a></li>
             <li class="active">Bài viết</li>
         </ol>
     </section>
@@ -22,7 +22,7 @@
             <div class="col-md-9">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Bài viết Tài liệu</h3>
+                        <h3 class="box-title">Bài viết Chi tiết</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">

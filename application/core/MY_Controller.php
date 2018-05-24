@@ -173,7 +173,7 @@ class Admin_Controller extends MY_Controller {
     function __construct() {
         parent::__construct();
         $this->load->library('ion_auth');
-        if (!$this->ion_auth->logged_in()) {
+        if (!$this->ion_auth->logged_in() || $this->ion_auth->is_admin()===FALSE) {
             //redirect them to the login page
             redirect('admin/user/login', 'refresh');
         }
@@ -203,6 +203,7 @@ class Public_Controller extends MY_Controller {
         parent::__construct();
         $this->load->library('session');
         $this->load->helper('form');
+        $this->load->library('ion_auth');
         
         $this->langAbbreviation = $this->uri->segment(1) ? $this->uri->segment(1) : 'vi';
         if($this->langAbbreviation == 'vi' || $this->langAbbreviation == 'en' || $this->langAbbreviation == ''){

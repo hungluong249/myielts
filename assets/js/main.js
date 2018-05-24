@@ -256,11 +256,11 @@
 	  	
 	};
 
-	var parallax = function() {
-		if ( !isMobile.any() ) {
-			$(window).stellar();
-		}
-	};
+	// var parallax = function() {
+	// 	if ( !isMobile.any() ) {
+	// 		$(window).stellar();
+	// 	}
+	// };
 
 	var DateTimePickerFunc = function() {
 		if ($('#taskdatetime').length > 0) {
@@ -323,7 +323,7 @@
 		loaderPage();
 		counterWayPoint();
 		fullHeight();
-		parallax();
+		// parallax();
 		DateTimePickerFunc();
 
 		$('.fh5co-bg-img').each(function(){

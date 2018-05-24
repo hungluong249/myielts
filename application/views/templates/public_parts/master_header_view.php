@@ -30,6 +30,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- Main Stylesheet
 	<link rel="stylesheet" href="<?php echo site_url('assets/sass/') ?>main.css"> -->
 
+	<!-- jQuery 3 -->
+	<script src="<?php echo site_url('assets/lib/') ?>jquery/jquery.min.js"></script>
+
+	<!-- Main Js -->
+	<script src="<?php echo site_url('assets/js/') ?>main.js"></script>
+	<script src="<?php echo site_url('assets/lib/') ?>jquery/jquery.validate.min.js"></script>
+	<!-- Easing JS -->
+	<script src="<?php echo site_url('assets/lib/') ?>jquery/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="<?php echo site_url('assets/lib/') ?>bootstrap/js/bootstrap.min.js"></script>
+	<!-- Waypoint Js -->
+	<script src="<?php echo site_url('assets/lib/') ?>jquery/jquery.waypoints.min.js"></script>
+	<!-- Stellar Js -->
+	<!-- <script src="<?php echo site_url('assets/lib/') ?>jquery/jquery.stellar.min.js"></script> -->
+	<!-- Stellar Js -->
+	<script src="<?php echo site_url('assets/lib/') ?>flexslider/js/jquery.flexslider-min.js"></script>
 
 </head>
 

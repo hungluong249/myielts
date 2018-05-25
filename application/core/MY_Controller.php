@@ -213,7 +213,7 @@ class Public_Controller extends MY_Controller {
         if($this->session->userdata('langAbbreviation') == 'vi'){
             $langName = 'vietnamese';
             $this->config->set_item('language', $langName); 
-            $this->session->set_userdata("langAbbreviation",'en');
+            $this->session->set_userdata("langAbbreviation",'vi');
             $this->lang->load('vietnamese_lang', 'vietnamese');
         }
         

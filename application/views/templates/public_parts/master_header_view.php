@@ -66,24 +66,47 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 				</div>
 				<div class="col-xs-12 text-center menu-1 menu-wrap">
+					<?php
+						$url_vi = '';
+						$url_en = '';
+						switch($current_link){
+							case 'homepage':
+								$url_vi = base_url() . 'vi';
+								$url_en = base_url() . 'en';
+								break;
+							case 'about':
+								$url_vi = base_url() . 'vi/about';
+								$url_en = base_url() . 'en/about';
+								break;
+							case 'courses':
+								$url_vi = base_url() . 'vi/courses';
+								$url_en = base_url() . 'en/courses';
+								break;
+							default:
+								$url_vi = base_url() . 'vi';
+								$url_en = base_url() . 'en';
+								break;
+						}
+					?>
+
 					<ul>
 						<li>
-							<a href="<?php echo base_url('') ?>">Home</a>
+							<a href="<?php echo base_url('') ?>"><?php echo $this->lang->line('homepage'); ?></a>
 						</li>
 						<li>
-							<a href="<?php echo base_url('about') ?>">About</a>
+							<a href="<?php echo base_url('about') ?>"><?php echo $this->lang->line('about'); ?></a>
 						</li>
 						<li>
-							<a href="<?php echo base_url('courses') ?>">Courses</a>
+							<a href="<?php echo base_url('courses') ?>"><?php echo $this->lang->line('courses'); ?></a>
 						</li>
 						<li>
-							<a href="<?php echo base_url('document') ?>">Document</a>
+							<a href="<?php echo base_url('document') ?>"><?php echo $this->lang->line('document'); ?></a>
 						</li>
 						<li>
-							<a href="<?php echo base_url('blogs') ?>">Blogs</a>
+							<a href="<?php echo base_url('blogs') ?>"><?php echo $this->lang->line('blogs'); ?></a>
 						</li>
 						<li>
-							<a href="<?php echo base_url('contact') ?>">Contact</a>
+							<a href="<?php echo base_url('contact') ?>"><?php echo $this->lang->line('contact'); ?></a>
 						</li>
 						<!--
 						<li>
@@ -91,13 +114,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</li>
 						-->
 					</ul>
+					
+
 					<ul>
 						<li>
-							<a href="">Vi</a>
+							<a href="<?php echo $url_vi; ?>">Vi</a>
 						</li>
 						<li> | </li>
 						<li>
-							<a href="">En</a>
+							<a href="<?php echo $url_en; ?>">En</a>
 						</li>
 					</ul>
 				</div>

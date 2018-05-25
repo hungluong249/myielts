@@ -8,7 +8,7 @@
             <div class="col-md-12 text-center">
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                        <h1>About <em>our</em> Center</h1>
+                        <h1><?php echo $this->lang->line('about-us') ?></h1>
                     </div>
                 </div>
             </div>
@@ -20,14 +20,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 img-wrap animate-box" data-animate-effect="fadeInLeft">
-                <img src="https://www.timeshighereducation.com/sites/default/files/styles/the_breaking_news_image_style/public/istock-619066144.jpg?itok=qc3nppWL" alt="img about">
+                <img src="<?php echo $detail['avatar'] ?>" alt="img about">
             </div>
             <div class="col-md-5 col-md-push-1 animate-box">
                 <div class="section-heading">
                     <h2>myIELTS English Center</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae neque quisquam at deserunt ab praesentium architecto tempore saepe animi voluptatem molestias, eveniet aut laudantium alias, laboriosam excepturi, et numquam? Atque tempore iure tenetur perspiciatis, aliquam, asperiores aut odio accusamus, unde libero dignissimos quod aliquid neque et illo vero nesciunt. Sunt!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam iure reprehenderit nihil nobis laboriosam beatae assumenda tempore, magni ducimus abentey.</p>
-                    <p>Fusce consequat, tellus eget eleifend gravida, velit turpis maximus risus, nec condimentum orci libero ac nunc. Ut vitae gravida arcu, a interdum mi. Suspendisse eleifend nisl et diam mattis porttitor a sit amet erat. Ut at diam neque. Phasellus at facilisis lorem. Sed varius tristique posuere. Sed at tincidunt ipsum. Nam libero lorem, tempus at facilisis nec, ultrices vitae lacus. Nullam vehicula dignissim accumsan. Donec tempus, metus a convallis vestibulum, nisi justo eleifend lacus, et fringilla lorem nulla sit amet libero. Duis tristique finibus libero in accumsan. Sed lacinia lacinia quam, eget sollicitudin magna rutrum eget. Cras a tortor luctus, interdum quam non, commodo nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <?php echo $detail['about_content'] ?>
                 </div>
             </div>
         </div>
@@ -42,89 +40,70 @@
                     <li class="timeline-heading text-center animate-box">
                         <div><h3>Our Message</h3></div>
                     </li>
-                    <li class="animate-box timeline-unverted">
-                        <div class="timeline-badge"><i class="icon-genius"></i></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h3 class="timeline-title">The Founders Meet</h3>
+                    <?php if ($our_message): ?>
+                        <?php foreach ($our_message as $key => $value): ?>
+                            <?php if ($key == 0 || ($key % 2 == 0) ): ?>
+                                <li class="animate-box timeline-unverted">
+                                    <div class="timeline-badge"><i class="icon-genius"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h3 class="timeline-title">The Founders Meet</h3>
 
-                            </div>
-                            <div class="timeline-body">
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted animate-box">
-                        <div class="timeline-badge"><i class="icon-genius"></i></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h3 class="timeline-title">Create A Restaurant</h3>
-                            </div>
-                            <div class="timeline-body">
-                                <p>Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="animate-box timeline-unverted">
-                        <div class="timeline-badge"><i class="icon-genius"></i></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h3 class="timeline-title">Added 200+ Employees</h3>
-                            </div>
-                            <div class="timeline-body">
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                        </div>
-                    </li>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p><?php echo $value['description'] ?></p>
+                                        </div>
+                                    </div>
+                                </li>
+                            <?php else: ?>
+                                <li class="timeline-inverted animate-box">
+                                    <div class="timeline-badge"><i class="icon-genius"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h3 class="timeline-title">Create A Restaurant</h3>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p><?php echo $value['description'] ?></p>
+                                        </div>
+                                    </div>
+                                </li>
+                            <?php endif ?>
+                        <?php endforeach ?>
+                    <?php endif ?>
 
                     <br>
                     <li class="timeline-heading text-center animate-box">
                         <div><h3>Our Methods</h3></div>
                     </li>
-                    <li class="timeline-inverted animate-box">
-                        <div class="timeline-badge"><i class="icon-genius"></i></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h3 class="timeline-title">Stablished Restaurant in Europe</h3>
-                            </div>
-                            <div class="timeline-body">
-                                <p>Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="animate-box timeline-unverted">
-                        <div class="timeline-badge"><i class="icon-genius"></i></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h3 class="timeline-title">Franchise Restaurants Brooklyn</h3>
-                            </div>
-                            <div class="timeline-body">
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted animate-box">
-                        <div class="timeline-badge"><i class="icon-genius"></i></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h3 class="timeline-title">Added 100K More Employees</h3>
-                            </div>
-                            <div class="timeline-body">
-                                <p>Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="animate-box timeline-unverted">
-                        <div class="timeline-badge"><i class="icon-genius"></i></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h3 class="timeline-title">Stablished Marketing</h3>
-                            </div>
-                            <div class="timeline-body">
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            </div>
-                        </div>
-                    </li>
+                    <?php if ($our_methods): ?>
+                        <?php foreach ($our_methods as $key => $value): ?>
+                            <?php if ($key == 0 || ($key % 2 == 0)): ?>
+                                <li class="timeline-inverted animate-box">
+                                    <div class="timeline-badge"><i class="icon-genius"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h3 class="timeline-title">Stablished Restaurant in Europe</h3>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p><?php echo $value['description'] ?></p>
+                                        </div>
+                                    </div>
+                                </li>
+                            <?php else: ?>
+                                <li class="animate-box timeline-unverted">
+                                    <div class="timeline-badge"><i class="icon-genius"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h3 class="timeline-title">Franchise Restaurants Brooklyn</h3>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p><?php echo $value['description'] ?></p>
+                                        </div>
+                                    </div>
+                                </li>
+                            <?php endif ?>
+                        <?php endforeach ?>
+                    <?php endif ?>
                 </ul>
             </div>
         </div>

@@ -53,10 +53,10 @@ $route['default_controller'] = 'homepage';
 $route['404_override'] = 'noPage';
 $route['translate_uri_dashes'] = TRUE;
 
-$route['^en/(.+)$'] = "$1"; 
-$route['^hu/(.+)$'] = "$1";
+$route['^vi/(.+)$'] = "$1"; 
+$route['^en/(.+)$'] = "$1";
 
-$route['^en$'] = $route['default_controller']; 
-$route['^hu$'] = $route['default_controller'];
+$route['^vi$'] = $route['default_controller']; 
+$route['^en$'] = $route['default_controller'];
 
 $route['admin'] = 'admin/dashboard';

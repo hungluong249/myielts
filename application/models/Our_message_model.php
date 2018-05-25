@@ -8,12 +8,15 @@ class Our_message_model extends MY_Model {
     public function __construct() {
         parent::__construct();
     }
-    public function get_all_by_our_message_with_pagination_search($limit = NULL, $start = NULL){
+    public function get_all_by_our_message_with_pagination_search($limit = NULL, $start = NULL, $lang = ''){
         $this->db->select($this->table .'.*, '. $this->table_lang .'.description');
         $this->db->from($this->table);
         $this->db->join($this->table_lang, $this->table_lang .'.'. $this->table .'_id = '. $this->table .'.id');
         $this->db->where($this->table .'.is_deleted', 0);
         $this->db->limit($limit, $start);
+        if($lang != ''){
+            $this->db->where($this->table_lang .'.language', $lang);
+        }
         $this->db->group_by($this->table_lang .'.'. $this->table .'_id');
         $this->db->order_by($this->table .".id", "desc");
 

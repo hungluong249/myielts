@@ -8,17 +8,23 @@ $lang['image'] = 'Ảnh đại diện';
 $lang['description'] = 'Giới thiệu';
 $lang['content'] = 'Nội dung';
 
+$lang['homepage'] = 'Trang chủ';
+
 /*
     Main Header
  */
 
-$lang['about-us'] = 'Về chúng tôi';
-$lang['our-food'] = 'Món ăn';
-$lang['events'] = 'Sự kiện';
-$lang['gallery'] = 'Thư viện';
-$lang['contact-us'] = 'Liên hệ';
-$lang['book-table'] = 'Đặt bàn';
-$lang['get-direction'] = 'Chỉ hướng';
+$lang['about'] = 'Giới Thiệu';
+$lang['courses'] = 'Khóa Học';
+$lang['document'] = 'Tài Liệu';
+$lang['blogs'] = 'Bài Viết';
+$lang['contact'] = 'Liên Hệ';
+
+/*
+    About
+ */
+
+$lang['about-us'] = 'Giới Thiệu';
 
 /*
     Break

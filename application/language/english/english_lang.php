@@ -7,17 +7,24 @@
 */
 $lang['detector'] = 'en';
 $lang['homepage'] = 'Homepage';
-// Header - Menu
-$lang['about_us'] = 'About us';
-$lang['product'] = 'products';
-$lang['blog'] = 'News - Events';
-$lang['recruit'] = 'Job opportunities';
+/*
+    Main Header
+ */
+$lang['about'] = 'About';
+$lang['courses'] = 'Courses';
+$lang['document'] = 'Document';
+$lang['blogs'] = 'Blogs';
 $lang['contact'] = 'Contact';
-$lang['search'] = 'Search';
-$lang['readmore'] = 'Read more';
-$lang['sub_1'] = 'History';
-$lang['sub_2'] = 'Medicines';
-$lang['sub_3'] = 'Healthy Infomation';
+
+/*
+    About
+ */
+$lang['about-us'] = 'About our Center';
+
+/*
+    courses
+ */
+
 
 // Index
 $lang['index_about'] = 'About Us';

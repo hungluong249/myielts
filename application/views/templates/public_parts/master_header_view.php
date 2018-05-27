@@ -98,6 +98,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								$url_vi = base_url() . 'vi/blogs';
 								$url_en = base_url() . 'en/blogs';
 								break;
+							case 'contact':
+								$url_vi = base_url() . 'vi/contact';
+								$url_en = base_url() . 'en/contact';
+								break;
 							default:
 								$url_vi = base_url() . 'vi';
 								$url_en = base_url() . 'en';

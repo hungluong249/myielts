@@ -32,7 +32,8 @@ $(document).ready(function(){
                     	$("input[name='csrf_myielts_token']").val(response.reponse.csrf_hash);
                     	if (response.isExits == true) {
                     		alert('Đăng ký tài khoản thành công. Vui lòng đăng nhập!');
-                    		window.location.href = HOSTNAME + "client/login";
+                    		location.reload();
+                    		// window.location.href = HOSTNAME + "client/login";
                     	}else{
                     		alert('Vui lòng điển đầy đủ thông tin');
                     	}

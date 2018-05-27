@@ -82,6 +82,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								$url_vi = base_url() . 'vi/courses';
 								$url_en = base_url() . 'en/courses';
 								break;
+							case 'detail_courses':
+								$url_vi = base_url() . 'vi/courses/detail/'. $current_slug;
+								$url_en = base_url() . 'en/courses/detail/'. $current_slug;
+								break;
+							case 'document':
+								$url_vi = base_url() . 'vi/document';
+								$url_en = base_url() . 'en/document';
+								break;
+							case 'detail_document':
+								$url_vi = base_url() . 'vi/document/detail/'. $current_slug;
+								$url_en = base_url() . 'en/document/detail/'. $current_slug;
+								break;
+							case 'blogs':
+								$url_vi = base_url() . 'vi/blogs';
+								$url_en = base_url() . 'en/blogs';
+								break;
 							default:
 								$url_vi = base_url() . 'vi';
 								$url_en = base_url() . 'en';

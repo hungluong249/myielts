@@ -19,45 +19,34 @@
 <div id="fh5co-featured-menu" class="fh5co-section">
     <div class="container">
         <div class="row">
-            <?php for ($i = 0; $i < 2; $i++) { ?>
-                <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
-                    <div class="fh5co-item">
-                        <div class="mask">
-                            <a href="<?php echo base_url('courses/detail') ?>">
-                                <img src="https://images.unsplash.com/photo-1450107579224-2d9b2bf1adc8?ixlib=rb-0.3.5&s=0b0fc084bc0625659cbdd0f04b191f62&auto=format&fit=crop&w=1350&q=80" alt="popular course img">
+            <?php if ($result): ?>
+                <?php foreach ($result as $key => $value): ?>
+                    <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
+                        <div class="fh5co-item">
+                            <div class="mask">
+                                <a href="<?php echo base_url('document/detail/'. $value['slug']) ?>">
+                                    <img src="<?php echo base_url('assets/upload/document/'. $value['image']); ?>" alt="<?php echo $value['slug']; ?>">
+                                </a>
+                            </div>
+                            <?php if ($value['type'] == 1): ?>
+                                <small>Register to Download</small>
+                            <?php endif ?>
+                            <a href="<?php echo base_url('document/detail/' .$value['slug']) ?>">
+                                <span class="fh5co-price"><?php echo $value['title'] ?></span>
                             </a>
+                            <p><?php echo $value['description'] ?></p>
+                            <a href="<?php echo base_url('document/detail/' .$value['slug']) ?>" class="btn btn-default" role="button">See more</a>
+                            <?php if ($value['type'] == 1): ?>
+                                <button type="button" class="btn btn-primary" role="button">Register Now!</button>
+                            <?php endif ?>
                         </div>
-
-                        <small>Free to Download</small>
-                        <a href="<?php echo base_url('document/detail') ?>">
-                            <span class="fh5co-price">Book 101</span>
-                        </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
-                        <a href="<?php echo base_url('document/detail') ?>" class="btn btn-default" role="button">See more</a>
                     </div>
-                </div>
-            <?php } ?>
-            <?php for ($i = 0; $i < 3; $i++) { ?>
-                <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
-                    <div class="fh5co-item">
-                        <div class="mask">
-                            <a href="<?php echo base_url('document/detail') ?>">
-                                <img src="https://images.unsplash.com/photo-1450107579224-2d9b2bf1adc8?ixlib=rb-0.3.5&s=0b0fc084bc0625659cbdd0f04b191f62&auto=format&fit=crop&w=1350&q=80" alt="popular course img">
-                            </a>
-                        </div>
-
-                        <small>Register to Download</small>
-                        <a href="<?php echo base_url('document/detail') ?>">
-                            <span class="fh5co-price">Book 101</span>
-                        </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
-                        <a href="<?php echo base_url('document/detail') ?>" class="btn btn-default" role="button">See more</a>
-                        <button type="button" class="btn btn-primary" role="button">Register Now!</button>
-                    </div>
-                </div>
-            <?php } ?>
+                <?php endforeach ?>
+            <?php endif ?>
         </div>
-
+        <div class="row">
+            <?php echo $page_links; ?>
+        </div>
 
     </div>
 </div>

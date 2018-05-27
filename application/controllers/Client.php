@@ -28,6 +28,8 @@ class Client extends Public_Controller {
         	$group = array('2');
         	$this->load->library('ion_auth');
         	if($this->ion_auth->register($username, $password, $email, $additional_data, $group)){
+                $this->load->helper('cookie');
+                set_cookie('remember_email',$email,180*24*60*60);
         		$isExits = true;
         		$reponse = array(
 	                'csrf_hash' => $this->security->get_csrf_hash()

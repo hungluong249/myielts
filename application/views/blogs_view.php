@@ -8,7 +8,7 @@
             <div class="col-md-12 text-center">
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                        <h1>Blogs</h1>
+                        <h1><?php echo $this->lang->line('blogs') ?></h1>
                     </div>
                 </div>
             </div>
@@ -19,23 +19,26 @@
 <div id="fh5co-featured-menu" class="fh5co-section">
     <div class="container">
         <div class="row">
-            <?php for ($i = 0; $i < 6; $i++) { ?>
+            <?php foreach ($result as $key => $value): ?>
                 <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
                     <div class="fh5co-item">
                         <div class="mask">
-                            <a href="<?php echo base_url('blogs/detail') ?>">
-                                <img src="https://images.unsplash.com/photo-1450107579224-2d9b2bf1adc8?ixlib=rb-0.3.5&s=0b0fc084bc0625659cbdd0f04b191f62&auto=format&fit=crop&w=1350&q=80" alt="popular course img">
+                            <a href="<?php echo base_url('blogs/detail/'. $value['slug']) ?>">
+                                <img src="<?php echo base_url('assets/upload/blogs/' . $value['image']); ?>" alt="popular course img">
                             </a>
                         </div>
 
-                        <a href="<?php echo base_url('blogs/detail') ?>">
-                            <span class="fh5co-price">Blog Post</span>
+                        <a href="<?php echo base_url('blogs/detail/'. $value['slug']) ?>">
+                            <span class="fh5co-price"><?php echo $value['title'] ?></span>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
-                        <a href="<?php echo base_url('blogs/detail') ?>" class="btn btn-default" role="button">See more</a>
+                        <p><?php echo $value['description'] ?></p>
+                        <a href="<?php echo base_url('blogs/detail/'. $value['slug']) ?>" class="btn btn-default" role="button"><?php echo $this->lang->line('see-more'); ?></a>
                     </div>
                 </div>
-            <?php } ?>
+            <?php endforeach ?>
+        </div>
+        <div class="row">
+            <?php echo $page_links ?>
         </div>
 
 

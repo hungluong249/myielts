@@ -8,8 +8,8 @@
             <div class="col-md-12 text-center">
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                        <h1>Get <em>in</em> Touch</h1>
-                        <h2>Feel Free to get in touch with us</h2>
+                        <h1><?php echo $this->lang->line('contact-title'); ?></h1>
+                        <h2><?php echo $this->lang->line('contact-description'); ?></h2>
                     </div>
                 </div>
             </div>
@@ -21,9 +21,9 @@
     <div class="container">
         <div class="row animate-box">
             <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                <h2>Don't be shy, let's chat.</h2>
+                <h2><?php echo $this->lang->line('contact-chat'); ?></h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate, sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga maxime odio? Eaque!</p>
-                <p><a href="mailto:info@yourdomainname.com" class="btn btn-primary">Contact Us</a></p>
+                <p><a href="mailto:info@yourdomainname.com" class="btn btn-primary"><?php echo $this->lang->line('contact'); ?></a></p>
             </div>
         </div>
 
@@ -36,34 +36,34 @@
 
                 <div class="form-group col-xs-12">
                     <?php
-                    echo form_label('Full Name (*)', 'contact_name');
+                    echo form_label($this->lang->line('contact-name') .' (*)', 'contact_name');
                     echo form_error('contact_name');
                     echo form_input('contact_name', set_value('contact_name'), 'class="form-control" id="contact_name"');
                     ?>
                 </div>
                 <div class="form-group col-xs-12">
                     <?php
-                    echo form_label('Email (*)', 'contact_mail');
+                    echo form_label($this->lang->line('contact-mail') .' (*)', 'contact_mail');
                     echo form_error('contact_mail');
                     echo form_input('contact_mail', set_value('contact_mail'), 'class="form-control" id="contact_mail"');
                     ?>
                 </div>
                 <div class="form-group col-xs-12">
                     <?php
-                    echo form_label('Your phone number (*)', 'contact_phone');
+                    echo form_label($this->lang->line('contact-phone') .' (*)', 'contact_phone');
                     echo form_error('contact_phone');
                     echo form_input('contact_phone', set_value('contact_phone'), 'class="form-control" id="contact_phone"');
                     ?>
                 </div>
                 <div class="form-group col-xs-12">
                     <?php
-                    echo form_label('Message', 'contact_message');
+                    echo form_label($this->lang->line('contact-message'), 'contact_message');
                     echo form_error('contact_message');
                     echo form_textarea('contact_message', set_value('contact_message'), 'class="form-control" id="contact_message"');
                     ?>
                 </div>
                 <div class="col-xs-12">
-                    <?php echo form_submit('submit', 'Send Message', 'class="btn btn-primary"'); ?>
+                    <?php echo form_submit('submit', $this->lang->line('contact-send'), 'class="btn btn-primary"'); ?>
 
                 </div>
 

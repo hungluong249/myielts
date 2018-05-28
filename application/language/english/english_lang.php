@@ -7,6 +7,12 @@
 */
 $lang['detector'] = 'en';
 $lang['homepage'] = 'Homepage';
+
+$lang['more-info'] = 'More Info';
+$lang['see-more'] = 'See More';
+$lang['register'] = 'Register Now';
+$lang['slogan'] = 'Join Us now to get lots of gifts';
+$lang['join-now'] = 'Join Now';
 /*
     Main Header
  */
@@ -17,81 +23,57 @@ $lang['blogs'] = 'Blogs';
 $lang['contact'] = 'Contact';
 
 /*
+    Home Page
+ */
+$lang['intro-about'] = 'Introducing myIELTS 
+English Center';
+$lang['getting-started'] = 'Getting Started';
+
+
+/*
     About
  */
 $lang['about-us'] = 'About our Center';
+$lang['our-message'] = 'OUR MESSAGE';
+$lang['our-methods'] = 'OUR METHODS';
 
 /*
     courses
  */
+$lang['courses-title'] = 'myIELTS Courses';
+$lang['detail-courses'] = 'Detail Courses';
 
+/*
+    Document
+ */
+$lang['document'] = 'Document';
+$lang['detail-document'] = 'Detail Document';
 
-// Index
-$lang['index_about'] = 'About Us';
-$lang['index_about_1'] = 'Friendly';
-$lang['index_about_2'] = 'Reputation';
-$lang['index_about_3'] = 'Quality';
-$lang['index_about_4'] = 'Community';
-$lang['index_product'] = 'Featured products';
-$lang['index_news'] = 'News - Events';
-
-
-// Blog
-$lang['blog_information'] = 'Healthy information';
-$lang['blog_medicine'] = 'Medicines information';
-$lang['blog_latest_articles'] = 'Latest articles';
-$lang['blog_most_viewed'] = 'Most viewed';
-
-// Footer
-$lang['company'] = 'Company';
-$lang['history'] = 'History';
-$lang['duty'] = 'Views and duties';
-$lang['structure'] = 'Structure';
-$lang['culture'] = 'Culture';
-$lang['medicine'] = 'Medicines';
-$lang['list_product'] = 'Functional foods';
-$lang['quotation'] = 'Quotation';
-$lang['partner'] = 'Partners';
-$lang['award'] = 'Awards';
-
-// Company information
-$lang['company_name'] = 'Thiên Lộc Xuân Commercial Joint Stock Company';
-$lang['company_address'] = 'Head office: No 76 Lane 472 Lac Long Quan Street - Tay Ho - Hanoi | Trading address: Medicine counter no 331 - Hapulico Medical and Medical Equipment Distribution Center No 1 Nguyen Huy Tuong - Thanh Xuan - Hanoi ';
-$lang['company_phone'] = 'Phone: 0166 913 1450 - 0246 286 5406';
-$lang['company_fax'] = ' ';
-$lang['company_email'] = 'E-mail: info@thienlocxuan.com.vn';
-$lang['contact_us'] = 'Contact us:';
-
-// Product dropdown
-$lang['product_type'] = 'Type';
-$lang['product_group'] = 'Group';
-
-// Product detail
-$lang['product_information'] = 'Information';
-$lang['product_faq'] = 'FAQ';
-$lang['product_question'] = 'Question';
-$lang['product_content'] = 'Content';
-
-$lang['product_ingredients'] = 'Ingredients';
-$lang['product_attribution'] = 'Attribution';
-$lang['product_dosage'] = 'Dosage';
-$lang['product_contraindicating'] = 'Contraindicating';
-$lang['product_expired'] = 'Expired Day';
-$lang['product_certification'] = 'Certification';
-$lang['product_presentation'] = 'Presentation';
+/*
+    Blogs
+ */
+$lang['blogs'] = 'Blogs';
+$lang['detail-blog'] = 'Detail Blog Post';
 
 // Contact form
-$lang['contact_greeting'] = 'Hi, send question to us and get answer as soon as possible';
-$lang['contact_name'] = 'Name';
-$lang['contact_email'] = 'Email';
-$lang['contact_phone'] = 'Phone';
-$lang['contact_wishing'] = 'Wishing product';
-$lang['contact_content'] = 'Content';
-$lang['contact_content_placeholder'] = 'What do you need to ask?';
-$lang['contact_send'] = 'Send';
-$lang['contact_image'] = 'GPP Certification Image';
-$lang['contact_address_1'] = 'Head office: No 76 Lane 472 Lac Long Quan Street - Tay Ho - Hanoi';
-$lang['contact_address_2'] = 'Trading address: Medicine counter no 331 - Hapulico Medical and Medical Equipment Distribution Center No 1 Nguyen Huy Tuong - Thanh Xuan - Hanoi';
+$lang['contact'] = 'Contact Us';
+$lang['contact-title'] = 'Get in Touch';
+$lang['contact-description'] = 'Feel Free to get in touch with us';
+$lang['contact-chat'] = "Don't be shy, let's chat.";
+
+$lang['contact-name'] = 'Name';
+$lang['contact-mail'] = 'Email';
+$lang['contact-phone'] = 'Your Phone Number';
+$lang['contact-message'] = 'Message';
+$lang['contact-send'] = 'Send Message';
+/*
+    Register
+ */
+$lang['register-name'] = 'Full Name';
+$lang['register-phone'] = 'Your Phone Number';
+$lang['register-age'] = 'Your Age';
+$lang['register-office'] = 'Sorkplace/ School';
+$lang['register-email'] = 'Email';
 
 // Medicine
 $lang['medicine_title'] = 'Medicine';

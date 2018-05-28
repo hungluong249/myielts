@@ -98,6 +98,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								$url_vi = base_url() . 'vi/blogs';
 								$url_en = base_url() . 'en/blogs';
 								break;
+							case 'detail_blogs':
+								$url_vi = base_url() . 'vi/blogs/detail/'. $current_slug;
+								$url_en = base_url() . 'en/blogs/detail/'. $current_slug;
+								break;
 							case 'contact':
 								$url_vi = base_url() . 'vi/contact';
 								$url_en = base_url() . 'en/contact';
@@ -111,7 +115,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 					<ul>
 						<li>
-							<a href="<?php echo base_url('') ?>"><?php echo $this->lang->line('homepage'); ?></a>
+							<a href="<?php echo base_url('homepage') ?>"><?php echo $this->lang->line('homepage'); ?></a>
 						</li>
 						<li>
 							<a href="<?php echo base_url('about') ?>"><?php echo $this->lang->line('about'); ?></a>

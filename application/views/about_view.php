@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 img-wrap animate-box" data-animate-effect="fadeInLeft">
-                <img src="<?php echo $detail['avatar'] ?>" alt="img about">
+                <img src="<?php echo base_url('assets/upload/about/' . $detail['avatar']) ?>" alt="img about" width=100%>
             </div>
             <div class="col-md-5 col-md-push-1 animate-box">
                 <div class="section-heading">
@@ -38,7 +38,7 @@
             <div class="col-md-12 col-md-offset-0">
                 <ul class="timeline animate-box">
                     <li class="timeline-heading text-center animate-box">
-                        <div><h3>Our Message</h3></div>
+                        <div><h3><?php echo $this->lang->line('our-message'); ?></h3></div>
                     </li>
                     <?php if ($our_message): ?>
                         <?php foreach ($our_message as $key => $value): ?>
@@ -73,7 +73,7 @@
 
                     <br>
                     <li class="timeline-heading text-center animate-box">
-                        <div><h3>Our Methods</h3></div>
+                        <div><h3><?php echo $this->lang->line('our-methods'); ?></h3></div>
                     </li>
                     <?php if ($our_methods): ?>
                         <?php foreach ($our_methods as $key => $value): ?>

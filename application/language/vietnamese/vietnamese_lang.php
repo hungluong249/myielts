@@ -9,6 +9,11 @@ $lang['description'] = 'Giới thiệu';
 $lang['content'] = 'Nội dung';
 
 $lang['homepage'] = 'Trang chủ';
+$lang['more-info'] = 'Xem Thêm';
+$lang['see-more'] = 'Chi Tiết';
+$lang['register'] = 'Đăng Ký';
+$lang['slogan'] = 'Tham gia với chúng tôi ngay bây giờ để nhận nhiều quà tặng';
+$lang['join-now'] = 'Tham Gia Ngay';
 
 /*
     Main Header
@@ -21,70 +26,68 @@ $lang['blogs'] = 'Bài Viết';
 $lang['contact'] = 'Liên Hệ';
 
 /*
+    Home Page
+ */
+$lang['intro-about'] = 'Giới thiệu Trung tâm tiếng Anh 
+myIELTS';
+$lang['getting-started'] = 'Bắt Đầu';
+
+
+/*
     About
  */
 
 $lang['about-us'] = 'Giới Thiệu';
+$lang['our-message'] = 'THÔNG ĐIỆP';
+$lang['our-methods'] = 'HÀNH ĐỘNG';
 
 /*
-    Break
+    courses
  */
+$lang['courses-title'] = 'Khóa Học myIELTS';
+$lang['detail-courses'] = 'Chi Tiết Khóa Học';
+
+/*
+    Document
+ */
+$lang['document'] = 'Tài Liệu';
+$lang['detail-document'] = 'Chi Tiết Tài Liệu';
+
+/*
+    blogs
+ */
+
+$lang['blogs'] = 'Bài Viết';
+$lang['detail-blog'] = 'Chi Tiết Bài Viết';
 
 $lang['perfect-blend'] = 'Sự kết hợp hoàn hảo';
 $lang['elegant-recipes'] = 'Những công thức thanh lịch';
 
 /*
-    Form
+    Contact form
  */
+$lang['contact'] = 'Liên Hệ';
+$lang['contact-title'] = 'Liên Hệ';
+$lang['contact-description'] = 'Hãy thoải mái liên hệ với chúng tôi';
+$lang['contact-chat'] = 'Đừng ngại, hãy trò chuyện với chúng tôi.';
 
-$lang['your-name'] = 'Tên của bạn';
-$lang['your-mail'] = 'Email của bạn';
-$lang['your-phone'] = 'Số điện thoại của bạn';
-$lang['your-way'] = 'Bạn đã tìm thấy chúng tôi như thế nào?';
-$lang['your-message'] = 'Tin nhắn của bạn';
-
-$lang['your-address'] = 'Địa chỉ của bạn';
-$lang['your-date'] = 'Ngày đặt bàn';
-$lang['your-time'] = 'Giờ đặt bàn';
-$lang['your-number'] = 'Số người tham gia';
+$lang['contact-name'] = 'Tên của bạn';
+$lang['contact-mail'] = 'Email của bạn';
+$lang['contact-phone'] = 'Số điện thoại của bạn';
+$lang['contact-message'] = 'Tin nhắn của bạn';
+$lang['contact-send'] = 'Gửi Tin Nhắn';
 
 
 $lang['submit'] = 'Gửi tin nhắn';
 
 /*
-    Our Food
+    Register
  */
-
-$lang['show-menu'] = 'Xem menu';
-
-/*
-    Events
- */
-
-$lang['private-rooms'] = 'Phòng riêng';
-$lang['private-floors'] = 'Tầng riêng';
-$lang['full-restaurant'] = 'Trọn gói nhà hàng';
-$lang['up-to'] = 'Lên tới';
-$lang['guests'] = 'khách';
-
-$lang['show-floor-plan'] = 'Chi tiết nhà hàng';
-
-/*
-    Booking
- */
-$lang['book-your-table'] = 'Đặt bàn';
-
-/*
-    Footer
- */
-
-$lang['company-address'] = 'Lô 8+9, Khu dân cư 3, đường Võ Nguyên Giáp, quận Sơn Trà, thành phố Đà Nẵng';
-$lang['company-tel'] = '000 000 0000 (9AM - 11AM)';
-$lang['company-email'] = 'info@ngochuongrestaurant.com';
-$lang['company-open-time'] = 'Open Daily';
-$lang['company-open-time-start'] = '11:00 - 14:00';
-$lang['company-open-time-end'] = '12:00 - 15:00';
-$lang['company-follow'] = 'Theo dõi chúng tôi tại';
+$lang['register-name'] = 'Tên của bạn';
+$lang['register-phone'] = 'Số điện thoại của bạn';
+$lang['register-age'] = 'Tuổi của bạn';
+$lang['register-office'] = 'Nơi Làm Việc/ Trường Học';
+$lang['register-email'] = 'Email của bạn';
 
 /*
     Modal

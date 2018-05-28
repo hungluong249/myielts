@@ -26,7 +26,7 @@ class Courses extends Admin_Controller {
         $this->load->library('pagination');
         $config = array();
         $base_url = base_url('admin/courses/index');
-        $per_page = 10;
+        $per_page = 1;
         $uri_segment = 4;
         foreach ($this->pagination_config($base_url, $total_rows, $per_page, $uri_segment) as $key => $value) {
             $config[$key] = $value;

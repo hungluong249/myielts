@@ -8,7 +8,7 @@
             <div class="col-md-12 text-center">
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                        <h1>Detail Document</h1>
+                        <h1><?php echo $this->lang->line('detail-document'); ?></h1>
                         <?php if ($detail['type'] == 0): ?>
                             <a href="<?php echo $detail['url'] ?>" class="btn btn-primary" download="<?php echo $detail['url'] ?>" target="_blank">
                                 Download now!
@@ -19,7 +19,7 @@
                                     Download now!
                                 </a>
                                 <?php else: ?>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">Register Now!</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register"><?php echo $this->lang->line('register') ?>!</button>
                                 <?php endif ?>
                         <?php endif ?>
                     </div>

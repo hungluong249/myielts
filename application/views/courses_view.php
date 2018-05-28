@@ -8,7 +8,7 @@
             <div class="col-md-12 text-center">
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                        <h1>myIELTS Courses</h1>
+                        <h1><?php echo $this->lang->line('courses-title'); ?></h1>
                     </div>
                 </div>
             </div>
@@ -32,8 +32,8 @@
 						</a>
 						<span class="fh5co-price"><?php echo number_format($value['price']) ?> vnd</span>
 						<p><?php echo $value['description'] ?></p>
-						<a href="<?php echo base_url('courses/detail/'. $value['slug']) ?>" class="btn btn-default" role="button">See more</a>
-						<button type="button" class="btn btn-primary" role="button">Register Now!</button>
+						<a href="<?php echo base_url('courses/detail/'. $value['slug']) ?>" class="btn btn-default" role="button"><?php echo $this->lang->line('see-more'); ?></a>
+						<button type="button" class="btn btn-primary btn-register-courses" role="button" data-toggle="modal" data-target="#register-courses" data-id="<?php echo $value['id'] ?>"><?php echo $this->lang->line('register') ?>!</button>
 					</div>
 				</div>
             <?php endforeach ?>
@@ -44,3 +44,9 @@
 
     </div>
 </div>
+<script type="text/javascript">
+	$('.btn-register-courses').click(function(){
+		var id = $(this).data('id');
+		$('#courses-id').val(id);
+	});
+</script>

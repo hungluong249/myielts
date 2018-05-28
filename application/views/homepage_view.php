@@ -8,8 +8,8 @@
 			<div class="col-md-12 text-center">
 				<div class="display-t js-fullheight">
 					<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-						<h1>Introducing myIELTS <br> English Center </h1>
-						<a href="#fh5co-about" class="btn btn-primary">Getting Started</a>
+						<h1><?php echo $this->lang->line('intro-about'); ?></h1>
+						<a href="#fh5co-about" class="btn btn-primary"><?php echo $this->lang->line('getting-started'); ?></a>
 					</div>
 				</div>
 			</div>
@@ -21,14 +21,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 img-wrap animate-box" data-animate-effect="fadeInLeft">
-				<img src="https://www.timeshighereducation.com/sites/default/files/styles/the_breaking_news_image_style/public/istock-619066144.jpg?itok=qc3nppWL" alt="img about">
+				<img src="<?php echo base_url('assets/upload/about/'. $about['avatar']) ?>" alt="img about" width="100%">
 			</div>
 			<div class="col-md-5 col-md-push-1 animate-box">
 				<div class="section-heading">
-					<h2>myIELTS English Center</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae neque quisquam at deserunt ab praesentium architecto tempore saepe animi voluptatem molestias, eveniet aut laudantium alias, laboriosam excepturi, et numquam? Atque tempore iure tenetur perspiciatis, aliquam, asperiores aut odio accusamus, unde libero dignissimos quod aliquid neque et illo vero nesciunt. Sunt!</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam iure reprehenderit nihil nobis laboriosam beatae assumenda tempore, magni ducimus abentey.</p>
-					<p><a href="#" class="btn btn-primary">More Info</a></p>
+					<h2><?php echo $about['about_title'] ?></h2>
+					<?php echo $about['about_content'] ?>
+					<p><a href="<?php echo base_url('about') ?>" class="btn btn-primary"><?php echo $this->lang->line('more-info'); ?></a></p>
 				</div>
 			</div>
 		</div>
@@ -47,18 +46,18 @@
 				</div>
 			</div>
 
-			<?php for ($i = 0; $i < 3; $i++) { ?>
-			<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
-				<div class="fh5co-item">
-					<div class="mask">
-						<img src="http://www.gettingsmart.com/wp-content/uploads/2017/07/College-Students-Using-Laptops-Feature-Image.jpg" alt="popular course img">
+			<?php foreach ($courses as $key => $value): ?>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
+					<div class="fh5co-item">
+						<div class="mask">
+							<img src="<?php echo base_url('assets/upload/courses/' . $value['image']); ?>" alt="<?php echo $value['slug'] ?> img">
+						</div>
+						<h3><?php echo $value['title'] ?></h3>
+						<span class="fh5co-price"><?php echo number_format($value['price']) ?> vnd</span>
+						<p><?php echo $value['description'] ?></p>
 					</div>
-					<h3>Popular Course</h3>
-					<span class="fh5co-price">1.000.000 vnd</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
 				</div>
-			</div>
-			<?php } ?>
+			<?php endforeach ?>
 
 		</div>
 	</div>
@@ -152,10 +151,10 @@
 	<div class="container">
 		<div class="row animate-box">
 			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-				<h2>Join Us now to get lots of gifts</h2>
+				<h2><?php echo $this->lang->line('slogan'); ?></h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate, sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga maxime odio? Eaque!</p>
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">
-					Join Now!
+					<?php echo $this->lang->line('join-now'); ?>!
 				</button>
 			</div>
 		</div>
@@ -166,33 +165,33 @@
 	<div class="container">
 		<div class="row animate-box">
 			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-				<h2>Blogs</h2>
+				<h2><?php echo $this->lang->line('blogs'); ?></h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, consequatur. Aliquam quaerat pariatur repellendus veniam nemo, saepe, culpa eius aspernatur cumque suscipit quae nobis illo tempora. Eum veniam necessitatibus, blanditiis facilis quidem dolore! Dolorem, molestiae.</p>
 			</div>
 		</div>
 		<div class="row">
 
-            <?php for ($i = 0; $i < 3; $i++) { ?>
-			<div class="col-md-4 col-sm-4 col-xs-12">
-				<div class="fh5co-blog animate-box">
-					<a href="#">
-						<div class="mask">
-							<img src="https://www.myamcat.com/blog/wp-content/uploads/2017/02/Engineering-students-e1486899290993.jpg" alt="blog img">
+            <?php foreach ($blogs as $key => $value): ?>
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<div class="fh5co-blog animate-box">
+						<a href="#">
+							<div class="mask">
+								<img src="<?php echo base_url('assets/upload/blogs/'. $value['image']) ?>" alt="<?php echo $value['slug'] ?> img">
+							</div>
+						</a>
+						<div class="blog-text">
+							<span class="posted_on"><?php echo date_format(date_create($value['updated_at']), 'd-m-Y') ?></span>
+							<h3><a href="#"><?php echo $value['title'] ?></a></h3>
+							<p><?php echo $value['description'] ?></p>
+							<ul class="stuff">
+								<!-- <li><i class="icon-heart2"></i>1.2K</li>
+								<li><i class="icon-eye2"></i>2K</li> -->
+								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
+							</ul>
 						</div>
-					</a>
-					<div class="blog-text">
-						<span class="posted_on">Feb. 15th 2016</span>
-						<h3><a href="#">Photoshoot On The Street</a></h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						<ul class="stuff">
-							<li><i class="icon-heart2"></i>1.2K</li>
-							<li><i class="icon-eye2"></i>2K</li>
-							<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
-						</ul>
 					</div>
 				</div>
-			</div>
-			<?php } ?>
+			<?php endforeach ?>
 
 		</div>
 	</div>

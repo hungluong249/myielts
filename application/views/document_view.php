@@ -8,7 +8,7 @@
             <div class="col-md-12 text-center">
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                        <h1>Document</h1>
+                        <h1><?php echo $this->lang->line('document'); ?></h1>
                     </div>
                 </div>
             </div>
@@ -29,15 +29,19 @@
                                 </a>
                             </div>
                             <?php if ($value['type'] == 1): ?>
-                                <small>Register to Download</small>
+                                <?php if (!get_cookie('remember_email')): ?>
+                                    <small>Register to Download</small>
+                                <?php endif ?>
                             <?php endif ?>
                             <a href="<?php echo base_url('document/detail/' .$value['slug']) ?>">
                                 <span class="fh5co-price"><?php echo $value['title'] ?></span>
                             </a>
                             <p><?php echo $value['description'] ?></p>
-                            <a href="<?php echo base_url('document/detail/' .$value['slug']) ?>" class="btn btn-default" role="button">See more</a>
+                            <a href="<?php echo base_url('document/detail/' .$value['slug']) ?>" class="btn btn-default" role="button"><?php echo $this->lang->line('see-more'); ?></a>
                             <?php if ($value['type'] == 1): ?>
-                                <button type="button" class="btn btn-primary" role="button">Register Now!</button>
+                                <?php if (!get_cookie('remember_email')): ?>
+                                    <button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#register"><?php echo $this->lang->line('register') ?>!</button>
+                                <?php endif ?>
                             <?php endif ?>
                         </div>
                     </div>

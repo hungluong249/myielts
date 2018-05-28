@@ -89,11 +89,10 @@
                     ?>
                     <div class="col-xs-12">
                         <label>Book Registered</label>
-                        <h3>Book 101</h3>
                     </div>
                     <div class="form-group col-xs-12">
                         <?php
-                        echo form_label('Full Name (*)', 'register_name');
+                        echo form_label($this->lang->line('register-name') .' (*)', 'register_name');
                         echo form_error('register_name');
                         echo form_input('register_name', set_value('register_name'), 'class="form-control" id="register_name"');
                         ?>
@@ -101,25 +100,25 @@
                     
                     <div class="form-group col-xs-12">
                         <?php
-                        echo form_label('Your phone number (*)', 'register_phone');
+                        echo form_label($this->lang->line('register-phone') .' (*)', 'register_phone');
                         echo form_error('register_phone');
                         echo form_input('register_phone', set_value('register_phone'), 'class="form-control" id="register_phone"');
                         ?>
                     </div>
                     <div class="form-group col-xs-12 col-sm-4">
-                        <label>Your age</label>
+                        <label><?php echo $this->lang->line('register-age'); ?></label>
                         <input type="number" class="form-control" id="register_age" name="register_age" min="0">
                     </div>
                     <div class="form-group col-xs-12 col-sm-8">
                         <?php
-                        echo form_label('Workplace/ School', 'register_workplace');
+                        echo form_label($this->lang->line('register-office'), 'register_workplace');
                         echo form_error('register_workplace');
                         echo form_input('register_workplace', set_value('register_workplace'), 'class="form-control" id="register_workplace"');
                         ?>
                     </div>
                     <div class="form-group col-xs-12">
                         <?php
-                        echo form_label('Email (*)', 'register_mail');
+                        echo form_label($this->lang->line('register-email') .' (*)', 'register_mail');
                         echo form_error('register_mail');
                         echo form_input('register_mail', set_value('register_mail'), 'class="form-control" id="register_mail"');
                         ?>
@@ -141,7 +140,72 @@
                     <div class="col-xs-12">
                         <?php echo form_submit(array('type' => 'submit', 'name' => 'submit'), 'Register to get Download Link', 'class="btn btn-primary btn-register"'); ?>
 						<br>
-						<small>We will send a link within an email to download your requested book</small>
+                    </div>
+
+                    <?php echo form_close(); ?>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="register-courses" tabindex="-1" role="dialog" aria-labelledby="registerCourseLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="registerCourseLabel">Register</h4>
+            </div>
+            <div class="modal-body">
+                <div class="modal-cover">
+                    <img src="http://www.gettingsmart.com/wp-content/uploads/2017/07/College-Students-Using-Laptops-Feature-Image.jpg" alt="register cover">
+                </div>
+                <div class="modal-text">
+                    <?php
+                    echo form_open_multipart('', array('class' => 'form-horizontal', 'id' => 'register-courses-form'));
+                    ?>
+                    <div class="col-xs-12">
+                        <label>Courses Registered</label>
+                    </div>
+                    <div class="form-group col-xs-12">
+                        <?php
+                        echo form_label($this->lang->line('register-name') .' (*)', 'register_courses_name');
+                        echo form_error('register_courses_name');
+                        echo form_input('register_courses_name', set_value('register_courses_name'), 'class="form-control" id="register-courses-name"');
+                        ?>
+                    </div>
+                    <div class="form-group col-xs-12">
+                        <?php
+                        echo form_label($this->lang->line('register-email') .' (*)', 'register_courses_mail');
+                        echo form_error('register_courses_mail');
+                        echo form_input('register_courses_mail', set_value('register_courses_mail'), 'class="form-control" id="register-courses-mail"');
+                        ?>
+                    </div>
+                    <div class="form-group col-xs-12">
+                        <?php
+                        echo form_label($this->lang->line('register-phone') .' (*)', 'register_courses_phone');
+                        echo form_error('register_courses_phone');
+                        echo form_input('register_courses_phone', set_value('register_courses_phone'), 'class="form-control" id="register-courses-phone"');
+                        ?>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-4">
+                        <label><?php echo $this->lang->line('register-age'); ?></label>
+                        <input type="number" class="form-control" id="register-courses-age" name="register_courses_age" min="0">
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-8">
+                        <?php
+                        echo form_label($this->lang->line('register-office'), 'register_courses_workplace');
+                        echo form_error('register_courses_workplace');
+                        echo form_input('register_courses_workplace', set_value('register_courses_workplace'), 'class="form-control" id="register-courses-workplace"');
+                        ?>
+                    </div>
+                    <input type="hidden" name="courses_id" value="" id="courses-id">
+                    <div class="col-xs-12">
+                        <?php echo form_submit(array('type' => 'submit', 'name' => 'submit'), 'Courses Registered', 'class="btn btn-primary btn-register"'); ?>
+                        <br>
                     </div>
 
                     <?php echo form_close(); ?>

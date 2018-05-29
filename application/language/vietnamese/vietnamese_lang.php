@@ -12,7 +12,7 @@ $lang['homepage'] = 'Trang chủ';
 $lang['more-info'] = 'Xem Thêm';
 $lang['see-more'] = 'Chi Tiết';
 $lang['register'] = 'Đăng Ký';
-$lang['slogan'] = 'Tham gia với chúng tôi ngay bây giờ để nhận nhiều quà tặng';
+$lang['slogan'] = 'Tham gia với chúng tôi ngay bây giờ!';
 $lang['join-now'] = 'Tham Gia Ngay';
 
 /*
@@ -28,9 +28,11 @@ $lang['contact'] = 'Liên Hệ';
 /*
     Home Page
  */
-$lang['intro-about'] = 'Giới thiệu Trung tâm tiếng Anh 
-myIELTS';
+$lang['intro-about'] = 'Giới thiệu Trung tâm tiếng Anh myIELTS';
 $lang['getting-started'] = 'Bắt Đầu';
+
+$lang['intro-courses'] = 'Hệ thống bài học của My IELTS được thiết kế theo chuẩn sư phạm bởi đội ngũ giáo viên được đào tạo chuyên môn tại các trường về sư phạm Anh tại Hà Nội.';
+$lang['testinomial'] = 'Cảm nhận';
 
 
 /*

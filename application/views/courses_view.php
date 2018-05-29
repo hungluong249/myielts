@@ -27,7 +27,7 @@
 								<img src="<?php echo base_url('assets/upload/courses/'. $value['image']) ?>" alt="popular course img">
 							</a>
 						</div>
-						<a href="<?php echo base_url('courses/detail') ?>">
+						<a href="<?php echo base_url('courses/detail/'. $value['slug']) ?>">
 							<h3><?php echo $value['title'] ?></h3>
 						</a>
 						<span class="fh5co-price"><?php echo number_format($value['price']) ?> vnd</span>

@@ -38,10 +38,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 fh5co-heading animate-box">
-				<h2>Popular Courses</h2>
+				<h2><?php echo $this->lang->line('courses'); ?></h2>
 				<div class="row">
 					<div class="col-md-6">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
+						<p><?php echo $this->lang->line('intro-courses'); ?></p>
 					</div>
 				</div>
 			</div>
@@ -63,12 +63,13 @@
 	</div>
 </div>
 
+<!--
 <div id="fh5co-slider" class="fh5co-section animate-box">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 animate-box">
 				<div class="fh5co-heading">
-					<h2>Testinomial</h2>
+					<h2><?php echo $this->lang->line('testinomial'); ?></h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis!</p>
 				</div>
 			</div>
@@ -145,6 +146,8 @@
 		</div>
 	</div>
 </div>
+-->
+
 
 <div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url('https://www.bestcolleges.com/wp-content/uploads/African_American_Graduates.jpg');" data-stellar-background-ratio="0.5">
 	<div class="overlay"></div>
@@ -152,7 +155,9 @@
 		<div class="row animate-box">
 			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 				<h2><?php echo $this->lang->line('slogan'); ?></h2>
+				<!--
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate, sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga maxime odio? Eaque!</p>
+				-->
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">
 					<?php echo $this->lang->line('join-now'); ?>!
 				</button>
@@ -166,7 +171,9 @@
 		<div class="row animate-box">
 			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 				<h2><?php echo $this->lang->line('blogs'); ?></h2>
+				<!--
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, consequatur. Aliquam quaerat pariatur repellendus veniam nemo, saepe, culpa eius aspernatur cumque suscipit quae nobis illo tempora. Eum veniam necessitatibus, blanditiis facilis quidem dolore! Dolorem, molestiae.</p>
+				-->
 			</div>
 		</div>
 		<div class="row">

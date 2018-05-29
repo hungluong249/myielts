@@ -32,7 +32,7 @@
 			<div class="col-md-2 col-md-push-1 fh5co-widget">
 				<h4>Quick Links</h4>
 				<ul class="fh5co-footer-links">
-					<li><a href="#">Landing Page</a></li>
+					<li><a href="<?php echo base_url('landing') ?>">Landing Page</a></li>
 					<!--
 					<li><a href="javascript:void(0);" data-toggle="modal" data-target="#register">Register and Get free books</a></li>
 					-->

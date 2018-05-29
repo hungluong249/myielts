@@ -328,29 +328,32 @@ p {
     font-weight: 700;
     font-family: 'Roboto', sans-serif; }
 
-.contact-us {
+.landing-us {
   padding-bottom: 5rem;
   padding-top: 3rem; }
-  .contact-us textarea {
+  .landing-us textarea {
     height: 105px; }
-  .contact-us .social-icons {
+  .landing-us .social-icons {
     padding-top: 45px;
     padding-bottom: 25px; }
-  .contact-us li {
+  .landing-us li {
     display: inline-block;
     padding-left: 20px; }
-  .contact-us .list-unstyled i {
+  .landing-us .list-unstyled i {
     color: #B61E2D;
     transition: all 0.75s;
     -webkit-transition: all 0.75s;
     -o-transition: all 0.75s;
     -moz-transition: all 0.75s; }
-    .contact-us .list-unstyled i:hover {
+    .landing-us .list-unstyled i:hover {
       color: #333; }
-  .contact-us .btn-primary {
+  .landing-us .btn-primary {
     background-color: #B61E2D; }
-    .contact-us .btn-primary:hover {
+    .landing-us .btn-primary:hover {
       background-color: #EB3B2C; }
+  .landing-us .form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0; }
 
 .footer-section {
   padding-bottom: 20px;

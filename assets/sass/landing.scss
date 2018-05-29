@@ -405,7 +405,7 @@ p {
     }
 }
 
-.contact-us {
+.landing-us {
     padding-bottom: 5rem;
     padding-top: 3rem;
     textarea {
@@ -435,6 +435,13 @@ p {
 
         &:hover{
             background-color: $primary-hover;
+        }
+    }
+
+    .form-horizontal{
+        .form-group{
+            margin-left: 0;
+            margin-right: 0;
         }
     }
 }

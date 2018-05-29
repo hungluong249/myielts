@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>
-        BICYCLE.. Simple .. Clean .. Responsive theme
+        myIELTS
     </title>
     <meta charset="utf-8">
     <!--CSS-->
@@ -46,7 +46,7 @@
                     <li><a href="#performers" class="nav-item">PERFORMERS</a></li>
                     <li><a href="#timeline" class="nav-item">TIMELINE</a></li>
                     <li><a href="#numbers" class="nav-item">NUMBERS</a></li>
-                    <li><a href="#contact-us" class="nav-item">CONTACT</a></li>
+                    <li><a href="#landing-us" class="nav-item">landing</a></li>
                 </ul>
 
 
@@ -279,8 +279,8 @@
         </div>
     </div>
 </section>
-<section id="contact-us">
-    <div class="contact-us">
+<section id="landing-us">
+    <div class="landing-us">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 wow slideInLeft">
@@ -291,29 +291,46 @@
         </div>
         <div class="section-wrapper">
             <div class="container">
-                <form role="form">
+                <?php
+                    echo form_open_multipart('', array('class' => 'form-horizontal'));
+                ?>
                     <div class="row">
                         <div class="col-md-6 wow slideInRight">
-
                             <div class="form-group">
-                                <input type="text" placeholder="Your Name" class="form-control input-lg">
+                                <?php
+                                echo form_label($this->lang->line('contact-name') .' (*)', 'landing_name');
+                                echo form_error('landing_name');
+                                echo form_input('landing_name', set_value('landing_name'), 'class="form-control input-lg"');
+                                ?>
                             </div>
                             <div class="form-group">
-                                <input type="text" placeholder="Your E - Mail" class="form-control input-lg">
+                                <?php
+                                echo form_label($this->lang->line('contact-mail') .' (*)', 'landing_mail');
+                                echo form_error('landing_mail');
+                                echo form_input('landing_mail', set_value('landing_mail'), 'class="form-control input-lg"');
+                                ?>
                             </div>
                             <div class="form-group">
-                                <input type="text" placeholder="Your Phone Number" class="form-control input-lg">
+                                <?php
+                                echo form_label($this->lang->line('contact-phone') .' (*)', 'landing_phone');
+                                echo form_error('landing_phone');
+                                echo form_input('landing_phone', set_value('landing_phone'), 'class="form-control input-lg"');
+                                ?>
                             </div>
 
                         </div>
                         <div class="col-md-6 wow bounceInRight">
                             <div class="form-group">
-                                <textarea placeholder="Your Message" class="form-control "></textarea>
+                                <?php
+                                echo form_label($this->lang->line('contact-message'), 'landing_message');
+                                echo form_error('landing_message');
+                                echo form_textarea('landing_message', set_value('landing_message'), 'class="form-control input-lg"');
+                                ?>
                             </div>
-                            <button class="btn btn-primary btn-block input-lg">SEND MESSAGE</button>
+                            <?php echo form_submit('submit', $this->lang->line('contact-send'), 'class="btn btn-primary btn-block input-lg btn-landing-send"'); ?>
                         </div>
                     </div>
-                </form>
+                <?php echo form_close(); ?>
             </div>
             <div class="container">
                 <div class="row">

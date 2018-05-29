@@ -90,7 +90,11 @@
                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i> <span>Đăng Ký Tải Tài Liệu</span>
                     </a>
                 </li>
-                
+                <li class="<?php echo ($this->uri->segment(2) == 'landing')? 'active' : '' ?>">
+                    <a href="<?php echo base_url('admin/landing') ?>">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i> <span>Landing Page</span>
+                    </a>
+                </li>
                 <li class="header">DOCUMENTATION</li>
                 <li>
                     <a href="<?php echo base_url('admin/documentation') ?>">

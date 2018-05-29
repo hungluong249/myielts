@@ -11,7 +11,7 @@ $lang['homepage'] = 'Homepage';
 $lang['more-info'] = 'More Info';
 $lang['see-more'] = 'See More';
 $lang['register'] = 'Register Now';
-$lang['slogan'] = 'Join Us now to get lots of gifts';
+$lang['slogan'] = 'Join Us now!';
 $lang['join-now'] = 'Join Now';
 /*
     Main Header
@@ -25,10 +25,11 @@ $lang['contact'] = 'Contact';
 /*
     Home Page
  */
-$lang['intro-about'] = 'Introducing myIELTS 
-English Center';
+$lang['intro-about'] = 'Introducing myIELTS English Center';
 $lang['getting-started'] = 'Getting Started';
 
+$lang['intro-courses'] = 'My IELTS lesson plan is designed in accordance with the standard taught by a team of teachers who are trained in English pedagogy in Hanoi.';
+$lang['testinomial'] = 'estinomial';
 
 /*
     About

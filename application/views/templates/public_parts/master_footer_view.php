@@ -3,25 +3,28 @@
 		<div class="row row-pb-md">
 			<div class="col-md-4 fh5co-widget">
 				<h4>myIELTS</h4>
-				<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+				<!--<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>-->
 			</div>
 			<div class="col-md-2 col-md-push-1 fh5co-widget">
 				<h4>Menu</h4>
 				<ul class="fh5co-footer-links">
 					<li class="active">
-						<a href="<?php echo base_url('') ?>">Home</a>
+						<a href="<?php echo base_url('') ?>"><?php echo $this->lang->line('homepage'); ?></a>
 					</li>
 					<li>
-						<a href="<?php echo base_url('about') ?>">About</a>
+						<a href="<?php echo base_url('about') ?>"><?php echo $this->lang->line('about'); ?></a>
 					</li>
 					<li>
-						<a href="<?php echo base_url('courses') ?>">Courses</a>
+						<a href="<?php echo base_url('courses') ?>"><?php echo $this->lang->line('courses'); ?></a>
 					</li>
 					<li>
-						<a href="<?php echo base_url('document') ?>">Document</a>
+						<a href="<?php echo base_url('document') ?>"><?php echo $this->lang->line('document'); ?></a>
 					</li>
 					<li>
-						<a href="<?php echo base_url('contact') ?>">Contact</a>
+						<a href="<?php echo base_url('blogs') ?>"><?php echo $this->lang->line('blogs'); ?></a>
+					</li>
+					<li>
+						<a href="<?php echo base_url('contact') ?>"><?php echo $this->lang->line('contact'); ?></a>
 					</li>
 				</ul>
 			</div>
@@ -30,16 +33,18 @@
 				<h4>Quick Links</h4>
 				<ul class="fh5co-footer-links">
 					<li><a href="#">Landing Page</a></li>
+					<!--
 					<li><a href="javascript:void(0);" data-toggle="modal" data-target="#register">Register and Get free books</a></li>
+					-->
 				</ul>
 			</div>
 
 			<div class="col-md-4 col-md-push-1 fh5co-widget">
 				<h4>Contact Information</h4>
 				<ul class="fh5co-footer-links">
-					<li>999 Nguyen Binh Khiem, <br> Nguyen Du Hanoi 10000</li>
-					<li><a href="tel://1234 5678 90">+ 1234 5678 90</a></li>
-					<li><a href="mailto:info@myielts.com">info@myielts.com</a></li>
+					<li>6th floor, 66A Trần Thái Tông, <br> Dịch Vọng Hậu, Cầu Giấy, Hà Nội</li>
+					<li><a href="tel://0915355490">+ 0915.355.490</a></li>
+					<li><a href="mailto:info@myielts.com">info@myielts.vn</a></li>
 				</ul>
 			</div>
 
@@ -55,9 +60,11 @@
 				</p>
 				<p>
 				<ul class="fh5co-social-icons">
-					<li><a href="#"><i class="icon-facebook2"></i></a></li>
+					<li><a href="https://www.facebook.com/myielts.edu.vn/" target="_blank"><i class="icon-facebook2"></i></a></li>
+					<!--
 					<li><a href="#"><i class="icon-instagram"></i></a></li>
 					<li><a href="#"><i class="icon-linkedin2"></i></a></li>
+					-->
 				</ul>
 				</p>
 			</div>

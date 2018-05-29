@@ -22,13 +22,21 @@
         <div class="row animate-box">
             <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
                 <h2><?php echo $this->lang->line('contact-chat'); ?></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate, sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga maxime odio? Eaque!</p>
+                <!--
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate, sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga maxime odio? Eaque!</p>
+				-->
                 <p><a href="mailto:info@yourdomainname.com" class="btn btn-primary"><?php echo $this->lang->line('contact'); ?></a></p>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6">
+			<div class="col-md-6 col-sm-6 ">
+				<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496.1999166287312!2d105.78880213555111!3d21.034565785845203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab49908d7957%3A0xe40660bf5855e892!2sKaraoke+Kevin+31!5e0!3m2!1svi!2s!4v1527562356627" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<small>Đi vào là từ ngõ 62, rồi rẽ trái vào sau tòa nhà 66A.</small>Đ
+				</div>
+			</div>
+            <div class="col-md-6  col-sm-6 ">
 
                 <?php
                 echo form_open_multipart('', array('class' => 'form-horizontal'));

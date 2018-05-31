@@ -1,5 +1,5 @@
 <!-- About Stylesheet -->
-<link rel="stylesheet" href="<?php echo site_url('assets/sass/') ?>courses.css">
+<link rel="stylesheet" href="<?php echo site_url('assets/sass/') ?>courses.min.css">
 
 <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url('http://www.gettingsmart.com/wp-content/uploads/2017/07/College-Students-Using-Laptops-Feature-Image.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>

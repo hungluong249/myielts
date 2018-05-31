@@ -1,5 +1,5 @@
 <!-- About Stylesheet -->
-<link rel="stylesheet" href="<?php echo site_url('assets/sass/') ?>courses.css">
+<link rel="stylesheet" href="<?php echo site_url('assets/sass/') ?>courses.min.css">
 
 <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url('https://images.unsplash.com/photo-1520588831435-1529e6d7cf5e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fd3d7c35892bd8c7c9e757865a764d4c&auto=format&fit=crop&w=1284&q=80');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>

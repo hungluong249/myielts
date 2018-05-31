@@ -43,10 +43,9 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#HOME" class="nav-item">HOME</a></li>
                     <li><a href="#about" class="nav-item">ABOUT</a></li>
-                    <li><a href="#performers" class="nav-item">PERFORMERS</a></li>
-                    <li><a href="#timeline" class="nav-item">TIMELINE</a></li>
+                    <li><a href="#timeline" class="nav-item">REASONS</a></li>
                     <li><a href="#numbers" class="nav-item">NUMBERS</a></li>
-                    <li><a href="#landing-us" class="nav-item">landing</a></li>
+                    <li><a href="#landing-us" class="nav-item">REGISTER</a></li>
                 </ul>
 
 

@@ -28,7 +28,7 @@
                             </a>
                         </div>
 
-                        <a href="<?php echo base_url('blogs/detail/'. $value['slug']) ?>">
+                        <a class="link" href="<?php echo base_url('blogs/detail/'. $value['slug']) ?>">
                             <span class="fh5co-price"><?php echo $value['title'] ?></span>
                         </a>
                         <p><?php echo $value['description'] ?></p>

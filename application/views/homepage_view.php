@@ -53,7 +53,9 @@
 							<img src="<?php echo base_url('assets/upload/courses/' . $value['image']); ?>" alt="<?php echo $value['slug'] ?> img">
 						</div>
 						<h3><?php echo $value['title'] ?></h3>
+						<!--
 						<span class="fh5co-price"><?php echo number_format($value['price']) ?> vnd</span>
+						-->
 						<p><?php echo $value['description'] ?></p>
 					</div>
 				</div>

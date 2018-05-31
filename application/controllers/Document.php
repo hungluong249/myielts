@@ -25,7 +25,8 @@ class Document extends Public_Controller {
             $uri_segment = 4;
         }
         
-        $per_page = 1;
+        //$per_page = 1;
+        $per_page = 8;
         foreach ($this->pagination_config($base_url, $total_rows, $per_page, $uri_segment) as $key => $value) {
             $config[$key] = $value;
         }

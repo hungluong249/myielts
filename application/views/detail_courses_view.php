@@ -8,7 +8,7 @@
             <div class="col-md-12 text-center">
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                        <h1><?php echo $this->lang->line('detail-courses'); ?></h1>
+                        <h2><?php echo $detail['courses_title'] ?></h2>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register-courses"><?php echo $this->lang->line('register'); ?>!</button>
                     </div>
                 </div>

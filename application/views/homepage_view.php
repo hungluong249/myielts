@@ -57,6 +57,7 @@
 						<span class="fh5co-price"><?php echo number_format($value['price']) ?> vnd</span>
 						-->
 						<p><?php echo $value['description'] ?></p>
+						<a href="<?php echo base_url('courses/detail/'. $value['slug']) ?>" class="btn btn-default" role="button"><?php echo $this->lang->line('see-more'); ?></a>
 					</div>
 				</div>
 			<?php endforeach ?>
@@ -190,12 +191,12 @@
 						</a>
 						<div class="blog-text">
 							<span class="posted_on"><?php echo date_format(date_create($value['updated_at']), 'd-m-Y') ?></span>
-							<h3><a href="#"><?php echo $value['title'] ?></a></h3>
+							<h3><a href="<?php echo base_url('blogs/detail/'. $value['slug']) ?>"><?php echo $value['title'] ?></a></h3>
 							<p><?php echo $value['description'] ?></p>
 							<ul class="stuff">
 								<!-- <li><i class="icon-heart2"></i>1.2K</li>
 								<li><i class="icon-eye2"></i>2K</li> -->
-								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
+								<li><a href="<?php echo base_url('blogs/detail/'. $value['slug']) ?>"><?php echo $this->lang->line('see-more'); ?><i class="icon-arrow-right22"></i></a></li>
 							</ul>
 						</div>
 					</div>

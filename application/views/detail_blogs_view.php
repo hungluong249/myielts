@@ -8,7 +8,7 @@
             <div class="col-md-12 text-center">
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                        <h1><?php echo $this->lang->line('detail-blog'); ?></h1>
+                        <h2><?php echo $detail['blog_title'] ?></h2>
 
                     </div>
                 </div>

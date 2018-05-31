@@ -23,11 +23,11 @@
 				<div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
 					<div class="fh5co-item">
 						<div class="mask">
-							<a href="<?php echo base_url('courses/detail') ?>">
+							<a href="<?php echo base_url('courses/detail/'. $value['slug']) ?>">
 								<img src="<?php echo base_url('assets/upload/courses/'. $value['image']) ?>" alt="popular course img">
 							</a>
 						</div>
-						<a href="<?php echo base_url('courses/detail/'. $value['slug']) ?>">
+						<a class="link" href="<?php echo base_url('courses/detail/'. $value['slug']) ?>">
 							<h3><?php echo $value['title'] ?></h3>
 						</a>
 						<span class="fh5co-price"><?php echo number_format($value['price']) ?> vnd</span>

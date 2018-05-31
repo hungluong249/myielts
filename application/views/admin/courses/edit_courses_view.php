@@ -44,7 +44,7 @@
                                 <?php
                                 echo form_label('Học phí (VND)', 'price_shared');
                                 echo form_error('price_shared');
-                                echo form_input(array('type' => 'text', 'name' => 'price_shared'), set_value('price_shared'), 'class="form-control" id="price_shared"');
+                                echo form_input(array('type' => 'text', 'name' => 'price_shared'), $detail['price'], 'class="form-control" id="price_shared"');
                                 ?>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                                         <?php
                                         echo form_label('Nội dung', 'content_vi');
                                         echo form_error('content_vi');
-                                        echo form_textarea('content_vi', $detail['content_vi'], 'class="tinymce-area" class="form-control"')
+                                        echo form_textarea('content_vi', $detail['content_vi'], 'class="tinymce-area form-control"')
                                         ?>
                                     </div>
                                 </div>
@@ -132,7 +132,7 @@
                                         <?php
                                         echo form_label('Content', 'content_en');
                                         echo form_error('content_en');
-                                        echo form_textarea('content_en', $detail['content_en'], 'class="tinymce-area" class="form-control"')
+                                        echo form_textarea('content_en', $detail['content_en'], 'class="tinymce-area form-control"')
                                         ?>
                                     </div>
                                 </div>

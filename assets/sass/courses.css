@@ -341,10 +341,9 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 0;
   color: white; }
 
-#fh5co-header .display-tc h1, .fh5co-cover .display-tc h1 {
+#fh5co-header .display-tc h2, .fh5co-cover .display-tc h2 {
   margin-bottom: 0px;
   font-size: 74px;
-  font-size: 80px;
   font-weight: 700; }
 
 @media screen and (max-width: 768px) {
@@ -1045,6 +1044,19 @@ textarea {
   #fh5co-featured-menu .fh5co-item h3 {
     margin-bottom: 0px;
     color: #666; }
+  #fh5co-featured-menu .fh5co-item a.link {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 2.5em;
+    height: 5em;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; }
+    #fh5co-featured-menu .fh5co-item a.link .fh5co-price {
+      color: #B61E2D;
+      margin-bottom: 20px;
+      font-size: 1.875em;
+      display: block; }
   #fh5co-featured-menu .fh5co-item .fh5co-price {
     color: #B61E2D;
     margin-bottom: 20px;
@@ -1059,6 +1071,14 @@ textarea {
       width: 100%;
       height: 100%;
       object-fit: cover; }
+  #fh5co-featured-menu .fh5co-item p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 2em;
+    height: 6em;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; }
 
 @media screen and (max-width: 768px) {
   #fh5co-featured-menu .fh5co-heading {
@@ -1074,7 +1094,8 @@ textarea {
 #fh5co-featured-menu .fh5co-item {
   float: left;
   width: 100%;
-  backround: #fff; }
+  background: #fff;
+  padding: 15px; }
 
 #fh5co-featured-menu .fh5co-item.margin_top {
   margin-top: 150px; }
@@ -1082,6 +1103,8 @@ textarea {
 @media screen and (max-width: 480px) {
   #fh5co-featured-menu .fh5co-item.margin_top {
     margin-top: 0; } }
+#fh5co-detail .fh5co-header .overlay h3 {
+  color: #fff; }
 #fh5co-detail .left .section-body table {
   font-size: .875em;
   font-weight: 300; }

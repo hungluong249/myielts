@@ -41,7 +41,7 @@ $lang['testinomial'] = 'Cảm nhận';
 
 $lang['about-us'] = 'Giới Thiệu';
 $lang['our-message'] = 'THÔNG ĐIỆP';
-$lang['our-methods'] = 'HÀNH ĐỘNG';
+$lang['our-methods'] = 'PHƯƠNG PHÁP';
 
 /*
     courses

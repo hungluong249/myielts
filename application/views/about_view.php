@@ -47,8 +47,7 @@
                                     <div class="timeline-badge"><i class="icon-genius"></i></div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h3 class="timeline-title">The Founders Meet</h3>
-
+                                            <h3 class="timeline-title"> </h3>
                                         </div>
                                         <div class="timeline-body">
                                             <p><?php echo $value['description'] ?></p>
@@ -60,7 +59,7 @@
                                     <div class="timeline-badge"><i class="icon-genius"></i></div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h3 class="timeline-title">Create A Restaurant</h3>
+                                            <h3 class="timeline-title"> </h3>
                                         </div>
                                         <div class="timeline-body">
                                             <p><?php echo $value['description'] ?></p>
@@ -82,7 +81,7 @@
                                     <div class="timeline-badge"><i class="icon-genius"></i></div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h3 class="timeline-title">Stablished Restaurant in Europe</h3>
+                                            <h3 class="timeline-title"> </h3>
                                         </div>
                                         <div class="timeline-body">
                                             <p><?php echo $value['description'] ?></p>
@@ -94,7 +93,7 @@
                                     <div class="timeline-badge"><i class="icon-genius"></i></div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h3 class="timeline-title">Franchise Restaurants Brooklyn</h3>
+                                            <h3 class="timeline-title"> </h3>
                                         </div>
                                         <div class="timeline-body">
                                             <p><?php echo $value['description'] ?></p>

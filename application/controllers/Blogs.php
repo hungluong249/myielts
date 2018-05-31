@@ -23,7 +23,8 @@ class Blogs extends Public_Controller {
             $base_url = base_url($this->data['lang']. '/blogs/index');
             $uri_segment = 4;
         }
-        $per_page = 10;
+        //$per_page = 10;
+        $per_page = 8;
         foreach ($this->pagination_config($base_url, $total_rows, $per_page, $uri_segment) as $key => $value) {
             $config[$key] = $value;
         }

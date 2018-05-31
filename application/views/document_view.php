@@ -33,7 +33,7 @@
                                     <small>Register to Download</small>
                                 <?php endif ?>
                             <?php endif ?>
-                            <a href="<?php echo base_url('document/detail/' .$value['slug']) ?>">
+                            <a class="link" href="<?php echo base_url('document/detail/' .$value['slug']) ?>">
                                 <span class="fh5co-price"><?php echo $value['title'] ?></span>
                             </a>
                             <p><?php echo $value['description'] ?></p>

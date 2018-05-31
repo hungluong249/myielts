@@ -8,7 +8,7 @@
             <div class="col-md-12 text-center">
                 <div class="display-t js-fullheight">
                     <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                        <h1><?php echo $this->lang->line('detail-document'); ?></h1>
+                        <h2><?php echo $detail['document_title'] ?></h2>
                         <?php if ($detail['type'] == 0): ?>
                             <a href="<?php echo $detail['url'] ?>" class="btn btn-primary" download="<?php echo $detail['url'] ?>" target="_blank">
                                 Download now!

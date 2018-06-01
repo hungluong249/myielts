@@ -44,6 +44,8 @@ class Blogs extends Public_Controller {
 
         $detail = $this->blog_model->get_by_slug($slug, array('title', 'description', 'content'), $this->data['lang']);
         $this->data['detail'] = $detail;
+        $this->data['meta_keywords'] = $detail['meta_keywords'];
+        $this->data['meta_description'] = $detail['meta_description'];
 
         $this->render('detail_blogs_view');
     }

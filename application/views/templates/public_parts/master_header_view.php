@@ -7,6 +7,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="<?php echo (isset($meta_description))? $meta_description : '' ?>" />
+	<meta name="keywords" content="<?php echo (isset($meta_keywords))? $meta_keywords : '' ?>" />
     <title>myIELTS</title>
 
 	<!-- FAVICON -->

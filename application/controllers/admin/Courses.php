@@ -67,6 +67,7 @@ class Courses extends Admin_Controller {
                     $image = $this->upload_image('image_shared', $_FILES['image_shared']['name'], 'assets/upload/courses', 'assets/upload/courses/thumb');
                     $shared_request = array(
                         'image' => $image,
+                        'opening' => $this->input->post('opening_shared'),
                         'slug' => $unique_slug,
                         'price' => str_replace(',','',$this->input->post('price_shared')),
                         'meta_keywords' => $this->input->post('metakeywords_shared'),
@@ -126,6 +127,7 @@ class Courses extends Admin_Controller {
                     $image = $this->upload_image('image_shared', $_FILES['image_shared']['name'], 'assets/upload/courses', 'assets/upload/courses/thumb');
                     $shared_request = array(
                         'slug' => $unique_slug,
+                        'opening' => $this->input->post('opening_shared'),
                         'price' => str_replace(',','',$this->input->post('price_shared')),
                         'meta_keywords' => $this->input->post('metakeywords_shared'),
                         'meta_description' => $this->input->post('metadescription_shared'),

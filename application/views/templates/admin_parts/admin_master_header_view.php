@@ -32,6 +32,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Google Font -->
     <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">-->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900&amp;subset=latin-ext" rel="stylesheet">
+
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-datepicker.min.css') ?>">
     
     <!-- Library JS called-->
     <!-- jQuery 3 -->

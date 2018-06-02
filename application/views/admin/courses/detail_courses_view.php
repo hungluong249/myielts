@@ -45,6 +45,10 @@
                                             <th colspan="2">Thông tin cơ bản</th>
                                         </tr>
                                         <tr>
+                                            <th>Lịch Khai Giảng</th>
+                                            <td><?php echo $detail['opening'] ?> </td>
+                                        </tr>
+                                        <tr>
                                             <th>Học Phí</th>
                                             <td><?php echo number_format($detail['price']) ?> <strong> VND</strong></td>
                                         </tr>

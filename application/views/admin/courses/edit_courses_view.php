@@ -42,6 +42,15 @@
                         <div class="form-group col-xs-12">
                             <div class="form-group col-xs-12">
                                 <?php
+                                echo form_label('Lịch Khai Giảng', 'opening_shared');
+                                echo form_error('opening_shared');
+                                echo form_input('opening_shared', set_value('opening_shared', $detail['opening']), 'class="form-control" id="datepicker"');
+                                ?>
+                            </div>
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <div class="form-group col-xs-12">
+                                <?php
                                 echo form_label('Học phí (VND)', 'price_shared');
                                 echo form_error('price_shared');
                                 echo form_input(array('type' => 'text', 'name' => 'price_shared'), $detail['price'], 'class="form-control" id="price_shared"');

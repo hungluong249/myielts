@@ -1,4 +1,5 @@
 <div class="content-wrapper">
+    
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
@@ -29,6 +30,15 @@
                             echo form_upload('image_shared', set_value('image_shared'), 'class="form-control"');
                             ?>
                             <br>
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <div class="form-group col-xs-12">
+                                <?php
+                                echo form_label('Lịch Khai Giảng', 'opening_shared');
+                                echo form_error('opening_shared');
+                                echo form_input('opening_shared', set_value('opening_shared'), 'class="form-control" id="datepicker"');
+                                ?>
+                            </div>
                         </div>
                         <div class="form-group col-xs-12">
                             <div class="form-group col-xs-12">
@@ -137,3 +147,4 @@
         </div>
     </section>
 </div>
+

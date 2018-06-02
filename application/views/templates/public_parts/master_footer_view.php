@@ -211,7 +211,7 @@
                     </div>
                     <input type="hidden" name="courses_id" value="" id="courses-id">
                     <div class="col-xs-12">
-                        <?php echo form_submit(array('type' => 'submit', 'name' => 'submit'), 'Courses Registered', 'class="btn btn-primary btn-register"'); ?>
+                        <?php echo form_submit(array('type' => 'submit', 'name' => 'submit'), 'Courses Register', 'class="btn btn-primary btn-register"'); ?>
                         <br>
                     </div>
 
@@ -231,6 +231,8 @@
         </div>
     </div>
 </div>
+
+
 
 
 <script src="<?php echo site_url('assets/js/') ?>client.js"></script>

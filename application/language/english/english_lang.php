@@ -43,6 +43,7 @@ $lang['our-methods'] = 'OUR METHODS';
  */
 $lang['courses-title'] = 'myIELTS Courses';
 $lang['detail-courses'] = 'Detail Courses';
+$lang['opening'] = 'Opening Day';
 
 /*
     Document

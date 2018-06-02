@@ -48,6 +48,7 @@ $lang['our-methods'] = 'PHƯƠNG PHÁP';
  */
 $lang['courses-title'] = 'Khóa Học myIELTS';
 $lang['detail-courses'] = 'Chi Tiết Khóa Học';
+$lang['opening'] = 'Khai giảng vào ngày';
 
 /*
     Document

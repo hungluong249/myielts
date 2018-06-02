@@ -27,6 +27,8 @@
 				<div class="section-body">
                     <p><?php echo $detail['courses_description'] ?></p>
                     <?php echo $detail['courses_content'] ?>
+
+					<h4><?php echo $this->lang->line('opening'); ?>: <?php echo $detail['opening'] ?></h4>
                 </div>
 				<div class="section-footer">
 					<p>Shared:</p>

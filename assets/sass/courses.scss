@@ -172,38 +172,4 @@
 
 }
 
-.btn-fixed{
-    border-radius: 4px;
-    padding: 8px;
 
-    position: fixed;
-    top: 50%;
-    right: 0;
-    -webkit-transform: translate(0,-50%);
-    -moz-transform: translate(0,-50%);
-    -ms-transform: translate(0,-50%);
-    -o-transform: translate(0,-50%);
-    transform: translate(0,-50%);
-}
-
-.modal{
-    .modal-body{
-        padding: 0;
-
-        .modal-cover{
-            width: 100%;
-            height: 400px;
-            overflow: hidden;
-
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-
-        .modal-text{
-            padding: 30px 15px;
-        }
-    }
-}

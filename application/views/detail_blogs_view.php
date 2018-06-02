@@ -114,3 +114,9 @@
         </div>
     </div>
 </div>
+
+<div class="btn-register">
+	<button class="btn btn-primary btn-fixed" data-toggle="modal" data-target="#register-courses">
+		<i class="fa fa-2x fa-pencil-square-o" aria-hidden="true"></i>
+	</button>
+</div>

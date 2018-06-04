@@ -57,7 +57,7 @@ class MY_Model extends CI_Model {
         return $result = $this->db->get()->num_rows();
     }
 
-    public function get_by_id($id, $select = array('title', 'description', 'content'), $lang = '') {
+    public function get_by_id($id, $select = array('title', 'description', 'content', 'time'), $lang = '') {
         $this->db->query('SET SESSION group_concat_max_len = 10000000');
         $this->db->select($this->table .'.*');
         if(in_array('title', $select)){
@@ -69,10 +69,14 @@ class MY_Model extends CI_Model {
         if(in_array('content', $select)){
             $this->db->select('GROUP_CONCAT('. $this->table_lang .'.content ORDER BY '. $this->table_lang .'.language separator \' ||| \') as '. $this->table .'_content');
         }
+        if(in_array('content', $select)){
+            $this->db->select('GROUP_CONCAT('. $this->table_lang .'.time ORDER BY '. $this->table_lang .'.language separator \' ||| \') as '. $this->table .'_time');
+        }
         if($select == null){
             $this->db->select('GROUP_CONCAT('. $this->table_lang .'.title ORDER BY '. $this->table_lang .'.language separator \' ||| \') as '. $this->table .'_title');
             $this->db->select('GROUP_CONCAT('. $this->table_lang .'.description ORDER BY '. $this->table_lang .'.language separator \' ||| \') as '. $this->table .'_description');
             $this->db->select('GROUP_CONCAT('. $this->table_lang .'.content ORDER BY '. $this->table_lang .'.language separator \' ||| \') as '. $this->table .'_content');
+            $this->db->select('GROUP_CONCAT('. $this->table_lang .'.time ORDER BY '. $this->table_lang .'.language separator \' ||| \') as '. $this->table .'_time');
         }
         
         $this->db->from($this->table);

@@ -27,9 +27,18 @@
                             <?php
                             echo form_label('Ảnh đại diện', 'image_shared');
                             echo form_error('image_shared');
-                            echo form_upload('image_shared', set_value('image_shared'), 'class="form-control"');
+                            echo form_upload('image_shared[]', set_value('image_shared'), 'class="form-control" multiple');
                             ?>
                             <br>
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <div class="form-group col-xs-12">
+                                <?php
+                                echo form_label('Mã Lớp', 'code_shared');
+                                echo form_error('code_shared');
+                                echo form_input('code_shared', set_value('code_shared'), 'class="form-control" ');
+                                ?>
+                            </div>
                         </div>
                         <div class="form-group col-xs-12">
                             <div class="form-group col-xs-12">
@@ -40,12 +49,22 @@
                                 ?>
                             </div>
                         </div>
+                        
                         <div class="form-group col-xs-12">
                             <div class="form-group col-xs-12">
                                 <?php
                                 echo form_label('Học phí (VND)', 'price_shared');
                                 echo form_error('price_shared');
-                                echo form_input(array('type' => 'text', 'name' => 'price_shared'), set_value('price_shared'), 'class="form-control" id="price_shared"');
+                                echo form_input(array('type' => 'text', 'name' => 'price_shared'), set_value('price_shared'), 'class="form-control price_shared"');
+                                ?>
+                            </div>
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <div class="form-group col-xs-12">
+                                <?php
+                                echo form_label('Học phí ưu đãi (VND)', 'discount_shared');
+                                echo form_error('discount_shared');
+                                echo form_input(array('type' => 'text', 'name' => 'discount_shared'), set_value('discount_shared'), 'class="form-control price_shared"');
                                 ?>
                             </div>
                         </div>
@@ -57,6 +76,22 @@
                                 echo form_input('slug_shared', set_value('slug_shared'), 'class="form-control" id="slug_shared" readonly');
                                 ?>
                             </div>
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <?php
+                            echo form_label('Banner Trên', 'imagetop_shared');
+                            echo form_error('imagetop_shared');
+                            echo form_upload('imagetop_shared', set_value('imagetop_shared'), 'class="form-control"');
+                            ?>
+                            <br>
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <?php
+                            echo form_label('Banner Dưới', 'imagebottom_shared');
+                            echo form_error('imagebottom_shared');
+                            echo form_upload('imagebottom_shared', set_value('imagebottom_shared'), 'class="form-control"');
+                            ?>
+                            <br>
                         </div>
                         <div class="form-group col-xs-12">
                             <div class="form-group col-xs-12">
@@ -93,6 +128,15 @@
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active" id="vi">
                                     <div class="form-group col-xs-12">
+                                        <div class="form-group col-xs-12">
+                                            <?php
+                                            echo form_label('Thời gian học', 'time_vi');
+                                            echo form_error('time_vi');
+                                            echo form_input('time_vi', set_value('time_vi'), 'class="form-control"');
+                                            ?>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-xs-12">
                                         <?php
                                         echo form_label('Tiêu đề', 'title_vi');
                                         echo form_error('title_vi');
@@ -115,6 +159,15 @@
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="en">
+                                    <div class="form-group col-xs-12">
+                                        <div class="form-group col-xs-12">
+                                            <?php
+                                            echo form_label('Study time', 'time_en');
+                                            echo form_error('time_en');
+                                            echo form_input('time_en', set_value('time_en'), 'class="form-control"');
+                                            ?>
+                                        </div>
+                                    </div>
                                     <div class="form-group col-xs-12">
                                         <?php
                                         echo form_label('Title', 'title_en');

@@ -61,8 +61,8 @@
                                 <label>Hình ảnh</label><br>
                                 <?php foreach (json_decode($detail['image']) as $key => $value): ?>
                                     <div class="dialog remove_<?php echo $key ?>"">
-                                        <img src="<?php echo base_url('assets/upload/about/'.$value) ?>" width=150 style="cursor: pointer;" class="btn-active-img" data-id="<?php echo $detail['id'] ?>" data-image="<?php echo $value ?>" data-key="<?php echo $key ?>" >
-                                        <a href="#" class="close-classic" data-id="<?php echo $detail['id'] ?>" data-image="<?php echo $value ?>" data-key="<?php echo $key ?>" ></a>
+                                        <img src="<?php echo base_url('assets/upload/about/'.$value) ?>" width=150 style="cursor: pointer;" class="btn-active-img" data-id="<?php echo $detail['id'] ?>" data-image="<?php echo $value ?>" data-key="<?php echo $key ?>" data-controller="about"  >
+                                        <a href="#" class="close-classic" data-id="<?php echo $detail['id'] ?>" data-image="<?php echo $value ?>" data-key="<?php echo $key ?>" data-controller="about"  ></a>
                                         <?php if ($value == $detail['avatar']): ?>
                                             <i class="fa fa-thumb-tack" aria-hidden="true" style="color: red"></i>
                                         <?php endif ?>

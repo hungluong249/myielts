@@ -143,6 +143,7 @@
 						</div>
 						<div class="section-body">
 							<?php echo $detail['courses_description'] ?>
+                            <h3 class="promise"><?php echo $this->lang->line('courses-promise'); ?>: <?php echo $detail['promise'] ?></h3>
 						</div>
 
 					</div>

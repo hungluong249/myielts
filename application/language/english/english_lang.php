@@ -48,6 +48,7 @@ $lang['opening'] = 'Opening Day';
 $lang['courses-description'] = 'About this course';
 $lang['courses-detail'] = 'Detail';
 $lang['courses-timetable'] = 'Opening Day';
+$lang['courses-promise'] = 'Output Level';
 
 /*
     Document

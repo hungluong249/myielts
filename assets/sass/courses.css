@@ -1152,6 +1152,8 @@ textarea {
 #fh5co-detail .content .section-body img {
   max-width: 100% !important;
   margin: 15px auto; }
+#fh5co-detail .content .section-body .promise {
+  color: #B61E2D; }
 #fh5co-detail .right .panel-default .panel-body form label {
   font-size: .875em; }
 #fh5co-detail .right .panel-default .btn {

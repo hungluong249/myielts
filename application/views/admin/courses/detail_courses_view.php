@@ -97,6 +97,10 @@
                                             <th>Lịch Khai Giảng</th>
                                             <td><?php echo $detail['opening'] ?> </td>
                                         </tr>
+										<tr>
+											<th>Cam kết đầu ra</th>
+											<td><?php echo $detail['promise'] ?> </td>
+										</tr>
                                         <tr>
                                             <th>Học Phí</th>
                                             <td><?php echo number_format($detail['price']) ?> <strong> VND</strong></td>

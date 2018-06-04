@@ -24,15 +24,14 @@
 					<div class="fh5co-item">
 						<div class="mask">
 							<a href="<?php echo base_url('courses/detail/'. $value['slug']) ?>">
-								<img src="<?php echo base_url('assets/upload/courses/'. $value['image']) ?>" alt="popular course img">
+								<img src="<?php echo base_url('assets/upload/courses/'. $value['avatar']) ?>" alt="popular course img">
 							</a>
 						</div>
 						<a class="link" href="<?php echo base_url('courses/detail/'. $value['slug']) ?>">
 							<h3><?php echo $value['title'] ?></h3>
 						</a>
 						<span class="fh5co-price"><?php echo number_format($value['price']) ?> vnd</span>
-						<p><?php echo $value['description'] ?></p>
-						<!--<h4><?php echo $this->lang->line('opening'); ?>: <?php echo $value['opening'] ?></h4>-->
+						<?php echo $value['description'] ?>
 						<a href="<?php echo base_url('courses/detail/'. $value['slug']) ?>" class="btn btn-default" role="button"><?php echo $this->lang->line('see-more'); ?></a>
 						<button type="button" class="btn btn-primary btn-register-courses" role="button" data-toggle="modal" data-target="#register-courses" data-id="<?php echo $value['id'] ?>"><?php echo $this->lang->line('register') ?>!</button>
 					</div>

@@ -37,7 +37,7 @@ $(document).ready(function(){
         return x1 + x2;
     }
 
-    $('#price_shared').on('input', function(e){        
+    $('.price_shared').on('input', function(e){        
         $(this).val(formatCurrency(this.value.replace(/[,VNĐ]/g,'')));
     }).on('keypress',function(e){
         if(!$.isNumeric(String.fromCharCode(e.which))) e.preventDefault();
@@ -51,7 +51,7 @@ $(document).ready(function(){
         return  n2.split('').reverse().join('');
     }
     
-    $('#price_shared').each(function(e){        
+    $('.price_shared').each(function(e){        
         $(this).val(formatCurrency(this.value.replace(/[,VNĐ]/g,'')));
     }).on('keypress',function(e){
         if(!$.isNumeric(String.fromCharCode(e.which))) e.preventDefault();

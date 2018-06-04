@@ -76,7 +76,7 @@
                                         <td><?php echo $i++ ?></td>
                                         <td>
                                             <div class="mask_sm">
-                                                <img src="<?php echo base_url('assets/upload/courses/'. $value['image']) ?>" alt="anh-cua-<?php echo $value['slug'] ?>" width=150 >
+                                                <img src="<?php echo base_url('assets/upload/courses/'. json_decode($value['image'])[0]) ?>" alt="anh-cua-<?php echo $value['slug'] ?>" width=150 >
                                             </div>
                                         </td>
                                         <td><?php echo $value['title'] ?></td>

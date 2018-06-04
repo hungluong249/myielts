@@ -1,3 +1,36 @@
+<style type="text/css">
+    .image-file{
+        display: none;
+    }
+
+    [class*='close-'] {
+      color: #777;
+      font: 14px/100% arial, sans-serif;
+      position: absolute;
+      right: 5px;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #fff;
+      top: 5px;
+    }
+
+    .close-classic:after {
+        content: '✖'; /* ANSI X letter */
+         color: red;
+    }
+    .close-classic:hover{
+        color: #ffffff;
+    }
+    /* Dialog */
+
+    .dialog {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        float: left;
+        margin: 20px;
+        position: relative;
+        width: 150px;
+    }
+</style>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -25,9 +58,20 @@
 
                         <div class="form-group col-xs-12">
                             <?php
-                            echo form_label('Ảnh đại diện đang sử dụng', 'image_old_shared');
+                            echo form_label('Ảnh đại diện đang sử dụng', 'image_old_shared').'<br>';
+                            $image = json_decode($detail['image']);
                             ?>
-                            <img src="<?php echo base_url('assets/upload/courses/'.$detail['image']) ?>" alt="anh-cua-<?php echo $detail['slug'] ?>" style="display: block;" width=150>
+                            <?php foreach (json_decode($detail['image']) as $key => $value): ?>
+                                    <div class="dialog remove_<?php echo $key ?>"">
+                                    <div class="mask-sm">
+                                        <img src="<?php echo base_url('assets/upload/courses/'.$value) ?>" width=150 style="cursor: pointer;" class="btn-active-img" data-id="<?php echo $detail['id'] ?>" data-image="<?php echo $value ?>" data-key="<?php echo $key ?>" data-controller="courses" >
+                                        <a href="#" class="close-classic" data-id="<?php echo $detail['id'] ?>" data-image="<?php echo $value ?>" data-key="<?php echo $key ?>"  data-controller="courses" ></a>
+                                        <?php if ($value == $detail['avatar']): ?>
+                                            <i class="fa fa-thumb-tack" aria-hidden="true" style="color: red"></i>
+                                        <?php endif ?>
+                                    </div>
+                                </div>
+                            <?php endforeach ?>
                             <br>
                         </div>
 
@@ -35,9 +79,18 @@
                             <?php
                             echo form_label('Ảnh đại diện', 'image_shared');
                             echo form_error('image_shared');
-                            echo form_upload('image_shared', set_value('image_shared'), 'class="form-control"');
+                            echo form_upload('image_shared[]', set_value('image_shared'), 'class="form-control" multiple');
                             ?>
                             <br>
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <div class="form-group col-xs-12">
+                                <?php
+                                echo form_label('Mã Lớp', 'code_shared');
+                                echo form_error('code_shared');
+                                echo form_input('code_shared', set_value('code_shared', $detail['code']), 'class="form-control" ');
+                                ?>
+                            </div>
                         </div>
                         <div class="form-group col-xs-12">
                             <div class="form-group col-xs-12">
@@ -53,7 +106,16 @@
                                 <?php
                                 echo form_label('Học phí (VND)', 'price_shared');
                                 echo form_error('price_shared');
-                                echo form_input(array('type' => 'text', 'name' => 'price_shared'), $detail['price'], 'class="form-control" id="price_shared"');
+                                echo form_input(array('type' => 'text', 'name' => 'price_shared'), $detail['price'], 'class="form-control price_shared"');
+                                ?>
+                            </div>
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <div class="form-group col-xs-12">
+                                <?php
+                                echo form_label('Học phí ưu đãi (VND)', 'discount_shared');
+                                echo form_error('discount_shared');
+                                echo form_input(array('type' => 'text', 'name' => 'discount_shared'), $detail['discount'], 'class="form-control price_shared"');
                                 ?>
                             </div>
                         </div>
@@ -65,6 +127,36 @@
                                 echo form_input('slug_shared', $detail['slug'], 'class="form-control" id="slug_shared" readonly');
                                 ?>
                             </div>
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <?php
+                            echo form_label('Banner trên đang sử dụng', 'imagetop_old_shared');
+                            ?>
+                            <img src="<?php echo base_url('assets/upload/courses/'.$detail['image_top']) ?>" alt="anh-cua-<?php echo $detail['slug'] ?>" style="display: block;" width=150>
+                            <br>
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <?php
+                            echo form_label('Banner Trên', 'imagetop_shared');
+                            echo form_error('imagetop_shared');
+                            echo form_upload('imagetop_shared', set_value('imagetop_shared'), 'class="form-control"');
+                            ?>
+                            <br>
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <?php
+                            echo form_label('Banner dưới đang sử dụng', 'imagebottom_old_shared');
+                            ?>
+                            <img src="<?php echo base_url('assets/upload/courses/'.$detail['image_bottom']) ?>" alt="anh-cua-<?php echo $detail['slug'] ?>" style="display: block;" width=150>
+                            <br>
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <?php
+                            echo form_label('Banner Dưới', 'imagebottom_shared');
+                            echo form_error('imagebottom_shared');
+                            echo form_upload('imagebottom_shared', set_value('imagebottom_shared'), 'class="form-control"');
+                            ?>
+                            <br>
                         </div>
                         <div class="form-group col-xs-12">
                             <div class="form-group col-xs-12">
@@ -101,6 +193,15 @@
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active" id="vi">
                                     <div class="form-group col-xs-12">
+                                        <div class="form-group col-xs-12">
+                                            <?php
+                                            echo form_label('Thời gian học', 'time_vi');
+                                            echo form_error('time_vi');
+                                            echo form_input('time_vi', $detail['time_vi'], 'class="form-control"');
+                                            ?>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-xs-12">
                                         <?php
                                         echo form_label('Tiêu đề', 'title_vi');
                                         echo form_error('title_vi');
@@ -123,6 +224,15 @@
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="en">
+                                    <div class="form-group col-xs-12">
+                                        <div class="form-group col-xs-12">
+                                            <?php
+                                            echo form_label('Study time', 'time_en');
+                                            echo form_error('time_en');
+                                            echo form_input('time_en', $detail['time_en'], 'class="form-control"');
+                                            ?>
+                                        </div>
+                                    </div>
                                     <div class="form-group col-xs-12">
                                         <?php
                                         echo form_label('Title', 'title_en');

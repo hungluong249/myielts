@@ -1,5 +1,37 @@
 <link rel="stylesheet" href="<?php echo site_url('assets/sass/admin/') ?>detail.css">
+<style type="text/css">
+    .image-file{
+        display: none;
+    }
 
+    [class*='close-'] {
+      color: #777;
+      font: 14px/100% arial, sans-serif;
+      position: absolute;
+      right: 5px;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #fff;
+      top: 5px;
+    }
+
+    .close-classic:after {
+        content: '✖'; /* ANSI X letter */
+         color: red;
+    }
+    .close-classic:hover{
+        color: #ffffff;
+    }
+    /* Dialog */
+
+    .dialog {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        float: left;
+        margin: 20px;
+        position: relative;
+        width: 150px;
+    }
+</style>
 
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -27,22 +59,39 @@
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="row">
-                            <div class="detail-image col-md-6">
+                            <div class="detail-image col-md-12">
                                 <label>Hình ảnh</label>
                                 <div class="row">
-                                    <div class="item col-md-12">
-                                        <div class="mask-lg">
-                                            <img src="<?php echo base_url('assets/upload/courses/'. $detail['image'] ) ?>" alt="Image Detail">
+                                    <?php foreach (json_decode($detail['image']) as $key => $value): ?>
+                                        <div class="item dialog">
+                                            <img src="<?php echo base_url('assets/upload/courses/'.$value) ?>" width=150 style="cursor: pointer;" class="btn-active-img" data-id="<?php echo $detail['id'] ?>" data-image="<?php echo $value ?>" data-key="<?php echo $key ?>" data-controller="courses" >
+                                            <a href="#" class="close-classic" data-id="<?php echo $detail['id'] ?>" data-image="<?php echo $value ?>" data-key="<?php echo $key ?>"  data-controller="courses" ></a>
+                                            <?php if ($value == $detail['avatar']): ?>
+                                                <i class="fa fa-thumb-tack" aria-hidden="true" style="color: red"></i>
+                                            <?php endif ?>
                                         </div>
+                                    <?php endforeach ?>
+                                </div>
+                                <label>Banner</label>
+                                <div class="row">
+                                    <div class="item col-md-6">
+                                        <img src="<?php echo base_url('assets/upload/courses/'. $detail['image_top'] ) ?>" alt="Image Detail" style="width: 100%">
+                                    </div>
+                                    <div class="item col-md-6">
+                                        <img src="<?php echo base_url('assets/upload/courses/'. $detail['image_bottom'] ) ?>" alt="Image Detail" style="width: 100%">
                                     </div>
                                 </div>
                             </div>
-                            <div class="detail-info col-md-6">
+                            <div class="detail-info col-md-12">
                                 <div class="table-responsive">
                                     <label>Thông tin</label>
                                     <table class="table table-striped">
                                         <tr>
                                             <th colspan="2">Thông tin cơ bản</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Mã Lớp</th>
+                                            <td><?php echo $detail['code'] ?> </td>
                                         </tr>
                                         <tr>
                                             <th>Lịch Khai Giảng</th>
@@ -51,6 +100,10 @@
                                         <tr>
                                             <th>Học Phí</th>
                                             <td><?php echo number_format($detail['price']) ?> <strong> VND</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Học Phí Ưu Đãi</th>
+                                            <td><?php echo number_format($detail['discount']) ?> <strong> VND</strong></td>
                                         </tr>
                                         <tr>
                                             <th>Slug</th>
@@ -90,6 +143,10 @@
                                             <table class="table table-striped">
                                                 <tbody>
                                                     <tr>
+                                                        <th style="width: 130px">Thời gian học: </th>
+                                                        <td><?php echo $detail['time_vi'] ?></td>
+                                                    </tr>
+                                                    <tr>
                                                         <th style="width: 100px">Tiêu đề: </th>
                                                         <td><?php echo $detail['title_vi'] ?></td>
                                                     </tr>
@@ -109,6 +166,10 @@
                                         <div class="table-responsive">
                                             <table class="table table-striped">
                                                 <tbody>
+                                                    <tr>
+                                                        <th style="width: 130px">Study time: </th>
+                                                        <td><?php echo $detail['time_en'] ?></td>
+                                                    </tr>
                                                     <tr>
                                                         <th style="width: 100px">Title: </th>
                                                         <td><?php echo $detail['title_en'] ?></td>

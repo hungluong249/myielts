@@ -47,7 +47,7 @@
                                             <?php foreach (json_decode($about['image']) as $key => $value): ?>
                                                 <div class="col-md-2">
                                                     <span style="cursor: pointer;">
-                                                        <img src="<?php echo base_url('assets/upload/about/'.$value) ?>" alt="Image Detail" width="150px" class="btn-active-img" data-id="<?php echo $about['id'] ?>" data-image="<?php echo $value ?>" data-key="<?php echo $key ?>" >
+                                                        <img src="<?php echo base_url('assets/upload/about/'.$value) ?>" alt="Image Detail" width="150px" class="btn-active-img" data-id="<?php echo $about['id'] ?>" data-image="<?php echo $value ?>" data-key="<?php echo $key ?>" data-controller="about"  >
                                                         <?php echo ($value == $about['avatar'])? '<i class="fa fa-check" aria-hidden="true"></i>' : '' ?>
                                                     </span>
                                                 </div>

@@ -39,6 +39,7 @@ $(document).ready(function(){
         height: 300,
         relative_urls: false,
         remove_script_host: false,
+        forced_root_block : false,
         plugins: [
             "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
             "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",

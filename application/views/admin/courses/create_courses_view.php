@@ -68,6 +68,15 @@
                                 ?>
                             </div>
                         </div>
+						<div class="form-group col-xs-12">
+							<div class="form-group col-xs-12">
+                                <?php
+                                echo form_label('Cam kết đầu ra', 'promise_shared');
+                                echo form_error('promise_shared');
+                                echo form_input(array('type' => 'text', 'name' => 'promise_shared'), set_value('promise_shared'), 'class="form-control"');
+                                ?>
+							</div>
+						</div>
                         <div class="form-group col-xs-12">
                             <div class="form-group col-xs-12">
                                 <?php

@@ -53,6 +53,7 @@ $lang['opening'] = 'Khai giảng vào ngày';
 $lang['courses-description'] = 'Tổng quan khoá học';
 $lang['courses-detail'] = 'Chi tiết khoá học';
 $lang['courses-timetable'] = 'Lịch khai giảng';
+$lang['courses-promise'] = 'Cam kết đầu ra';
 
 $lang['timetable-course'] = 'Tên khoá học';
 $lang['timetable-class'] = 'Mã lớp';

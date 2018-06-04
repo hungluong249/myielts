@@ -44,7 +44,7 @@
 				<ul class="fh5co-footer-links">
 					<li>6th floor, 66A Trần Thái Tông, <br> Dịch Vọng Hậu, Cầu Giấy, Hà Nội</li>
 					<li><a href="tel://0915355490">+ 0915.355.490</a></li>
-					<li><a href="mailto:info@myielts.com">info@myielts.vn</a></li>
+					<li><a href="mailto:myielts.edu.vn@gmail.com">myielts.edu.vn@gmail.com</a></li>
 				</ul>
 			</div>
 
@@ -104,7 +104,7 @@
                         echo form_input('register_name', set_value('register_name'), 'class="form-control" id="register_name"');
                         ?>
                     </div>
-                    
+
                     <div class="form-group col-xs-12">
                         <?php
                         echo form_label($this->lang->line('register-phone') .' (*)', 'register_phone');

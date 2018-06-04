@@ -292,7 +292,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative; }
 
 .fh5co-section {
-  padding: 7em 0; }
+  padding: 30px 0; }
   .fh5co-section p {
     color: #666;
     font-size: .875em;
@@ -1065,7 +1065,7 @@ textarea {
   #fh5co-about .img-wrap img {
     max-width: 100%; } }
 #fh5co-featured-menu .fh5co-heading, #fh5co-gallery .fh5co-heading, #fh5co-reservation-form .fh5co-heading {
-  margin-bottom: 170px; }
+  margin-bottom: 70px; }
 
 @media screen and (max-width: 768px) {
   #fh5co-featured-menu .fh5co-heading, #fh5co-gallery .fh5co-heading, #fh5co-reservation-form .fh5co-heading {

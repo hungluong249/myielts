@@ -111,7 +111,7 @@
                                         <?php
                                         echo form_label('Giới thiệu', 'description_vi');
                                         echo form_error('description_vi');
-                                        echo form_textarea('description_vi', $detail['description_vi'], 'class="form-control" rows="5" ')
+                                        echo form_textarea('description_vi', $detail['description_vi'], 'class="tinymce-area form-control" ')
                                         ?>
                                     </div>
                                     <div class="form-group col-xs-12">
@@ -134,7 +134,7 @@
                                         <?php
                                         echo form_label('Description', 'description_en');
                                         echo form_error('description_en');
-                                        echo form_textarea('description_en', $detail['description_en'], 'class="form-control" rows="5" ')
+                                        echo form_textarea('description_en', $detail['description_en'], 'class="tinymce-area form-control"')
                                         ?>
                                     </div>
                                     <div class="form-group col-xs-12">

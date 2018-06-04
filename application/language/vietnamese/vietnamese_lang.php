@@ -50,6 +50,20 @@ $lang['courses-title'] = 'Khóa Học myIELTS';
 $lang['detail-courses'] = 'Chi Tiết Khóa Học';
 $lang['opening'] = 'Khai giảng vào ngày';
 
+$lang['courses-description'] = 'Tổng quan khoá học';
+$lang['courses-detail'] = 'Chi tiết khoá học';
+$lang['courses-timetable'] = 'Lịch khai giảng';
+
+$lang['timetable-course'] = 'Tên khoá học';
+$lang['timetable-class'] = 'Mã lớp';
+$lang['timetable-time'] = 'Thời gian học';
+$lang['timetable-opening'] = 'Khai giảng';
+$lang['timetable-fee'] = 'Học phí';
+$lang['timetable-non-discount'] = 'Học phí gốc';
+$lang['timetable-fee-discount'] = 'Học phí ưu đãi';
+$lang['timetable-register'] = 'Đăng ký';
+
+
 /*
     Document
  */
@@ -86,11 +100,14 @@ $lang['submit'] = 'Gửi tin nhắn';
 /*
     Register
  */
+$lang['register-title'] = 'Khoá học đăng ký';
 $lang['register-name'] = 'Tên của bạn';
 $lang['register-phone'] = 'Số điện thoại của bạn';
 $lang['register-age'] = 'Tuổi của bạn';
 $lang['register-office'] = 'Nơi Làm Việc/ Trường Học';
 $lang['register-email'] = 'Email của bạn';
+$lang['register-submit'] = 'Đăng ký';
+$lang['register-info'] = '(Thông tin của bạn được bảo mật và chỉ sử dụng trong hoạt động tư vấn của myIELTS. Tư vấn viên sẽ gọi điện cho bạn trong 24h tới)';
 
 /*
     Modal

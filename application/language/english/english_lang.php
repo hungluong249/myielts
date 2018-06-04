@@ -45,6 +45,10 @@ $lang['courses-title'] = 'myIELTS Courses';
 $lang['detail-courses'] = 'Detail Courses';
 $lang['opening'] = 'Opening Day';
 
+$lang['courses-description'] = 'About this course';
+$lang['courses-detail'] = 'Detail';
+$lang['courses-timetable'] = 'Opening Day';
+
 /*
     Document
  */
@@ -71,11 +75,14 @@ $lang['contact-send'] = 'Send Message';
 /*
     Register
  */
+$lang['register-title'] = 'Course Registed';
 $lang['register-name'] = 'Full Name';
 $lang['register-phone'] = 'Your Phone Number';
 $lang['register-age'] = 'Your Age';
 $lang['register-office'] = 'Sorkplace/ School';
 $lang['register-email'] = 'Email';
+$lang['register-submit'] = 'Submit';
+$lang['register-info'] = '(Your information is confidential and will only be used in myIELTS, and will be contacted within 24 hours.)';
 
 // Medicine
 $lang['medicine_title'] = 'Medicine';

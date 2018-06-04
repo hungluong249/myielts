@@ -292,7 +292,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative; }
 
 .fh5co-section {
-  padding: 7em 0; }
+  padding: 30px 0; }
   .fh5co-section p {
     color: #666;
     font-size: .875em;
@@ -1058,6 +1058,9 @@ textarea {
 * 	COURSES STYLE
 *
 * ======================================================= */
+#fh5co-header {
+  height: 200px; }
+
 #fh5co-featured-menu .fh5co-heading {
   margin-bottom: 170px; }
 #fh5co-featured-menu .fh5co-tabs .nav-pills {
@@ -1128,12 +1131,25 @@ textarea {
 @media screen and (max-width: 480px) {
   #fh5co-featured-menu .fh5co-item.margin_top {
     margin-top: 0; } }
+.header.container-fluid {
+  padding-left: 0;
+  padding-right: 0; }
+  .header.container-fluid .row {
+    padding-top: 50px;
+    padding-bottom: 50px; }
+    .header.container-fluid .row .slide {
+      min-height: 400px; }
+      .header.container-fluid .row .slide .carousel-control {
+        background-image: none; }
+
 #fh5co-detail .fh5co-header .overlay h3 {
   color: #fff; }
-#fh5co-detail .left .section-body table {
+#fh5co-detail .content .section-heading {
+  padding-top: 30px; }
+#fh5co-detail .content .section-body table {
   font-size: .875em;
   font-weight: 300; }
-#fh5co-detail .left .section-body img {
+#fh5co-detail .content .section-body img {
   max-width: 100% !important;
   margin: 15px auto; }
 #fh5co-detail .right .panel-default .panel-body form label {

@@ -32,7 +32,7 @@
 						</a>
 						<span class="fh5co-price"><?php echo number_format($value['price']) ?> vnd</span>
 						<p><?php echo $value['description'] ?></p>
-						<h4><?php echo $this->lang->line('opening'); ?>: <?php echo $value['opening'] ?></h4>
+						<!--<h4><?php echo $this->lang->line('opening'); ?>: <?php echo $value['opening'] ?></h4>-->
 						<a href="<?php echo base_url('courses/detail/'. $value['slug']) ?>" class="btn btn-default" role="button"><?php echo $this->lang->line('see-more'); ?></a>
 						<button type="button" class="btn btn-primary btn-register-courses" role="button" data-toggle="modal" data-target="#register-courses" data-id="<?php echo $value['id'] ?>"><?php echo $this->lang->line('register') ?>!</button>
 					</div>

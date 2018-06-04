@@ -13,6 +13,10 @@
 *
 * ======================================================= */
 
+#fh5co-header{
+    height: 200px;
+}
+
 #fh5co-featured-menu{
     .fh5co-heading{
         margin-bottom: 170px;
@@ -122,7 +126,32 @@
     }
 }
 
+.header{
+    &.container-fluid{
+        padding-left: 0;
+        padding-right: 0;
+
+        .row{
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            .panel{
+
+            }
+
+            .slide{
+                min-height: 400px;
+
+                .carousel-control{
+                    background-image: none;
+                }
+            }
+        }
+    }
+}
+
 #fh5co-detail{
+
     .fh5co-header{
         .overlay{
             h3{
@@ -131,9 +160,9 @@
         }
     }
 
-    .left{
+    .content{
         .section-heading{
-
+            padding-top: 30px;
         }
 
         .section-body{

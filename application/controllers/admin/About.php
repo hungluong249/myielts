@@ -28,7 +28,7 @@ class About extends Admin_Controller {
         if (!is_numeric($id)) {
             redirect('admin/about', 'refresh');
         }
-        $detail = $this->about_model->get_by_id($id);
+        $detail = $this->about_model->get_by_id($id, $this->request_language_template);
         if(!$detail){
             redirect('admin/about', 'refresh');
         }
@@ -100,7 +100,7 @@ class About extends Admin_Controller {
     public function remove_image(){
         $id = $this->input->get('id');
         $image = $this->input->get('image');
-        $detail = $this->about_model->get_by_id($id);
+        $detail = $this->about_model->get_by_id($id, $this->request_language_template);
         if ($image == $detail['avatar']) {
             return $this->output
                 ->set_content_type('application/json')

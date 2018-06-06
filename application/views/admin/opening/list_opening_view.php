@@ -63,7 +63,8 @@
                                     <th>No.</th>
                                     <th>Hình ảnh</th>
                                     <th>Tiêu đề</th>
-                                    <th>Detail</th>
+                                    <th>Chi Tiết</th>
+                                    <th>Kich Hoạt</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -80,8 +81,15 @@
                                         </td>
                                         <td><?php echo $value['title'] ?></td>
                                         <td>
-                                            <a href="<?php echo base_url('admin/opening/detail/'.$value['id']) ?>"
-                                            <button class="btn btn-default btn-sm" type="button" data-toggle="collapse" data-target="#collapse_1" aria-expanded="false" aria-controls="collapse_1" target="_blank" >Xem Chi Tiết</button>
+                                            <a href="<?php echo base_url('admin/opening/detail/'.$value['id']) ?>" >
+                                            <button class="btn btn-default btn-sm" type="button" data-toggle="collapse" data-target="#collapse_1" aria-expanded="false" aria-controls="collapse_1" target="_blank" >Xem Chi Tiết</button></a>
+                                        </td>
+                                        <td class="row-active-<?php echo $value['id'] ?> btn-row-active">
+                                            <?php if ($value['is_activated'] == 0): ?>
+                                                <button class="btn btn-warning btn-sm btn-active-admin" type="button" data-id="<?php echo $value['id'] ?>">Không Kích Hoạt</button>
+                                            <?php else: ?>
+                                                <button class="btn btn-success btn-sm btn-deactive-admin" type="button" data-id="<?php echo $value['id'] ?>">Đang Kích Hoạt</button>
+                                            <?php endif ?>
                                         </td>
                                         <td>
                                             <a href="<?php echo base_url('admin/opening/edit/'. $value['id']) ?>" class="dataActionEdit"><i class="fa fa-pencil" aria-hidden="true"></i> </a>
@@ -102,7 +110,8 @@
                                     <th>No.</th>
                                     <th>Hình ảnh</th>
                                     <th>Tiêu đề</th>
-                                    <th>Detail</th>
+                                    <th>Chi Tiết</th>
+                                    <th>Kich Hoạt</th>
                                     <th>Action</th>
                                 </tr>
                                 </tfoot>

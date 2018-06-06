@@ -99,7 +99,7 @@ class Opening extends Admin_Controller {
     }
 
     public function edit($id = null){
-        $detail = $this->opening_model->get_by_id($id);
+        $detail = $this->opening_model->get_by_id($id, $this->request_language_template);
         if(!$detail){
             redirect('admin/opening/index','refresh');
         }
@@ -167,7 +167,7 @@ class Opening extends Admin_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        $detail = $this->opening_model->get_by_id($id);
+        $detail = $this->opening_model->get_by_id($id, $this->request_language_template);
         $detail = build_language('opening', $detail, $this->request_language_template, $this->page_languages);
         $this->data['detail'] = $detail;
 
@@ -186,6 +186,38 @@ class Opening extends Admin_Controller {
                 ->set_content_type('application/json')
                 ->set_status_header(200)
                 ->set_output(json_encode(array('status' => 200, 'reponse' => $reponse)));
+        }
+            return $this->output
+                    ->set_content_type('application/json')
+                    ->set_status_header(400)
+                    ->set_output(json_encode(array('status' => 400)));
+    }
+
+    public function active(){
+        $id = $this->input->get('id');
+        $data = array('is_activated' => 1);
+        $update = $this->opening_model->common_update($id, $data);
+        if($update == 1){
+            return $this->output
+                ->set_content_type('application/json')
+                ->set_status_header(200)
+                ->set_output(json_encode(array('status' => 200)));
+        }
+            return $this->output
+                    ->set_content_type('application/json')
+                    ->set_status_header(400)
+                    ->set_output(json_encode(array('status' => 400)));
+    }
+
+    public function deactive(){
+        $id = $this->input->get('id');
+        $data = array('is_activated' => 0);
+        $update = $this->opening_model->common_update($id, $data);
+        if($update == 1){
+            return $this->output
+                ->set_content_type('application/json')
+                ->set_status_header(200)
+                ->set_output(json_encode(array('status' => 200)));
         }
             return $this->output
                     ->set_content_type('application/json')

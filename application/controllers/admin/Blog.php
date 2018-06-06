@@ -113,7 +113,7 @@ class Blog extends Admin_Controller {
     }
 
     public function edit($id = null){
-        $detail = $this->blog_model->get_by_id($id);
+        $detail = $this->blog_model->get_by_id($id, $this->request_language_template);
         if(!$detail){
             redirect('admin/blog/index','refresh');
         }
@@ -187,7 +187,7 @@ class Blog extends Admin_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        $detail = $this->blog_model->get_by_id($id);
+        $detail = $this->blog_model->get_by_id($id, $this->request_language_template);
         $detail = build_language('blog', $detail, $this->request_language_template, $this->page_languages);
         $cate_title = $this->category_model->get_by_id($detail['category_id'], array('title'), 'vi');
         $detail['cate_title'] = $cate_title['category_title'];

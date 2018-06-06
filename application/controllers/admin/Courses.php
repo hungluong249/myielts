@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Courses extends Admin_Controller {
 	private $request_language_template = array(
-        'time', 'title', 'description', 'content'
+        'time', 'title', 'description', 'content', 'introduce'
     );
     private $author_data = array();
 
@@ -154,6 +154,7 @@ class Courses extends Admin_Controller {
                     'opening' => $this->input->post('opening_shared'),
                     'code' => $this->input->post('code_shared'),
                     'price' => str_replace(',','',$this->input->post('price_shared')),
+                    'discount' => str_replace(',','',$this->input->post('discount_shared')),
                     'promise' => $this->input->post('promise_shared'),
                     'meta_keywords' => $this->input->post('metakeywords_shared'),
                     'meta_description' => $this->input->post('metadescription_shared'),

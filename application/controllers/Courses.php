@@ -37,7 +37,7 @@ class Courses extends Public_Controller {
         $this->data['page'] = ($this->uri->segment($uri_segment)) ? $this->uri->segment($uri_segment) : 0;
 
 
-        $result = $this->courses_model->get_all_field('desc', array('title', 'description', 'content'), $this->data['lang'], $per_page, $this->data['page']);
+        $result = $this->courses_model->get_all_field('desc', array('title', 'description', 'content', 'introduce'), $this->data['lang'], $per_page, $this->data['page']);
         $this->data['result'] = $result;
 
         $this->render('courses_view');
@@ -48,7 +48,7 @@ class Courses extends Public_Controller {
         $this->data['current_slug'] = $slug;
 
 
-        $detail = $this->courses_model->get_by_slug($slug, array('title', 'description', 'content'), $this->data['lang']);
+        $detail = $this->courses_model->get_by_slug($slug, array('title', 'description', 'content', 'time', 'introduce'), $this->data['lang']);
         $this->data['detail'] = $detail;
         $this->data['meta_keywords'] = $detail['meta_keywords'];
         $this->data['meta_description'] = $detail['meta_description'];

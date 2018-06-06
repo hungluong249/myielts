@@ -86,9 +86,9 @@
                                         </td>
                                         <td class="row-active-<?php echo $value['id'] ?> btn-row-active">
                                             <?php if ($value['is_activated'] == 0): ?>
-                                                <button class="btn btn-warning btn-sm btn-active-admin" type="button" data-id="<?php echo $value['id'] ?>">Không Kích Hoạt</button>
+                                                <button class="btn btn-warning btn-sm btn-active-admin" type="button" data-id="<?php echo $value['id'] ?>" data-controller="opening">Không Kích Hoạt</button>
                                             <?php else: ?>
-                                                <button class="btn btn-success btn-sm btn-deactive-admin" type="button" data-id="<?php echo $value['id'] ?>">Đang Kích Hoạt</button>
+                                                <button class="btn btn-success btn-sm btn-deactive-admin" type="button" data-id="<?php echo $value['id'] ?>" data-controller="opening">Đang Kích Hoạt</button>
                                             <?php endif ?>
                                         </td>
                                         <td>

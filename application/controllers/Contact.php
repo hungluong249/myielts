@@ -50,7 +50,7 @@ class Contact extends Public_Controller {
         $mail->Username = "myielts.hosting@gmail.com"; // your SMTP username or your gmail username
         $mail->Password = "lrybgozzrrdazrqh"; // your SMTP password or your gmail password
         $from = "myielts.hosting@gmail.com"; // Reply to this email
-        $to = "hung.luong@matocreative.vn"; // Recipients email ID
+        $to = "myielts.edu.vn@gmail.com"; // Recipients email ID
         $name = 'WEBMAIL'; // Recipient's name
         $mail->From = $from;
         $mail->FromName = $name; // Name to indicate where the email came from when the recepient received

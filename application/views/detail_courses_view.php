@@ -83,16 +83,13 @@
 
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
-						<div class="item active">
+						<?php foreach (json_decode($detail['image'])as $key => $value): ?>
+						<div class="item <?php echo ($key == 0)? 'active' : '' ?>">
 							<div class="mask">
-								<img src="..." alt="...">
+								<img src="<?php echo base_url('assets/upload/courses/' . $value) ?>" alt="...">
 							</div>
 						</div>
-						<div class="item">
-							<div class="mask">
-								<img src="..." alt="...">
-							</div>
-						</div>
+						<?php endforeach; ?>
 					</div>
 
 					<!-- Controls -->
@@ -177,12 +174,12 @@
 								</thead>
 								<tbody>
 								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td><?php echo $detail['courses_title'] ?></td>
+									<td><?php echo $detail['code'] ?></td>
+									<td><?php echo $detail['courses_time'] ?></td>
+									<td><?php echo $detail['opening'] ?></td>
+									<td><?php echo number_format($detail['price']) ?></td>
+									<td><?php echo ($detail['discount'] == null)? number_format($detail['discount']) : number_format($detail['price']) ?></td>
 									<td>
 										<button class="btn btn-primary" data-toggle="modal" data-target="#register">
                                             <?php echo $this->lang->line('timetable-register'); ?>

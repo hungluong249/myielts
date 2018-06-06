@@ -155,7 +155,11 @@
                                                         <td><?php echo $detail['title_vi'] ?></td>
                                                     </tr>
                                                     <tr>
-                                                        <th style="width: 100px">Giới thiệu: </th>
+                                                        <th style="width: 100px">Giới Thiệu: </th>
+                                                        <td><?php echo $detail['introduce_vi'] ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="width: 100px">Tổng Quan: </th>
                                                         <td><?php echo $detail['description_vi'] ?></td>
                                                     </tr>
                                                     <tr>
@@ -180,6 +184,10 @@
                                                     </tr>
                                                     <tr>
                                                         <th style="width: 100px">Description: </th>
+                                                        <td><?php echo $detail['introduce_en'] ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="width: 100px">Overview: </th>
                                                         <td><?php echo $detail['description_en'] ?></td>
                                                     </tr>
                                                     <tr>

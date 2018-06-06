@@ -1,5 +1,5 @@
 <!-- About Stylesheet -->
-<link rel="stylesheet" href="<?php echo site_url('assets/sass/') ?>courses.min.css">
+<link rel="stylesheet" href="<?php echo site_url('assets/sass/') ?>courses.css">
 
 <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url('https://images.unsplash.com/photo-1450107579224-2d9b2bf1adc8?ixlib=rb-0.3.5&s=0b0fc084bc0625659cbdd0f04b191f62&auto=format&fit=crop&w=1350&q=80');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
@@ -42,9 +42,10 @@
                 </div>
                 <div class="section-footer">
                     <p>Shared:</p>
-                    <ul class="list-inline">
-                        <li><a href=""><i class="fa fa-facebook-f"></i> Facebook </a></li>
-                    </ul>
+                    <div class="fb-share-button" data-href="http://myielts.vn" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmyielts.vn%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                    <!--<ul class="list-inline">-->
+                    <!--    <li><a href=""><i class="fa fa-facebook-f"></i> Facebook </a></li>-->
+                    <!--</ul>-->
                 </div>
             </div>
 

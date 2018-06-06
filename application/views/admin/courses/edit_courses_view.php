@@ -219,7 +219,14 @@
                                     </div>
                                     <div class="form-group col-xs-12">
                                         <?php
-                                        echo form_label('Giới thiệu', 'description_vi');
+                                        echo form_label('Giới Thiệu', 'introduce_vi');
+                                        echo form_error('introduce_vi');
+                                        echo form_textarea('introduce_vi', $detail['introduce_vi'], 'class="form-control"')
+                                        ?>
+                                    </div>
+                                    <div class="form-group col-xs-12">
+                                        <?php
+                                        echo form_label('Tổng Quan', 'description_vi');
                                         echo form_error('description_vi');
                                         echo form_textarea('description_vi', $detail['description_vi'], 'class="tinymce-area form-control" ')
                                         ?>
@@ -251,7 +258,14 @@
                                     </div>
                                     <div class="form-group col-xs-12">
                                         <?php
-                                        echo form_label('Description', 'description_en');
+                                        echo form_label('Description', 'introduce_en');
+                                        echo form_error('introduce_en');
+                                        echo form_textarea('introduce_en', $detail['introduce_en'], 'class="form-control"');
+                                        ?>
+                                    </div>
+                                    <div class="form-group col-xs-12">
+                                        <?php
+                                        echo form_label('Overview', 'description_en');
                                         echo form_error('description_en');
                                         echo form_textarea('description_en', $detail['description_en'], 'class="tinymce-area form-control"')
                                         ?>

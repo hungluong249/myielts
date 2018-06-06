@@ -50,7 +50,7 @@
 				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
 					<div class="fh5co-item">
 						<div class="mask">
-							<img src="<?php echo base_url('assets/upload/courses/' . $value['image']); ?>" alt="<?php echo $value['slug'] ?> img">
+							<img src="<?php echo base_url('assets/upload/courses/' . $value['avatar']); ?>" alt="<?php echo $value['slug'] ?> img">
 						</div>
 						<h3><?php echo $value['title'] ?></h3>
 						<!--

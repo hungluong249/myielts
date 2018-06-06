@@ -2,7 +2,9 @@
 /**
 * 
 */
-class Banner_model extends CI_Model{
+class Banner_model extends MY_Model{
+    public $table = 'banner';
+
 	function __construct(){
 		parent::__construct();
 	}
@@ -34,13 +36,14 @@ class Banner_model extends CI_Model{
         return true;
     }
 
-    public function get_by_id($id) {
+    public function get_by_id_only_with_banner($id){
         $this->db->select('*');
         $this->db->from('banner');
         $this->db->where('is_deleted', 0);
         $this->db->where('id', $id);
-        $this->db->limit(1);
 
-        return $this->db->get()->row_array();
+        $result = $this->db->get()->row_array();
+
+        return $result;
     }
 }

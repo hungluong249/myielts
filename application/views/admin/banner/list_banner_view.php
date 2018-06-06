@@ -2,42 +2,54 @@
 <div class="content-wrapper">
     <section class="content row">
         <div class="col-md-12">
+            <?php if ($this->session->flashdata('message_error')): ?>
+                <div class="alert alert-warning alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <h4><i class="icon fa fa-warning"></i> Alert!</h4>
+                    <?php echo $this->session->flashdata('message_error'); ?>
+                </div>
+            <?php endif ?>
+            <?php if ($this->session->flashdata('message_success')): ?>
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <h4><i class="icon fa fa-check"></i> Alert!</h4>
+                    <?php echo $this->session->flashdata('message_success'); ?>
+                </div>
+            <?php endif ?>
+            <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash() ?>" id="csrf" />
             <div >
-                <span><?php echo $this->session->flashdata('message'); ?></span>
-            </div>
-            <div >
-                <a type="button" href="<?php echo site_url('admin/banner/create'); ?>" class="btn btn-primary">ADD NEW</a>
+                <a type="button" href="<?php echo site_url('admin/banner/create'); ?>" class="btn btn-primary">Thêm mới</a>
             </div>
             <div >
                 <div  style="margin-top: 10px;">
                     <table class="table table-hover table-bordered table-condensed">
                     	<?php if ($result): ?>
 			                <tr>
-				                <td><b><a href="#">Title</a></b></td>
+				                <td><b><a href="#">No.</a></b></td>
 				                <td><b><a href="#">Image</a></b></td>
-				                <td><b><a href="#">Url</a></b></td>
 				                <td><b><a href="#">Active</a></b></td>
 				                <td><b>Operations</b></td>
 			                </tr>
+			                <?php $no = 1 ?>
 			                <?php foreach ($result as $key => $value): ?>
-		                        <tr>
-		                            <td><?php echo $value['text'] ?></td>
-		                            <td><img src="<?php echo base_url('assets/upload/banners/'.$value['image']) ?>"></td>
-		                            <td><?php echo $value['url'] ?></td>
-
-		                            <?php if ($value['is_actived'] == 1): ?>
-                                        <td><button class="btn btn-success btn-is-active" data-id="<?php echo $value['id'] ?>"  title="Tắt banner"><i class="fa fa-check" aria-hidden="true"></i></button></td>
+		                        <tr class="remove_<?php echo $value['id'] ?>">
+		                            <td><?php echo $no++ ?></td>
+		                            <td style="width: 50%"><img src="<?php echo base_url('assets/upload/banners/'.$value['image']) ?>" width=100%></td>
+									<td class="row-active-<?php echo $value['id'] ?> btn-row-active">
+		                            <?php if ($value['is_activated'] == 0): ?>
+                                        <button class="btn btn-warning btn-sm btn-active-admin" type="button" data-id="<?php echo $value['id'] ?>" data-controller="banner">Không Kích Hoạt</button>
                                     <?php else: ?>
-                                        <td><button class="btn btn-danger btn-not-active" data-id="<?php echo $value['id'] ?>"  title="Bật banner"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                                        <button class="btn btn-success btn-sm btn-deactive-admin" type="button" data-id="<?php echo $value['id'] ?>" data-controller="banner">Đang Kích Hoạt</button>
                                     <?php endif ?>
-
+									</td>
 		                            <td>
-		                            <a href="" title="Xóa" class="btn-remove" data-id="" >
-		                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+		                            <a href="javascript:void(0);" class="dataActionDelete btn-remove" data-controller="banner" data-id="<?php echo $value['id'] ?>" >
+			                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+			                        </a>
 		                        </tr>
 	                        <?php endforeach ?>
 						<?php else: ?>
-                        	<tr class="odd"><td colspan="9">No records</td></tr>
+                        	<tr class="odd"><td colspan="9">Chưa có Banner</td></tr>
                         <?php endif ?>
                     </table>
 		            <div class="col-md-6 col-md-offset-5">

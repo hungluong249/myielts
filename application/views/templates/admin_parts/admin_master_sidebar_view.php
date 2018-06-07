@@ -95,6 +95,11 @@
                         <i class="fa fa-calendar" aria-hidden="true"></i> <span>Lịch Khai Giảng</span>
                     </a>
                 </li>
+                <li class="<?php echo ($this->uri->segment(2) == 'team')? 'active' : '' ?>">
+                    <a href="<?php echo base_url('admin/team') ?>">
+                       <i class="fa fa-users" aria-hidden="true"></i> <span>Giảng Viên</span>
+                    </a>
+                </li>
                 <li class="<?php echo ($this->uri->segment(2) == 'landing')? 'active' : '' ?>">
                     <a href="<?php echo base_url('admin/landing') ?>">
                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i> <span>Landing Page</span>

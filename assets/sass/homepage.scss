@@ -13,6 +13,167 @@
 *
 * ======================================================= */
 
+#fh5co-methods{
+    .item{
+        margin-top: 30px;
+
+        .icon{
+            width: 100px;
+            margin: 5px auto 15px;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .content{
+            text-align: center;
+        }
+    }
+}
+
+#fh5co-courses{
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    background-image: url("https://www.bestcolleges.com/wp-content/uploads/African_American_Graduates.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    position: relative;
+
+    .overlay{
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .fh5co-heading{
+        h2{
+            text-align: center;
+            color: #fff;
+        }
+
+    }
+
+    .item{
+
+        &:last-of-type{
+            .inner{
+                .arrow{
+                    display: none;
+                }
+            }
+        }
+
+        .inner{
+            padding: 15px;
+            background-color: $primary;
+            color: #fff;
+
+            position: relative;
+
+            .arrow{
+                position: absolute;
+                top: 50%;
+                left: 100%;
+
+                width: 30px;
+                height: 30px;
+
+                -webkit-transform: translate(0, -50%);
+                -moz-transform: translate(0, -50%);
+                -ms-transform: translate(0, -50%);
+                -o-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+
+                background-image: url("../img/right-arrow.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+
+            .head{
+                h3{
+                    font-size: 1.5em;
+                    height: 3em;
+                    color: #fff;
+
+                    overflow: hidden;
+                }
+            }
+
+            .content{
+                span.description{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    line-height: 2em;
+                    height: 8em;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                }
+
+                p{
+                    color: #fff !important;
+                }
+            }
+
+            .foot{
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px){
+    #fh5co-courses{
+        .item{
+            width: 20%;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    #fh5co-courses{
+        .item{
+            margin-bottom: 30px;
+
+            .inner {
+                .arrow {
+                    top: 100%;
+                    left: 50%;
+
+                    -webkit-transform: translate(-50%, 0);
+                    -moz-transform: translate(-50%, 0);
+                    -ms-transform: translate(-50%, 0);
+                    -o-transform: translate(-50%, 0);
+                    transform: translate(-50%, 0);
+
+                    background-image: url("../img/down-arrow.png");
+                }
+            }
+        }
+    }
+}
+
+#fh5co-benefit{
+    .container-fluid{
+        padding-left: 0;
+        padding-right: 0;
+
+        img{
+            width: 100%;
+        }
+    }
+}
 
 #fh5co-about .img-wrap img {
     margin-bottom: 30px;
@@ -199,7 +360,7 @@
         }
 
         .slider-text-bg{
-            margin-left: -150px;
+            margin-left: 0px;
         }
     }
 }
@@ -258,7 +419,7 @@
 #fh5co-content-section,
 #fh5co-contact,
 #fh5co-footer {
-    padding: 7em 0;
+    padding: 30px 0;
     clear: both;
 }
 @media screen and (max-width: 768px) {
@@ -271,7 +432,7 @@
     #fh5co-content-section,
     #fh5co-contact,
     #fh5co-footer {
-        padding: 3em 0;
+        padding: 15px 0;
     }
 }
 
@@ -284,6 +445,8 @@
     position: relative;
     float: left;
     width: 100%;
+    padding: 150px 0;
+
     .overlay {
         z-index: 0;
         position: absolute;
@@ -309,7 +472,7 @@
 
 
 #fh5co-blog .fh5co-heading, #fh5co-contact .fh5co-heading {
-    margin-bottom: 170px;
+    margin-bottom: 100px;
 }
 
 @media screen and (max-width: 768px) {

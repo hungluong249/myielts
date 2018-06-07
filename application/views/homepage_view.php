@@ -1,6 +1,7 @@
 <!-- Homepage Stylesheet -->
 <link rel="stylesheet" href="<?php echo site_url('assets/sass/') ?>homepage.min.css">
 
+<!--
 <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url('http://www.lifeoftrends.com/wp-content/uploads/2017/08/InspiredStudents.jpg');" data-stellar-background-ratio="0.5">
 	<div class="overlay"></div>
 	<div class="container">
@@ -16,7 +17,245 @@
 		</div>
 	</div>
 </header>
+-->
 
+<div class="header container-fluid">
+	<div class="container">
+		<div class="row">
+			<div class="left col-sm-3 col-xs-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title"><?php echo $this->lang->line('register-title'); ?> </h3>
+					</div>
+					<div class="panel-body">
+                        <?php
+                        echo form_open_multipart('', array('class' => 'form-horizontal', 'id' => 'register-courses-form'));
+                        ?>
+						<div class="col-xs-12">
+
+						</div>
+						<div class="form-group col-xs-12">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i> </span>
+                                <?php
+                                //echo form_label($this->lang->line('register-name') .' (*)', 'register_courses_name');
+                                echo '';
+                                echo form_error('register_courses_name');
+                                echo form_input('register_courses_name', set_value('register_courses_name'), 'class="form-control" id="register-courses-name" placeholder="' . $this->lang->line('register-name') . '"');
+                                ?>
+							</div>
+
+						</div>
+						<div class="form-group col-xs-12">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i> </span>
+                                <?php
+                                //echo form_label($this->lang->line('register-email') .' (*)', 'register_courses_mail');
+                                echo form_error('register_courses_mail');
+                                echo form_input('register_courses_mail', set_value('register_courses_mail'), 'class="form-control" id="register-courses-mail" placeholder="'. $this->lang->line('register-email') .'"');
+                                ?>
+							</div>
+						</div>
+						<div class="form-group col-xs-12">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i> </span>
+                                <?php
+                                //echo form_label($this->lang->line('register-phone') .' (*)', 'register_courses_phone');
+                                echo form_error('register_courses_phone');
+                                echo form_input('register_courses_phone', set_value('register_courses_phone'), 'class="form-control" id="register-courses-phone" placeholder="'. $this->lang->line('register-phone') .'"');
+                                ?>
+							</div>
+						</div>
+						<div class="form-group col-xs-12">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i> </span>
+								<!--<label><?php echo $this->lang->line('register-age'); ?></label>-->
+								<input type="number" class="form-control" id="register-courses-age" name="register_courses_age" min="0" placeholder="<?php echo $this->lang->line('register-age'); ?>">
+							</div>
+						</div>
+						<div class="form-group col-xs-12">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-building" aria-hidden="true"></i> </span>
+                                <?php
+                                //echo form_label($this->lang->line('register-office'), 'register_courses_workplace');
+                                echo form_error('register_courses_workplace');
+                                echo form_input('register_courses_workplace', set_value('register_courses_workplace'), 'class="form-control" id="register-courses-workplace" placeholder="'. $this->lang->line('register-office') .'"');
+                                ?>
+							</div>
+						</div>
+						<div class="col-xs-12">
+							<small><?php echo $this->lang->line('register-info'); ?><br><br></small>
+						</div>
+
+						<input type="hidden" name="courses_id" value="" id="courses-id">
+						<div class="col-xs-12">
+                            <?php echo form_submit(array('type' => 'submit', 'name' => 'submit'), $this->lang->line('register-submit') , 'class="btn btn-primary btn-register"'); ?>
+							<br>
+						</div>
+
+
+                        <?php echo form_close(); ?>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="right col-sm-9 col-xs-12">
+				<div id="header-slider" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#header-slider" data-slide-to="0" class="active"></li>
+						<li data-target="#header-slider" data-slide-to="1"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+
+						<div class="item active">
+							<div class="mask">
+								<img src="<?php echo base_url('assets/img/') ?>slide-1-demo.png" alt="...">
+							</div>
+						</div>
+						<div class="item">
+							<div class="mask">
+								<img src="<?php echo base_url('assets/img/') ?>slide-2-demo.png" alt="...">
+							</div>
+						</div>
+
+						<!--
+						<?php foreach (json_decode($detail['image'])as $key => $value): ?>
+							<div class="item <?php echo ($key == 0)? 'active' : '' ?>">
+								<div class="mask">
+									<img src="<?php echo base_url('assets/upload/courses/' . $value) ?>" alt="...">
+								</div>
+							</div>
+						<?php endforeach; ?>
+						-->
+					</div>
+
+					<!-- Controls -->
+					<a class="left carousel-control" href="#header-slider" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#header-slider" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div id="fh5co-methods" class="fh5co-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 fh5co-heading animate-box">
+				<h2><?php echo $this->lang->line('methods-head'); ?></h2>
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2 col-xs-12 img-wrap animate-box" data-animate-effect="fadeInUp">
+						<p><?php echo $this->lang->line('methods-intro'); ?></p> <!--Description cho phan phuong phap giang day-->
+					</div>
+				</div>
+			</div>
+
+			<?php for ( $i=0; $i < 4; $i++ ) { ?>
+			<div class="item col-sm-3 col-xs-6 img-wrap animate-box" data-animate-effect="fadeInUp">
+				<div class="icon">
+					<img src="<?php echo site_url('assets/img/') ?>method-1.png" alt="phuong phap so 1">
+				</div>
+				<div class="content">
+					<p>Noi dung cua phuong phap</p>
+				</div>
+			</div>
+			<?php } ?>
+		</div>
+	</div>
+</div>
+
+<div id="fh5co-courses" class="fh5co-section">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 fh5co-heading animate-box">
+				<h2><?php echo $this->lang->line('courses-head'); ?></h2>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+            <?php foreach ($courses as $key => $value): ?>
+			<div class="item col-xs-12 img-wrap animate-box" data-animate-effect="fadeInUp">
+				<div class="inner">
+					<div class="head">
+						<h3><?php echo $value['title'] ?></h3>
+					</div>
+					<div class="content">
+						<span class="description"><?php echo $value['description'] ?></span>
+                        <p><?php echo $this->lang->line('courses-input'); ?>: <?php echo $value['input'] ?></p>
+						<p><?php echo $this->lang->line('courses-output'); ?>: <?php echo $value['output'] ?></p>
+
+					</div>
+					<div class="foot">
+						<a href="<?php echo base_url('courses/detail/'. $value['slug']) ?>" class="btn btn-default" role="button"><?php echo $this->lang->line('see-more'); ?></a>
+					</div>
+
+					<div class="arrow"></div>
+				</div>
+			</div>
+            <?php endforeach ?>
+		</div>
+
+	</div>
+</div>
+
+<div id="fh5co-benefit" class="fh5co-section">
+	<div class="container-fluid">
+		<img src="http://abit.edu.vn/wp-content/uploads/2016/10/mo-hinh-coaching.png" alt="beifit img">
+	</div>
+</div>
+
+<div id="fh5co-team" class="fh5co-section">
+	<div class="container">
+		<div class="row animate-box">
+			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+				<h2><?php echo $this->lang->line('team-head'); ?></h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, consequatur. Aliquam quaerat pariatur repellendus veniam nemo, saepe, culpa eius aspernatur cumque suscipit quae nobis illo tempora. Eum veniam necessitatibus, blanditiis facilis quidem dolore! Dolorem, molestiae.</p>
+
+			</div>
+		</div>
+		<div class="row">
+
+            <?php for ( $i = 0; $i < 3; $i++){ ?>
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<div class="fh5co-blog animate-box">
+						<a href="">
+							<div class="mask">
+								<img src="<?php echo base_url('assets/upload/blogs/'. $value['image']) ?>" alt="<?php echo $value['slug'] ?> img">
+							</div>
+						</a>
+						<div class="blog-text">
+							<!--<span class="posted_on"><?php echo date_format(date_create($value['updated_at']), 'd-m-Y') ?></span>-->
+							<h3>Ten giao vien</h3>
+							<p>Chuc vu</p>
+							<p>Mo ta ve giao vien</p>
+							<ul class="stuff">
+								<!-- <li><i class="icon-heart2"></i>1.2K</li>
+								<li><i class="icon-eye2"></i>2K</li> -->
+								<li><a href="<?php echo base_url('blogs/detail/'. $value['slug']) ?>"><?php echo $this->lang->line('see-more'); ?><i class="icon-arrow-right22"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+            <?php } ?>
+
+		</div>
+	</div>
+</div>
+
+<!--
 <div id="fh5co-about" class="fh5co-section">
 	<div class="container">
 		<div class="row">
@@ -26,14 +265,16 @@
 			<div class="col-md-5 col-md-push-1 animate-box">
 				<div class="section-heading">
 					<h2><?php echo $about['about_title'] ?></h2>
-					<?php echo $about['about_content'] ?>
+                    <?php echo $about['about_content'] ?>
 					<p><a href="<?php echo base_url('about') ?>" class="btn btn-primary"><?php echo $this->lang->line('more-info'); ?></a></p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+-->
 
+<!--
 <div id="fh5co-featured-menu" class="fh5co-section">
 	<div class="container">
 		<div class="row">
@@ -53,9 +294,9 @@
 							<img src="<?php echo base_url('assets/upload/courses/' . $value['avatar']); ?>" alt="<?php echo $value['slug'] ?> img">
 						</div>
 						<h3><?php echo $value['title'] ?></h3>
-						<!--
+
 						<span class="fh5co-price"><?php echo number_format($value['price']) ?> vnd</span>
-						-->
+
 						<p><?php echo $value['description'] ?></p>
 						<a href="<?php echo base_url('courses/detail/'. $value['slug']) ?>" class="btn btn-default" role="button"><?php echo $this->lang->line('see-more'); ?></a>
 					</div>
@@ -65,21 +306,22 @@
 		</div>
 	</div>
 </div>
+-->
 
-<!--
+
 <div id="fh5co-slider" class="fh5co-section animate-box">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 animate-box">
+			<div class="col-xs-12 animate-box">
 				<div class="fh5co-heading">
 					<h2><?php echo $this->lang->line('testinomial'); ?></h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis!</p>
 				</div>
 			</div>
-			<div class="col-md-6 col-md-push-1 animate-box">
+			<div class="col-xs-12 animate-box">
 				<aside id="fh5co-slider-wrwap">
 					<div class="flexslider">
 						<ul class="slides">
+                            <?php for ( $i=0; $i < 3; $i++ ) { ?>
 							<li>
 								<div class="overlay-gradient"></div>
 								<div class="mask">
@@ -87,7 +329,7 @@
 								</div>
 								<div class="container-fluid">
 									<div class="row">
-										<div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
+										<div class="col-xs-6 slider-text slider-text-bg">
 											<div class="slider-text-inner">
 												<div class="desc">
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt eveniet quae, numquam magnam doloribus eligendi ratione rem, consequatur quos natus voluptates est totam magni! Nobis a temporibus, ipsum repudiandae dolorum.</p>
@@ -100,48 +342,7 @@
 									</div>
 								</div>
 							</li>
-							<li>
-								<div class="overlay-gradient"></div>
-								<div class="mask">
-									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQyqCV9aCtCkXOipriMbj_Ui-rwARARB27iBkHxKqrxoeReE4MlQ" alt="img person">
-								</div>
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
-											<div class="slider-text-inner">
-												<div class="desc">
-
-													<p>Ink is a free html5 bootstrap and a multi-purpose template perfect for any type of websites. A combination of a minimal and modern design template. The features are big slider on homepage, smooth animation, product listing and many more</p>
-													<blockquote>
-														<p class="author"><cite>&mdash; Jane Smith</cite></p>
-													</blockquote>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="overlay-gradient"></div>
-								<div class="mask">
-									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQyqCV9aCtCkXOipriMbj_Ui-rwARARB27iBkHxKqrxoeReE4MlQ" alt="img person">
-								</div>
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
-											<div class="slider-text-inner">
-												<div class="desc">
-
-													<p>Ink is a free html5 bootstrap and a multi-purpose template perfect for any type of websites. A combination of a minimal and modern design template. The features are big slider on homepage, smooth animation, product listing and many more</p>
-													<blockquote>
-														<p class="author"><cite>&mdash; Jane Smith</cite></p>
-													</blockquote>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
+                            <?php } ?>
 						</ul>
 					</div>
 				</aside>
@@ -149,7 +350,7 @@
 		</div>
 	</div>
 </div>
--->
+
 
 
 <div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url('https://www.bestcolleges.com/wp-content/uploads/African_American_Graduates.jpg');" data-stellar-background-ratio="0.5">
@@ -207,9 +408,10 @@
 	</div>
 </div>
 
+<!--
 <div class="btn-register">
 	<button class="btn btn-primary btn-fixed" data-toggle="modal" data-target="#register-courses">
 		<i class="fa fa-2x fa-pencil-square-o" aria-hidden="true"></i>
 	</button>
 </div>
-
+-->

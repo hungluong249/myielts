@@ -67,9 +67,128 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div class="fh5co-loader"></div>
 
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="<?php echo base_url('') ?>">
+				<img src="<?php echo site_url('assets/img/logo-c.png')?>" alt="logo">
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+            <?php
+            $url_vi = '';
+            $url_en = '';
+            switch($current_link){
+                case 'homepage':
+                    $url_vi = base_url() . 'vi';
+                    $url_en = base_url() . 'en';
+                    break;
+                case 'about':
+                    $url_vi = base_url() . 'vi/about';
+                    $url_en = base_url() . 'en/about';
+                    break;
+                case 'courses':
+                    $url_vi = base_url() . 'vi/courses';
+                    $url_en = base_url() . 'en/courses';
+                    break;
+                case 'detail_courses':
+                    $url_vi = base_url() . 'vi/courses/detail/'. $current_slug;
+                    $url_en = base_url() . 'en/courses/detail/'. $current_slug;
+                    break;
+                case 'document':
+                    $url_vi = base_url() . 'vi/document';
+                    $url_en = base_url() . 'en/document';
+                    break;
+                case 'detail_document':
+                    $url_vi = base_url() . 'vi/document/detail/'. $current_slug;
+                    $url_en = base_url() . 'en/document/detail/'. $current_slug;
+                    break;
+                case 'blogs':
+                    $url_vi = base_url() . 'vi/blogs';
+                    $url_en = base_url() . 'en/blogs';
+                    break;
+                case 'detail_blogs':
+                    $url_vi = base_url() . 'vi/blogs/detail/'. $current_slug;
+                    $url_en = base_url() . 'en/blogs/detail/'. $current_slug;
+                    break;
+                case 'contact':
+                    $url_vi = base_url() . 'vi/contact';
+                    $url_en = base_url() . 'en/contact';
+                    break;
+                default:
+                    $url_vi = base_url() . 'vi';
+                    $url_en = base_url() . 'en';
+                    break;
+            }
+            ?>
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="<?php echo base_url('') ?>"><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
+				</li>
+				<li>
+					<a href="<?php echo base_url('about') ?>">
+                        <?php echo $this->lang->line('about'); ?>
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <?php echo $this->lang->line('courses'); ?> <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="<?php echo base_url('') ?>">Tong quan khoa hoc</a></li>
+						<li><a href="<?php echo base_url('') ?>">Khoa hoc I</a></li>
+						<li><a href="<?php echo base_url('') ?>">Khoa hoc II</a></li>
+						<li><a href="<?php echo base_url('') ?>">Khoa hoc III</a></li>
+						<li><a href="<?php echo base_url('') ?>">Khoa hoc IV</a></li>
+						<li><a href="<?php echo base_url('') ?>">Khoa hoc V</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="<?php echo base_url('opening') ?>">
+                        <?php echo $this->lang->line('opening-day'); ?>
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <?php echo $this->lang->line('blogs'); ?> <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="<?php echo base_url('') ?>">Khoa hoc I</a>
+						</li> <!-- Category Bai Viet -->
+						<li role="separator" class="divider"></li>
+						<li><a href="#"><?php echo $this->lang->line('document'); ?></a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="<?php echo base_url('contact') ?>">
+                        <?php echo $this->lang->line('contact'); ?>
+					</a>
+				</li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="<?php echo $url_vi; ?>">Vi</a></li>
+				<li></li>
+				<li><a href="<?php echo $url_en; ?>">En</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
+
 <div id="page">
+	<!--
 	<nav class="fh5co-nav" role="navigation">
-		<!-- <div class="top-menu"> -->
+
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 text-center logo-wrap">
@@ -80,52 +199,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 				</div>
 				<div class="col-xs-12 text-center menu-1 menu-wrap">
-					<?php
-						$url_vi = '';
-						$url_en = '';
-						switch($current_link){
-							case 'homepage':
-								$url_vi = base_url() . 'vi';
-								$url_en = base_url() . 'en';
-								break;
-							case 'about':
-								$url_vi = base_url() . 'vi/about';
-								$url_en = base_url() . 'en/about';
-								break;
-							case 'courses':
-								$url_vi = base_url() . 'vi/courses';
-								$url_en = base_url() . 'en/courses';
-								break;
-							case 'detail_courses':
-								$url_vi = base_url() . 'vi/courses/detail/'. $current_slug;
-								$url_en = base_url() . 'en/courses/detail/'. $current_slug;
-								break;
-							case 'document':
-								$url_vi = base_url() . 'vi/document';
-								$url_en = base_url() . 'en/document';
-								break;
-							case 'detail_document':
-								$url_vi = base_url() . 'vi/document/detail/'. $current_slug;
-								$url_en = base_url() . 'en/document/detail/'. $current_slug;
-								break;
-							case 'blogs':
-								$url_vi = base_url() . 'vi/blogs';
-								$url_en = base_url() . 'en/blogs';
-								break;
-							case 'detail_blogs':
-								$url_vi = base_url() . 'vi/blogs/detail/'. $current_slug;
-								$url_en = base_url() . 'en/blogs/detail/'. $current_slug;
-								break;
-							case 'contact':
-								$url_vi = base_url() . 'vi/contact';
-								$url_en = base_url() . 'en/contact';
-								break;
-							default:
-								$url_vi = base_url() . 'vi';
-								$url_en = base_url() . 'en';
-								break;
-						}
-					?>
+
 
 					<ul>
 						<li>
@@ -146,11 +220,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<li>
 							<a href="<?php echo base_url('contact') ?>"><?php echo $this->lang->line('contact'); ?></a>
 						</li>
-						<!--
-						<li>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">Register</button>
-						</li>
-						-->
+
 					</ul>
 					
 
@@ -167,6 +237,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 
 		</div>
-		<!-- </div> -->
 	</nav>
+
+	-->
 

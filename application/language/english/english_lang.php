@@ -20,6 +20,7 @@ $lang['about'] = 'About';
 $lang['courses'] = 'Courses';
 $lang['document'] = 'Document';
 $lang['blogs'] = 'Blogs';
+$lang['opening-day'] = 'Opening Day';
 $lang['contact'] = 'Contact';
 
 /*
@@ -39,8 +40,20 @@ $lang['our-message'] = 'OUR MESSAGE';
 $lang['our-methods'] = 'OUR METHODS';
 
 /*
+    Team
+ */
+
+$lang['team-head'] = 'Our Teachers';
+
+
+/*
     courses
  */
+
+$lang['courses-head'] = 'Courses at myIELTS';
+$lang['courses-input'] = 'Input Level';
+$lang['courses-output'] = 'Output Level';
+
 $lang['courses-title'] = 'myIELTS Courses';
 $lang['detail-courses'] = 'Detail Courses';
 $lang['opening'] = 'Opening Day';
@@ -76,7 +89,7 @@ $lang['contact-send'] = 'Send Message';
 /*
     Register
  */
-$lang['register-title'] = 'Course Registed';
+$lang['register-title'] = 'Input Test Register';
 $lang['register-name'] = 'Full Name';
 $lang['register-phone'] = 'Your Phone Number';
 $lang['register-age'] = 'Your Age';

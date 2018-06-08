@@ -1,8 +1,9 @@
 <!-- About Stylesheet -->
-<link rel="stylesheet" href="<?php echo site_url('assets/sass/') ?>courses.css">
+<link rel="stylesheet" href="<?php echo site_url('assets/sass/') ?>courses.min.css">
 
-<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url('https://images.unsplash.com/photo-1520588831435-1529e6d7cf5e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fd3d7c35892bd8c7c9e757865a764d4c&auto=format&fit=crop&w=1284&q=80');" data-stellar-background-ratio="0.5">
+<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image: url('https://images.unsplash.com/1/iphone-4-closeup.jpg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3793dc829da718fc56ef19a8c99d938b&auto=format&fit=crop&w=1950&q=80');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
+    <!--
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -15,6 +16,7 @@
             </div>
         </div>
     </div>
+	-->
 </header>
 
 <div id="fh5co-contact" class="fh5co-section animate-box">

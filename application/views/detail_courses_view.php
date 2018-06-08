@@ -1,20 +1,13 @@
 <!-- About Stylesheet -->
 <link rel="stylesheet" href="<?php echo site_url('assets/sass/') ?>courses.min.css">
 
-
-<header id="fh5co-header" class="fh5co-cover " role="banner"  data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-
-</header>
-
-
 <div class="header container-fluid">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-4 col-xs-12">
+			<div class="left col-sm-3 col-xs-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h3 class="panel-title"><?php echo $this->lang->line('register-title'); ?>: <?php echo $detail['courses_title'] ?></h3>
+						<h3 class="panel-title"><?php echo $this->lang->line('register-title'); ?> </h3>
 					</div>
 					<div class="panel-body">
                         <?php
@@ -24,36 +17,53 @@
 
 						</div>
 						<div class="form-group col-xs-12">
-                            <?php
-                            //echo form_label($this->lang->line('register-name') .' (*)', 'register_courses_name');
-                            echo form_error('register_courses_name');
-                            echo form_input('register_courses_name', set_value('register_courses_name'), 'class="form-control" id="register-courses-name" placeholder="' . $this->lang->line('register-name') . '"');
-                            ?>
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i> </span>
+                                <?php
+                                //echo form_label($this->lang->line('register-name') .' (*)', 'register_courses_name');
+                                echo '';
+                                echo form_error('register_courses_name');
+                                echo form_input('register_courses_name', set_value('register_courses_name'), 'class="form-control" id="register-courses-name" placeholder="' . $this->lang->line('register-name') . '"');
+                                ?>
+							</div>
+
 						</div>
 						<div class="form-group col-xs-12">
-                            <?php
-                            //echo form_label($this->lang->line('register-email') .' (*)', 'register_courses_mail');
-                            echo form_error('register_courses_mail');
-                            echo form_input('register_courses_mail', set_value('register_courses_mail'), 'class="form-control" id="register-courses-mail" placeholder="'. $this->lang->line('register-email') .'"');
-                            ?>
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i> </span>
+                                <?php
+                                //echo form_label($this->lang->line('register-email') .' (*)', 'register_courses_mail');
+                                echo form_error('register_courses_mail');
+                                echo form_input('register_courses_mail', set_value('register_courses_mail'), 'class="form-control" id="register-courses-mail" placeholder="'. $this->lang->line('register-email') .'"');
+                                ?>
+							</div>
 						</div>
 						<div class="form-group col-xs-12">
-                            <?php
-                            //echo form_label($this->lang->line('register-phone') .' (*)', 'register_courses_phone');
-                            echo form_error('register_courses_phone');
-                            echo form_input('register_courses_phone', set_value('register_courses_phone'), 'class="form-control" id="register-courses-phone" placeholder="'. $this->lang->line('register-phone') .'"');
-                            ?>
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i> </span>
+                                <?php
+                                //echo form_label($this->lang->line('register-phone') .' (*)', 'register_courses_phone');
+                                echo form_error('register_courses_phone');
+                                echo form_input('register_courses_phone', set_value('register_courses_phone'), 'class="form-control" id="register-courses-phone" placeholder="'. $this->lang->line('register-phone') .'"');
+                                ?>
+							</div>
 						</div>
 						<div class="form-group col-xs-12">
-							<!--<label><?php echo $this->lang->line('register-age'); ?></label>-->
-							<input type="number" class="form-control" id="register-courses-age" name="register_courses_age" min="0" placeholder="<?php echo $this->lang->line('register-age'); ?>">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i> </span>
+								<!--<label><?php echo $this->lang->line('register-age'); ?></label>-->
+								<input type="number" class="form-control" id="register-courses-age" name="register_courses_age" min="0" placeholder="<?php echo $this->lang->line('register-age'); ?>">
+							</div>
 						</div>
 						<div class="form-group col-xs-12">
-                            <?php
-                            //echo form_label($this->lang->line('register-office'), 'register_courses_workplace');
-                            echo form_error('register_courses_workplace');
-                            echo form_input('register_courses_workplace', set_value('register_courses_workplace'), 'class="form-control" id="register-courses-workplace" placeholder="'. $this->lang->line('register-office') .'"');
-                            ?>
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-building" aria-hidden="true"></i> </span>
+                                <?php
+                                //echo form_label($this->lang->line('register-office'), 'register_courses_workplace');
+                                echo form_error('register_courses_workplace');
+                                echo form_input('register_courses_workplace', set_value('register_courses_workplace'), 'class="form-control" id="register-courses-workplace" placeholder="'. $this->lang->line('register-office') .'"');
+                                ?>
+							</div>
 						</div>
 						<div class="col-xs-12">
 							<small><?php echo $this->lang->line('register-info'); ?><br><br></small>
@@ -72,24 +82,37 @@
 				</div>
 			</div>
 
-			<div class="col-sm-8 col-xs-12">
+			<div class="right col-sm-9 col-xs-12">
 				<div id="header-slider" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
 						<li data-target="#header-slider" data-slide-to="0" class="active"></li>
 						<li data-target="#header-slider" data-slide-to="1"></li>
-						<li data-target="#header-slider" data-slide-to="2"></li>
 					</ol>
 
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
-						<?php foreach (json_decode($detail['image'])as $key => $value): ?>
-						<div class="item <?php echo ($key == 0)? 'active' : '' ?>">
+
+						<div class="item active">
 							<div class="mask">
-								<img src="<?php echo base_url('assets/upload/courses/' . $value) ?>" alt="...">
+								<img src="<?php echo base_url('assets/img/') ?>slide-1-demo.png" alt="...">
 							</div>
 						</div>
+						<div class="item">
+							<div class="mask">
+								<img src="<?php echo base_url('assets/img/') ?>slide-2-demo.png" alt="...">
+							</div>
+						</div>
+
+						<!--
+						<?php foreach (json_decode($detail['image'])as $key => $value): ?>
+							<div class="item <?php echo ($key == 0)? 'active' : '' ?>">
+								<div class="mask">
+									<img src="<?php echo base_url('assets/upload/courses/' . $value) ?>" alt="...">
+								</div>
+							</div>
 						<?php endforeach; ?>
+						-->
 					</div>
 
 					<!-- Controls -->
@@ -106,8 +129,9 @@
 
 		</div>
 	</div>
-
 </div>
+
+
 
 <div id="fh5co-detail" class="fh5co-section">
     <div class="container">
@@ -181,7 +205,7 @@
 									<td><?php echo number_format($detail['price']) ?></td>
 									<td><?php echo ($detail['discount'] == null)? number_format($detail['discount']) : number_format($detail['price']) ?></td>
 									<td>
-										<button class="btn btn-primary" data-toggle="modal" data-target="#register">
+										<button class="btn btn-primary" data-toggle="modal" data-target="#register-courses">
                                             <?php echo $this->lang->line('timetable-register'); ?>
 										</button>
 									</td>

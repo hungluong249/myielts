@@ -58,6 +58,14 @@ $lang['team-head'] = 'Đội ngũ giảng viên';
 
 
 /*
+    Opening
+ */
+
+
+
+
+
+/*
     courses
  */
 $lang['courses-head'] = 'Các khóa học tại myIELTS';

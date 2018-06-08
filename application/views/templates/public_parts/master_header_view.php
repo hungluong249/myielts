@@ -131,6 +131,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }
             ?>
 			<ul class="nav navbar-nav">
+
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<a href="<?php echo base_url('') ?>"><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
 				</li>
@@ -144,7 +148,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php echo $this->lang->line('courses'); ?> <span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="<?php echo base_url('') ?>">Tong quan khoa hoc</a></li>
+						<!--<li><a href="<?php echo base_url('') ?>">Tong quan khoa hoc</a></li>-->
 						<li><a href="<?php echo base_url('') ?>">Khoa hoc I</a></li>
 						<li><a href="<?php echo base_url('') ?>">Khoa hoc II</a></li>
 						<li><a href="<?php echo base_url('') ?>">Khoa hoc III</a></li>
@@ -163,10 +167,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</a>
 					<ul class="dropdown-menu">
 						<li>
-							<a href="<?php echo base_url('') ?>">Khoa hoc I</a>
-						</li> <!-- Category Bai Viet -->
+							<a href="<?php echo base_url('blogs') ?>"><?php echo $this->lang->line('blogs'); ?></a>
+						</li>
 						<li role="separator" class="divider"></li>
-						<li><a href="#"><?php echo $this->lang->line('document'); ?></a></li>
+						<li><a href="<?php echo base_url('document') ?>"><?php echo $this->lang->line('document'); ?></a></li>
 					</ul>
 				</li>
 				<li>
@@ -174,9 +178,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php echo $this->lang->line('contact'); ?>
 					</a>
 				</li>
-			</ul>
 
-			<ul class="nav navbar-nav navbar-right">
 				<li><a href="<?php echo $url_vi; ?>">Vi</a></li>
 				<li></li>
 				<li><a href="<?php echo $url_en; ?>">En</a></li>
@@ -186,58 +188,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </nav>
 
 <div id="page">
-	<!--
-	<nav class="fh5co-nav" role="navigation">
 
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 text-center logo-wrap">
-					<div id="fh5co-logo">
-						<a href="<?php echo base_url('') ?>">
-							<img src="<?php echo site_url('assets/img/logo.png')?>" alt="logo">
-						</a>
-					</div>
-				</div>
-				<div class="col-xs-12 text-center menu-1 menu-wrap">
-
-
-					<ul>
-						<li>
-							<a href="<?php echo base_url('homepage') ?>"><?php echo $this->lang->line('homepage'); ?></a>
-						</li>
-						<li>
-							<a href="<?php echo base_url('about') ?>"><?php echo $this->lang->line('about'); ?></a>
-						</li>
-						<li>
-							<a href="<?php echo base_url('courses') ?>"><?php echo $this->lang->line('courses'); ?></a>
-						</li>
-						<li>
-							<a href="<?php echo base_url('document') ?>"><?php echo $this->lang->line('document'); ?></a>
-						</li>
-						<li>
-							<a href="<?php echo base_url('blogs') ?>"><?php echo $this->lang->line('blogs'); ?></a>
-						</li>
-						<li>
-							<a href="<?php echo base_url('contact') ?>"><?php echo $this->lang->line('contact'); ?></a>
-						</li>
-
-					</ul>
-
-
-					<ul>
-						<li>
-							<a href="<?php echo $url_vi; ?>">Vi</a>
-						</li>
-						<li> | </li>
-						<li>
-							<a href="<?php echo $url_en; ?>">En</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-
-		</div>
-	</nav>
-  -->
 
 

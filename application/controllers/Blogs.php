@@ -10,10 +10,13 @@ class Blogs extends Public_Controller {
         $this->data['lang'] = $this->session->userdata('langAbbreviation');
     }
 
-    public function index() {
+    public function index($slug = '') {
     	$this->data['current_link'] = 'blogs';
+        $this->data['current_slug'] = $slug;
 
-        $total_rows  = $this->blog_model->count_search();
+        $this->load->model('category_model');
+        $category = $this->category_model->get_by_slug($slug, array('title'));
+        $total_rows  = $this->blog_model->count_search_by_category($slug);
         $this->load->library('pagination');
         $config = array();
         if ($this->uri->segment(1) != 'vi' && $this->uri->segment(1) != 'en') {
@@ -32,7 +35,7 @@ class Blogs extends Public_Controller {
         $this->data['page_links'] = $this->pagination->create_links();
         $this->data['page'] = ($this->uri->segment($uri_segment)) ? $this->uri->segment($uri_segment) : 0;
 
-        $result = $this->blog_model->get_all_field('desc', array('title', 'description', 'content'), $this->data['lang'], $per_page, $this->data['page']);
+        $result = $this->blog_model->get_all_field_by_category($category['id'], 'desc', array('title', 'description', 'content'), $this->data['lang'], $per_page, $this->data['page']);
         $this->data['result'] = $result;
 
         $this->render('blogs_view');

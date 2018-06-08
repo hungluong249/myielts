@@ -92,18 +92,15 @@
 
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
-
-						<div class="item active">
-							<div class="mask">
-								<img src="<?php echo base_url('assets/img/') ?>slide-1-demo.png" alt="...">
-							</div>
-						</div>
-						<div class="item">
-							<div class="mask">
-								<img src="<?php echo base_url('assets/img/') ?>slide-2-demo.png" alt="...">
-							</div>
-						</div>
-
+						<?php if ($detail['image'] != ''): ?>
+							<?php foreach (json_decode($detail['image']) as $key => $value): ?>
+								<div class="item <?php echo ($key == 0)? 'active' : '' ?>">
+									<div class="mask">
+										<img src="<?php echo base_url('assets/upload/courses/'. $value) ?>" alt="...">
+									</div>
+								</div>
+							<?php endforeach ?>
+						<?php endif ?>
 						<!--
 						<?php foreach (json_decode($detail['image'])as $key => $value): ?>
 							<div class="item <?php echo ($key == 0)? 'active' : '' ?>">

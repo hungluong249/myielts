@@ -57,6 +57,18 @@ class MY_Model extends CI_Model {
         return $result = $this->db->get()->num_rows();
     }
 
+    public function count_search_by_category($category_id, $keyword = ''){
+        $this->db->select('*');
+        $this->db->from($this->table);
+        $this->db->join($this->table_lang, $this->table_lang .'.'. $this->table .'_id = '. $this->table .'.id');
+        $this->db->like($this->table_lang .'.title', $keyword);
+        $this->db->group_by($this->table_lang .'.'.$this->table.'_id');
+        $this->db->where($this->table .'.is_deleted', 0);
+        $this->db->where($this->table .'.category_id', $category_id);
+
+        return $result = $this->db->get()->num_rows();
+    }
+
     public function get_by_id($id, $select = array('title', 'description', 'content', 'time', 'introduce'), $lang = '') {
         $this->db->query('SET SESSION group_concat_max_len = 10000000');
         $this->db->select($this->table .'.*');
@@ -156,6 +168,67 @@ class MY_Model extends CI_Model {
 
     public function get_all_field($order = 'desc', $select = array('title', 'description', 'content', 'time', 'introduce'),$lang = '', $limit = NULL, $start = NULL){
         $this->db->select($this->table .'.*');
+        if (in_array('title', $select)) {
+           $this->db->select($this->table_lang .'.title');
+        }
+        if (in_array('description', $select)) {
+           $this->db->select($this->table_lang .'.description');
+        }
+        if (in_array('content', $select)) {
+           $this->db->select($this->table_lang .'.content');
+        }
+        if (in_array('time', $select)) {
+           $this->db->select($this->table_lang .'.time');
+        }
+        if (in_array('introduce', $select)) {
+           $this->db->select($this->table_lang .'.introduce');
+        }
+        $this->db->from($this->table);
+        $this->db->join($this->table_lang, $this->table_lang .'.'. $this->table .'_id = '. $this->table .'.id');
+        $this->db->where($this->table .'.is_deleted', 0);
+        if($lang != ''){
+            $this->db->where($this->table_lang .'.language', $lang);
+        }
+        $this->db->limit($limit, $start);
+        $this->db->group_by($this->table_lang .'.'. $this->table .'_id');
+        $this->db->order_by($this->table .".id", $order);
+
+        return $result = $this->db->get()->result_array();
+    }
+
+    public function get_all_field_by_category($category_id, $order = 'desc', $select = array('title', 'description', 'content', 'time', 'introduce'),$lang = '', $limit = NULL, $start = NULL){
+        $this->db->select($this->table .'.*');
+        if (in_array('title', $select)) {
+           $this->db->select($this->table_lang .'.title');
+        }
+        if (in_array('description', $select)) {
+           $this->db->select($this->table_lang .'.description');
+        }
+        if (in_array('content', $select)) {
+           $this->db->select($this->table_lang .'.content');
+        }
+        if (in_array('time', $select)) {
+           $this->db->select($this->table_lang .'.time');
+        }
+        if (in_array('introduce', $select)) {
+           $this->db->select($this->table_lang .'.introduce');
+        }
+        $this->db->from($this->table);
+        $this->db->join($this->table_lang, $this->table_lang .'.'. $this->table .'_id = '. $this->table .'.id');
+        $this->db->where($this->table .'.is_deleted', 0);
+        $this->db->where($this->table .'.category_id', $category_id);
+        if($lang != ''){
+            $this->db->where($this->table_lang .'.language', $lang);
+        }
+        $this->db->limit($limit, $start);
+        $this->db->group_by($this->table_lang .'.'. $this->table .'_id');
+        $this->db->order_by($this->table .".id", $order);
+
+        return $result = $this->db->get()->result_array();
+    }
+
+    public function get_all_field_for_menu($order = 'desc', $select = array('title', 'description', 'content', 'time', 'introduce'),$lang = '', $limit = NULL, $start = NULL){
+        $this->db->select($this->table .'.slug, '. $this->table_lang .'.title ');
         if (in_array('title', $select)) {
            $this->db->select($this->table_lang .'.title');
         }

@@ -113,8 +113,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     $url_en = base_url() . 'en/document/detail/'. $current_slug;
                     break;
                 case 'blogs':
-                    $url_vi = base_url() . 'vi/blogs';
-                    $url_en = base_url() . 'en/blogs';
+                    $url_vi = base_url() . 'vi/blogs/'. $current_slug;
+                    $url_en = base_url() . 'en/blogs/'. $current_slug;
                     break;
                 case 'detail_blogs':
                     $url_vi = base_url() . 'vi/blogs/detail/'. $current_slug;
@@ -136,7 +136,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a href="<?php echo base_url('') ?>"><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
+					<a href="<?php echo base_url('homepage') ?>"><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
 				</li>
 				<li>
 					<a href="<?php echo base_url('about') ?>">
@@ -149,11 +149,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</a>
 					<ul class="dropdown-menu">
 						<!--<li><a href="<?php echo base_url('') ?>">Tong quan khoa hoc</a></li>-->
-						<li><a href="<?php echo base_url('') ?>">Khoa hoc I</a></li>
-						<li><a href="<?php echo base_url('') ?>">Khoa hoc II</a></li>
-						<li><a href="<?php echo base_url('') ?>">Khoa hoc III</a></li>
-						<li><a href="<?php echo base_url('') ?>">Khoa hoc IV</a></li>
-						<li><a href="<?php echo base_url('') ?>">Khoa hoc V</a></li>
+						<?php foreach ($courses_menu as $key => $value): ?>
+							<li><a href="<?php echo base_url('courses/detail/'. $value['slug']) ?>"><?php echo $value['title'] ?></a></li>
+						<?php endforeach ?>
 					</ul>
 				</li>
 				<li>
@@ -166,9 +164,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php echo $this->lang->line('blogs'); ?> <span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li>
-							<a href="<?php echo base_url('blogs') ?>"><?php echo $this->lang->line('blogs'); ?></a>
-						</li>
+						<?php foreach ($posts_menu as $key => $value): ?>
+							<li><a href="<?php echo base_url('blogs/'. $value['slug']) ?>"><?php echo $value['title'] ?></a></li>
+						<?php endforeach ?>
+						
 						<li role="separator" class="divider"></li>
 						<li><a href="<?php echo base_url('document') ?>"><?php echo $this->lang->line('document'); ?></a></li>
 					</ul>

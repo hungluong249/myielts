@@ -98,7 +98,7 @@ class Banner extends Admin_Controller{
                     ->set_output(json_encode(array('status' => 400)));
     }
 
-	 function file_selected_test($str, $field){
+	function file_selected_test($str, $field){
         if (empty($_FILES[$field]['name'])) {
             $this->form_validation->set_message(__FUNCTION__, 'The {field} field is required.');
             return false;

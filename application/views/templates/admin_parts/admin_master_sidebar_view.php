@@ -95,6 +95,21 @@
                         <i class="fa fa-calendar" aria-hidden="true"></i> <span>Lịch Khai Giảng</span>
                     </a>
                 </li>
+                <li class="<?php echo ($this->uri->segment(2) == 'team')? 'active' : '' ?>">
+                    <a href="<?php echo base_url('admin/team') ?>">
+                        <i class="fa fa-users" aria-hidden="true"></i> <span>Giảng Viên</span>
+                    </a>
+                </li>
+                <li class="<?php echo ($this->uri->segment(2) == 'comment')? 'active' : '' ?>">
+                    <a href="<?php echo base_url('admin/comment') ?>">
+                        <i class="fa fa-comments" aria-hidden="true"></i> <span>Cảm Nhận Học Viên</span>
+                    </a>
+                </li>
+                <li class="<?php echo ($this->uri->segment(2) == 'benefit')? 'active' : '' ?>">
+                    <a href="<?php echo base_url('admin/benefit') ?>">
+                        <i class="fa fa-picture-o" aria-hidden="true"></i> <span>BENEFIT</span>
+                    </a>
+                </li>
                 <li class="<?php echo ($this->uri->segment(2) == 'landing')? 'active' : '' ?>">
                     <a href="<?php echo base_url('admin/landing') ?>">
                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i> <span>Landing Page</span>

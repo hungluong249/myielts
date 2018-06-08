@@ -53,10 +53,15 @@ $route['default_controller'] = 'homepage';
 $route['404_override'] = 'noPage';
 $route['translate_uri_dashes'] = TRUE;
 
+$route['(:any)/blogs/(:any)'] = 'blogs/index/$2';
+$route['blogs/(:any)'] = 'blogs/index/$1';
+
 $route['^vi/(.+)$'] = "$1"; 
 $route['^en/(.+)$'] = "$1";
 
 $route['^vi$'] = $route['default_controller']; 
 $route['^en$'] = $route['default_controller'];
+
+
 
 $route['admin'] = 'admin/dashboard';

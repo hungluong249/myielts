@@ -204,10 +204,26 @@ class Public_Controller extends MY_Controller {
             $this->lang->load('english_lang', 'english');
         }
         
+        $this->data['courses_menu'] = $this->courses_menu();
+        $this->data['posts_menu'] = $this->posts_menu();
     }
 
     protected function render($the_view = NULL, $template = 'master') {
         parent::render($the_view, $template);
+    }
+
+    protected function courses_menu(){
+        $this->load->model('courses_model');
+        $result = $this->courses_model->get_all_field_for_menu('desc', array('title'), $this->session->userdata('langAbbreviation'));
+
+        return $result;
+    }
+
+    protected function posts_menu(){
+        $this->load->model('category_model');
+        $result = $this->category_model->get_all_field_for_menu('desc', array('title'), $this->session->userdata('langAbbreviation'));
+
+        return $result;
     }
 
 }

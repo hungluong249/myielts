@@ -110,17 +110,13 @@
 
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
-
-						<div class="item active">
-							<div class="mask">
-								<img src="<?php echo base_url('assets/img/') ?>slide-1-demo.png" alt="...">
+						<?php foreach ($banners as $key => $value): ?>
+							<div class="item <?php echo ($key == 0)? 'active' : '' ?>">
+								<div class="mask">
+									<img src="<?php echo base_url('assets/upload/banners/'. $value['image']) ?>" alt="...">
+								</div>
 							</div>
-						</div>
-						<div class="item">
-							<div class="mask">
-								<img src="<?php echo base_url('assets/img/') ?>slide-2-demo.png" alt="...">
-							</div>
-						</div>
+						<?php endforeach ?>
 
 						<!--
 						<?php foreach (json_decode($detail['image'])as $key => $value): ?>
@@ -213,7 +209,7 @@
 
 <div id="fh5co-benefit" class="fh5co-section">
 	<div class="container-fluid">
-		<img src="http://abit.edu.vn/wp-content/uploads/2016/10/mo-hinh-coaching.png" alt="beifit img">
+		<img src="<?php echo base_url('assets/upload/benefits/'. $benefit['image']) ?>" alt="beifit img">
 	</div>
 </div>
 
@@ -227,29 +223,28 @@
 			</div>
 		</div>
 		<div class="row">
-
-            <?php for ( $i = 0; $i < 3; $i++){ ?>
+			<?php foreach ($team as $key => $value): ?>
 				<div class="col-md-4 col-sm-4 col-xs-12">
 					<div class="fh5co-blog animate-box">
 						<a href="">
 							<div class="mask">
-								<img src="<?php echo base_url('assets/upload/blogs/'. $value['image']) ?>" alt="<?php echo $value['slug'] ?> img">
+								<img src="<?php echo base_url('assets/upload/teams/'. $value['image']) ?>" alt="img">
 							</div>
 						</a>
 						<div class="blog-text">
 							<!--<span class="posted_on"><?php echo date_format(date_create($value['updated_at']), 'd-m-Y') ?></span>-->
-							<h3>Ten giao vien</h3>
-							<p>Chuc vu</p>
-							<p>Mo ta ve giao vien</p>
+							<h3><?php echo $value['title'] ?></h3>
+							<!-- <p>Chuc vu</p> -->
+							<p><?php echo $value['description'] ?></p>
 							<ul class="stuff">
 								<!-- <li><i class="icon-heart2"></i>1.2K</li>
 								<li><i class="icon-eye2"></i>2K</li> -->
-								<li><a href="<?php echo base_url('blogs/detail/'. $value['slug']) ?>"><?php echo $this->lang->line('see-more'); ?><i class="icon-arrow-right22"></i></a></li>
+								<li><a href="<?php echo base_url('about') ?>"><?php echo $this->lang->line('see-more'); ?><i class="icon-arrow-right22"></i></a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
-            <?php } ?>
+            <?php endforeach ?>
 
 		</div>
 	</div>
@@ -321,28 +316,28 @@
 				<aside id="fh5co-slider-wrwap">
 					<div class="flexslider">
 						<ul class="slides">
-                            <?php for ( $i=0; $i < 3; $i++ ) { ?>
-							<li>
-								<div class="overlay-gradient"></div>
-								<div class="mask">
-									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQyqCV9aCtCkXOipriMbj_Ui-rwARARB27iBkHxKqrxoeReE4MlQ" alt="img person">
-								</div>
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col-xs-6 slider-text slider-text-bg">
-											<div class="slider-text-inner">
-												<div class="desc">
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt eveniet quae, numquam magnam doloribus eligendi ratione rem, consequatur quos natus voluptates est totam magni! Nobis a temporibus, ipsum repudiandae dolorum.</p>
-													<blockquote>
-														<p class="author"><cite>&mdash; Jane Smith</cite></p>
-													</blockquote>
+                           	<?php foreach ($comments as $key => $value): ?>
+								<li>
+									<div class="overlay-gradient"></div>
+									<div class="mask">
+										<img src="<?php echo base_url('assets/upload/comments/'. $value['image']) ?>" alt="img person">
+									</div>
+									<div class="container-fluid">
+										<div class="row">
+											<div class="col-xs-6 slider-text slider-text-bg">
+												<div class="slider-text-inner">
+													<div class="desc">
+														<p><?php echo $value['description'] ?></p>
+														<blockquote>
+															<p class="author"><cite>&mdash; <?php echo $value['title'] ?></cite></p>
+														</blockquote>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							</li>
-                            <?php } ?>
+								</li>
+                            <?php endforeach ?>
 						</ul>
 					</div>
 				</aside>

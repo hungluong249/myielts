@@ -62,7 +62,6 @@
 						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
 					-->
 				</p>
-				<p>
 				<ul class="fh5co-social-icons">
 					<li><a href="https://www.facebook.com/myielts.edu.vn/" target="_blank"><i class="icon-facebook2"></i></a></li>
 					<!--
@@ -70,7 +69,6 @@
 					<li><a href="#"><i class="icon-linkedin2"></i></a></li>
 					-->
 				</ul>
-				</p>
 			</div>
 		</div>
 

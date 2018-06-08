@@ -23,6 +23,7 @@ $lang['about'] = 'Giới Thiệu';
 $lang['courses'] = 'Khóa Học';
 $lang['document'] = 'Tài Liệu';
 $lang['blogs'] = 'Bài Viết';
+$lang['opening-day'] = 'Khai giảng';
 $lang['contact'] = 'Liên Hệ';
 
 /*
@@ -32,8 +33,14 @@ $lang['intro-about'] = 'Giới thiệu Trung tâm tiếng Anh myIELTS';
 $lang['getting-started'] = 'Bắt Đầu';
 
 $lang['intro-courses'] = 'Hệ thống bài học của My IELTS được thiết kế theo chuẩn sư phạm bởi đội ngũ giáo viên được đào tạo chuyên môn tại các trường về sư phạm Anh tại Hà Nội.';
-$lang['testinomial'] = 'Cảm nhận';
+$lang['testinomial'] = 'Cảm nhận của học viên về trung tâm';
 
+/*
+    Methods
+ */
+
+$lang['methods-head'] = 'Phương pháp giảng dạy';
+$lang['methods-intro'] = 'Giới Thiệu';
 
 /*
     About
@@ -44,8 +51,19 @@ $lang['our-message'] = 'THÔNG ĐIỆP';
 $lang['our-methods'] = 'PHƯƠNG PHÁP';
 
 /*
+    Team
+ */
+
+$lang['team-head'] = 'Đội ngũ giảng viên';
+
+
+/*
     courses
  */
+$lang['courses-head'] = 'Các khóa học tại myIELTS';
+$lang['courses-input'] = 'Đầu vào';
+$lang['courses-output'] = 'Đầu ra';
+
 $lang['courses-title'] = 'Khóa Học myIELTS';
 $lang['detail-courses'] = 'Chi Tiết Khóa Học';
 $lang['opening'] = 'Khai giảng vào ngày';
@@ -101,7 +119,7 @@ $lang['submit'] = 'Gửi tin nhắn';
 /*
     Register
  */
-$lang['register-title'] = 'Khoá học đăng ký';
+$lang['register-title'] = 'Đăng ký kiểm tra trình độ đầu vào';
 $lang['register-name'] = 'Tên của bạn';
 $lang['register-phone'] = 'Số điện thoại của bạn';
 $lang['register-age'] = 'Tuổi của bạn';

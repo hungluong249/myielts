@@ -41,6 +41,48 @@ body {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   body {
     /*background: #000 url(../img/broken_noise.png) repeat;*/ } }
+nav.navbar {
+  width: 100%;
+  height: 90px; }
+  nav.navbar .container-fluid .navbar-header .navbar-brand img {
+    height: 60px; }
+  nav.navbar .container-fluid .navbar-collapse {
+    padding-top: 20px; }
+  nav.navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1011; }
+
+div.header.container-fluid {
+  background-image: url("../img/slide-bg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 50px; }
+  div.header.container-fluid .container .row .left .panel .panel-heading {
+    text-align: center;
+    padding: 15px 25px; }
+    div.header.container-fluid .container .row .left .panel .panel-heading .panel-title {
+      font-size: 1.25em; }
+  div.header.container-fluid .container .row .left .panel .panel-body .form-control {
+    height: 35px;
+    font-size: 0.75em;
+    border: 1px solid #ccc; }
+  div.header.container-fluid .container .row .left .panel .input-group-addon {
+    padding: 0px;
+    width: 40px; }
+  div.header.container-fluid .container .row .left .panel small {
+    font-size: 0.75em; }
+  div.header.container-fluid .container .row .right .slide {
+    min-height: 400px; }
+    div.header.container-fluid .container .row .right .slide .carousel-control {
+      background-image: none; }
+
+.fh5co-section .fh5co-heading {
+  margin-bottom: 30px;
+  text-align: center; }
+
 #page {
   position: relative;
   overflow-x: hidden;
@@ -295,9 +337,7 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 30px 0; }
   .fh5co-section p {
     color: #666;
-    font-size: .875em;
-    font-weight: 300;
-    line-height: 1.5; }
+    font-weight: 300; }
 
 @media screen and (max-width: 480px) {
   .fh5co-section {
@@ -460,7 +500,8 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-footer {
   background-color: #666; }
   #fh5co-footer p {
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 15px; }
 
 #fh5co-content {
   border-bottom: 2px solid rgba(234, 39, 45, 0.1); }
@@ -618,6 +659,8 @@ h1, h2, h3, h4, h5, h6, figure {
   .fh5co-team {
     border-right: 0;
     margin-bottom: 80px; } }
+#fh5co-footer .row-pb-md {
+  padding-bottom: 30px !important; }
 #fh5co-footer .fh5co-footer-links {
   padding: 0;
   margin: 0; }
@@ -1024,10 +1067,10 @@ textarea {
   overflow: auto; }
 
 .row-pb-md {
-  padding-bottom: 4em !important; }
+  padding-bottom: 30px !important; }
 
 .row-pb-sm {
-  padding-bottom: 2em !important; }
+  padding-bottom: 15px !important; }
 
 .nopadding {
   padding: 0 !important;
@@ -1058,6 +1101,96 @@ textarea {
 * 	HOMEPAGE STYLE
 *
 * ======================================================= */
+#fh5co-methods .item {
+  margin-top: 30px; }
+  #fh5co-methods .item .icon {
+    width: 100px;
+    margin: 5px auto 15px; }
+    #fh5co-methods .item .icon img {
+      width: 100%; }
+  #fh5co-methods .item .content {
+    text-align: center; }
+
+#fh5co-courses {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url("https://www.bestcolleges.com/wp-content/uploads/African_American_Graduates.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative; }
+  #fh5co-courses .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); }
+  #fh5co-courses .fh5co-heading h2 {
+    text-align: center;
+    color: #fff; }
+  #fh5co-courses .item:last-of-type .inner .arrow {
+    display: none; }
+  #fh5co-courses .item .inner {
+    padding: 15px;
+    background-color: #B61E2D;
+    color: #fff;
+    position: relative; }
+    #fh5co-courses .item .inner .arrow {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      width: 30px;
+      height: 30px;
+      -webkit-transform: translate(0, -50%);
+      -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      background-image: url("../img/right-arrow.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%; }
+    #fh5co-courses .item .inner .head h3 {
+      font-size: 1.5em;
+      height: 3em;
+      color: #fff;
+      overflow: hidden; }
+    #fh5co-courses .item .inner .content span.description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      line-height: 2em;
+      height: 8em;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical; }
+    #fh5co-courses .item .inner .content p {
+      color: #fff !important; }
+    #fh5co-courses .item .inner .foot {
+      margin-top: 30px; }
+
+@media (min-width: 768px) {
+  #fh5co-courses .item {
+    width: 20%; } }
+@media (max-width: 768px) {
+  #fh5co-courses .item {
+    margin-bottom: 30px; }
+    #fh5co-courses .item .inner .arrow {
+      top: 100%;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+      -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -o-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+      background-image: url("../img/down-arrow.png"); } }
+#fh5co-benefit .container-fluid {
+  padding-left: 0;
+  padding-right: 0; }
+  #fh5co-benefit .container-fluid img {
+    width: 100%; }
+
 #fh5co-about .img-wrap img {
   margin-bottom: 30px; }
 
@@ -1189,7 +1322,7 @@ textarea {
   #fh5co-slider-wrwap .flexslider .flex-direction-nav {
     display: none; }
   #fh5co-slider-wrwap .flexslider .slider-text-bg {
-    margin-left: -150px; }
+    margin-left: 0px; }
 
 @media screen and (max-width: 992px) {
   #fh5co-slider-wrwap .flexslider .slider-text-bg {
@@ -1230,7 +1363,7 @@ textarea {
 #fh5co-content-section,
 #fh5co-contact,
 #fh5co-footer {
-  padding: 7em 0;
+  padding: 30px 0;
   clear: both; }
 
 @media screen and (max-width: 768px) {
@@ -1243,7 +1376,7 @@ textarea {
   #fh5co-content-section,
   #fh5co-contact,
   #fh5co-footer {
-    padding: 3em 0; } }
+    padding: 15px 0; } }
 #fh5co-started {
   background-attachment: fixed;
   background-position: center;
@@ -1251,7 +1384,8 @@ textarea {
   background-size: cover;
   position: relative;
   float: left;
-  width: 100%; }
+  width: 100%;
+  padding: 150px 0; }
   #fh5co-started .overlay {
     z-index: 0;
     position: absolute;
@@ -1271,7 +1405,7 @@ textarea {
       font-size: 20px; }
 
 #fh5co-blog .fh5co-heading, #fh5co-contact .fh5co-heading {
-  margin-bottom: 170px; }
+  margin-bottom: 100px; }
 
 @media screen and (max-width: 768px) {
   #fh5co-blog .fh5co-heading, #fh5co-contact .fh5co-heading {

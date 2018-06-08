@@ -98,9 +98,19 @@
                                             <td><?php echo $detail['opening'] ?> </td>
                                         </tr>
 										<tr>
+											<th>Đầu vào</th>
+											<td><?php echo $detail['input'] ?> </td>
+										</tr>
+										<tr>
+											<th>Đầu ra</th>
+											<td><?php echo $detail['output'] ?> </td>
+										</tr>
+										<!--
+										<tr>
 											<th>Cam kết đầu ra</th>
 											<td><?php echo $detail['promise'] ?> </td>
 										</tr>
+										-->
                                         <tr>
                                             <th>Học Phí</th>
                                             <td><?php echo number_format($detail['price']) ?> <strong> VND</strong></td>

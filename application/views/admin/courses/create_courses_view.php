@@ -77,6 +77,22 @@
                                 ?>
 							</div>
 						</div>
+						<div class="form-group col-xs-12">
+							<div class="form-group col-xs-6">
+                                <?php
+                                echo form_label('Đầu vào', 'input_shared');
+                                echo form_error('input_shared');
+                                echo form_input(array('type' => 'text', 'name' => 'input_shared'), set_value('input_shared'), 'class="form-control"');
+                                ?>
+							</div>
+							<div class="form-group col-xs-6">
+                                <?php
+                                echo form_label('Đầu ra', 'output_shared');
+                                echo form_error('output_shared');
+                                echo form_input(array('type' => 'text', 'name' => 'output_shared'), set_value('output_shared'), 'class="form-control"');
+                                ?>
+							</div>
+						</div>
                         <div class="form-group col-xs-12">
                             <div class="form-group col-xs-12">
                                 <?php

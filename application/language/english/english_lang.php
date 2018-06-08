@@ -63,6 +63,15 @@ $lang['courses-detail'] = 'Detail';
 $lang['courses-timetable'] = 'Opening Day';
 $lang['courses-promise'] = 'Output Level';
 
+$lang['timetable-course'] = 'Course';
+$lang['timetable-class'] = 'Class ID';
+$lang['timetable-time'] = 'Duration';
+$lang['timetable-opening'] = 'Opening Day';
+$lang['timetable-fee'] = 'Fee';
+$lang['timetable-non-discount'] = 'Original Fee';
+$lang['timetable-fee-discount'] = 'Discount Fee';
+$lang['timetable-register'] = 'Register';
+
 /*
     Document
  */

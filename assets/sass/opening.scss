@@ -12,3 +12,19 @@
 * 	HOMEPAGE STYLE
 *
 * ======================================================= */
+
+#fh5co-opening{
+    .content{
+        table{
+            thead{
+                tr{
+                    th{
+                        &:first-of-type{
+                            width: 15%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -13,6 +13,9 @@
 *
 * ======================================================= */
 
+#fh5co-header{
+    height: 40vh;
+}
 
 #fh5co-about .img-wrap img {
     margin-bottom: 30px;
@@ -21,7 +24,8 @@
 
 
 #fh5co-timeline {
-    padding: 7em 0;
+    padding: 30px 0;
+
     .timeline {
         list-style: none;
         padding: 20px 0 20px;

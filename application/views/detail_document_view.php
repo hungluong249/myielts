@@ -42,10 +42,7 @@
                 </div>
                 <div class="section-footer">
                     <p>Shared:</p>
-                    <div class="fb-share-button" data-href="http://myielts.vn" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmyielts.vn%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-                    <!--<ul class="list-inline">-->
-                    <!--    <li><a href=""><i class="fa fa-facebook-f"></i> Facebook </a></li>-->
-                    <!--</ul>-->
+                    <div class="fb-share-button" data-href="" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmyielts.vn%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
                 </div>
             </div>
 
@@ -60,5 +57,3 @@
         <i class="fa fa-2x fa-pencil-square-o" aria-hidden="true"></i>
     </button>
 </div>
-
-

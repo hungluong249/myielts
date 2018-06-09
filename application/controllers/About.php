@@ -18,12 +18,20 @@ class About extends Public_Controller {
     	$detail = $this->about_model->get_by_id_in_about($this->data['lang']);
     	$our_message = $this->our_message_model->get_all_by_our_message_with_pagination_search(3, null, $this->data['lang']);
     	$our_methods = $this->our_methods_model->get_all_by_our_methods_with_pagination_search(4, null, $this->data['lang']);
+        $team = $this->team();
 
     	$this->data['detail'] = $detail;
     	$this->data['our_message'] = $our_message;
     	$this->data['our_methods'] = $our_methods;
     	$this->data['current_link'] = 'about';
+        $this->data['team'] = $team;
         $this->render('about_view');
+    }
+
+    function team(){
+        $this->load->model('team_model');
+        $team = $this->team_model->get_all_field('desc', array('title', 'description'), $this->data['lang'], 0);
+        return $team;
     }
 
 }

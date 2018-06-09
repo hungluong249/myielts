@@ -45,16 +45,33 @@ nav.navbar {
   width: 100%;
   height: 90px;
   margin-bottom: 0; }
-  nav.navbar .container-fluid .navbar-header .navbar-brand img {
-    height: 60px; }
-  nav.navbar .container-fluid .navbar-collapse {
-    padding-top: 20px; }
+  nav.navbar .container-fluid {
+    height: 90px; }
+    nav.navbar .container-fluid .navbar-header {
+      height: 100%; }
+      nav.navbar .container-fluid .navbar-header .navbar-brand img {
+        height: 60px; }
+    nav.navbar .container-fluid .navbar-collapse {
+      padding-top: 20px; }
   nav.navbar.fixed {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1011; }
 
+@media (max-width: 768px) {
+  nav.navbar .container-fluid .navbar-header {
+    height: 100%; }
+  nav.navbar .container-fluid .navbar-collapse {
+    width: 100%;
+    padding-left: 30px;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1001; }
+    nav.navbar .container-fluid .navbar-collapse ul li {
+      margin-bottom: 15px; } }
 div.header.container-fluid {
   background-image: url("../img/slide-bg.png");
   background-size: 100%;
@@ -714,7 +731,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-offcanvas {
   position: absolute;
-  z-index: 1901;
+  z-index: 101;
   width: 270px;
   background: #000 url(../images/broken_noise.png) repeat;
   top: 0;
@@ -1085,7 +1102,7 @@ textarea {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url(../images/loader.gif) center no-repeat #fff; }
+  background: url(../img/loader.gif) center no-repeat #fff; }
 
 .js .animate-box {
   opacity: 0; }
@@ -1116,7 +1133,7 @@ textarea {
 #fh5co-courses {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image: url("https://www.bestcolleges.com/wp-content/uploads/African_American_Graduates.jpg");
+  background-image: url("https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=349f0586d07c10fdf29da504276b5407&auto=format&fit=crop&w=1950&q=80");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1138,6 +1155,7 @@ textarea {
     padding: 15px;
     background-color: #B61E2D;
     color: #fff;
+    border-radius: 17px;
     position: relative; }
     #fh5co-courses .item .inner .arrow {
       position: absolute;
@@ -1171,6 +1189,23 @@ textarea {
       color: #fff !important; }
     #fh5co-courses .item .inner .foot {
       margin-top: 30px; }
+
+#fh5co-blog .blog-text h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 1.5em;
+  height: 4.5em;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; }
+#fh5co-blog .blog-text p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 2em;
+  height: 6em;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; }
 
 @media (min-width: 768px) {
   #fh5co-courses .item {
@@ -1271,7 +1306,7 @@ textarea {
 
 #fh5co-slider-wrwap {
   height: 500px !important;
-  background: url(../img/loader.gif) no-repeat center center; }
+  background: url(..//loader.gif) no-repeat center center; }
 
 #fh5co-slider-wrwap .btn {
   font-size: 24px; }

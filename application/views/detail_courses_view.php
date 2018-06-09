@@ -92,7 +92,7 @@
 
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
-						<?php if ($detail['image'] != ''): ?>
+						<?php if ($detail['image'] != '' && $detail['image'] != null): ?>
 							<?php foreach (json_decode($detail['image']) as $key => $value): ?>
 								<div class="item <?php echo ($key == 0)? 'active' : '' ?>">
 									<div class="mask">

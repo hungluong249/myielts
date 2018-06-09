@@ -6,7 +6,7 @@
 				<!--<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>-->
 				<div class="map">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496.1999166287312!2d105.78880213555111!3d21.034565785845203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab49908d7957%3A0xe40660bf5855e892!2sKaraoke+Kevin+31!5e0!3m2!1svi!2s!4v1527562356627" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-					<small style="color: #fff;">Đi vào là từ ngõ 62, rồi rẽ trái vào sau tòa nhà 66A.</small>Đ
+					<small style="color: #fff;">Đi vào từ ngõ 62, rồi rẽ trái vào sau tòa nhà 66A.</small>Đ
 				</div>
 			</div>
 			<div class="col-md-2 col-md-push-1 fh5co-widget">
@@ -44,9 +44,9 @@
 			</div>
 
 			<div class="col-md-4 col-md-push-1 fh5co-widget">
-				<h4>Contact Information</h4>
+				<h4><?php echo $this->lang->line('contact'); ?></h4>
 				<ul class="fh5co-footer-links">
-					<li>6th floor, 66A Trần Thái Tông, <br> Dịch Vọng Hậu, Cầu Giấy, Hà Nội</li>
+					<li>Tầng 6, 66A Trần Thái Tông, <br> Dịch Vọng Hậu, Cầu Giấy, Hà Nội</li>
 					<li><a href="tel://0915355490">+ 0915.355.490</a></li>
 					<li><a href="mailto:myielts.edu.vn@gmail.com">myielts.edu.vn@gmail.com</a></li>
 				</ul>

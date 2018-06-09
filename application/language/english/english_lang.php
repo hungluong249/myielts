@@ -30,7 +30,7 @@ $lang['intro-about'] = 'Introducing myIELTS English Center';
 $lang['getting-started'] = 'Getting Started';
 
 $lang['intro-courses'] = 'My IELTS lesson plan is designed in accordance with the standard taught by a team of teachers who are trained in English pedagogy in Hanoi.';
-$lang['testinomial'] = 'estinomial';
+$lang['testinomial'] = 'Testinomial';
 
 /*
     About
@@ -102,7 +102,7 @@ $lang['register-title'] = 'Input Test Register';
 $lang['register-name'] = 'Full Name';
 $lang['register-phone'] = 'Your Phone Number';
 $lang['register-age'] = 'Your Age';
-$lang['register-office'] = 'Sorkplace/ School';
+$lang['register-office'] = 'Workplace/ School';
 $lang['register-email'] = 'Email';
 $lang['register-submit'] = 'Submit';
 $lang['register-info'] = '(Your information is confidential and will only be used in myIELTS, and will be contacted within 24 hours.)';

@@ -114,6 +114,41 @@
     </div>
 </div>
 
+<div id="fh5co-team" class="fh5co-section">
+	<div class="container">
+		<div class="row animate-box">
+			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+				<h2><?php echo $this->lang->line('team-head'); ?></h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, consequatur. Aliquam quaerat pariatur repellendus veniam nemo, saepe, culpa eius aspernatur cumque suscipit quae nobis illo tempora. Eum veniam necessitatibus, blanditiis facilis quidem dolore! Dolorem, molestiae.</p>
+
+			</div>
+		</div>
+		<div class="row">
+            <?php foreach ($team as $key => $value): ?>
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<div class="fh5co-blog animate-box">
+						<a href="">
+							<div class="mask">
+								<img src="<?php echo base_url('assets/upload/teams/'. $value['image']) ?>" alt="img">
+							</div>
+						</a>
+						<div class="blog-text">
+							<h3><?php echo $value['title'] ?></h3>
+							<p><?php echo $value['description'] ?></p>
+							<!--
+							<ul class="stuff">
+								<li><a href="<?php echo base_url('about') ?>"><?php echo $this->lang->line('see-more'); ?><i class="icon-arrow-right22"></i></a></li>
+							</ul>
+							-->
+						</div>
+					</div>
+				</div>
+            <?php endforeach ?>
+
+		</div>
+	</div>
+</div>
+
 <div class="btn-register">
 	<button class="btn btn-primary btn-fixed" data-toggle="modal" data-target="#register-courses">
 		<i class="fa fa-2x fa-pencil-square-o" aria-hidden="true"></i>

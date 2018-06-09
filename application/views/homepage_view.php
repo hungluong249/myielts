@@ -190,8 +190,9 @@
 					</div>
 					<div class="content">
 						<span class="description"><?php echo $value['description'] ?></span>
-                        <p><?php echo $this->lang->line('courses-input'); ?>: <?php echo $value['input'] ?></p>
-						<p><?php echo $this->lang->line('courses-output'); ?>: <?php echo $value['output'] ?></p>
+						<br>
+						<p><b><?php echo $this->lang->line('courses-input'); ?>: <?php echo $value['input'] ?></b></p>
+						<p><b><?php echo $this->lang->line('courses-output'); ?>: <?php echo $value['output'] ?></b></p>
 
 					</div>
 					<div class="foot">
@@ -232,15 +233,13 @@
 							</div>
 						</a>
 						<div class="blog-text">
-							<!--<span class="posted_on"><?php echo date_format(date_create($value['updated_at']), 'd-m-Y') ?></span>-->
 							<h3><?php echo $value['title'] ?></h3>
-							<!-- <p>Chuc vu</p> -->
 							<p><?php echo $value['description'] ?></p>
+							<!--
 							<ul class="stuff">
-								<!-- <li><i class="icon-heart2"></i>1.2K</li>
-								<li><i class="icon-eye2"></i>2K</li> -->
 								<li><a href="<?php echo base_url('about') ?>"><?php echo $this->lang->line('see-more'); ?><i class="icon-arrow-right22"></i></a></li>
 							</ul>
+							-->
 						</div>
 					</div>
 				</div>
@@ -302,7 +301,6 @@
 	</div>
 </div>
 -->
-
 
 <div id="fh5co-slider" class="fh5co-section animate-box">
 	<div class="container">

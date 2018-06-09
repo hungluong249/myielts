@@ -60,7 +60,7 @@ div.header.container-fluid {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom;
-  padding-bottom: 30px;
+  padding-top: 30px;
   padding-bottom: 50px; }
   div.header.container-fluid .container .row .left .panel .panel-heading {
     text-align: center;

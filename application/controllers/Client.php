@@ -11,13 +11,13 @@ class Client extends Public_Controller {
         $email = $this->input->post('email');
         $phone = $this->input->post('phone');
         $age = $this->input->post('age');
-        $company = $this->input->post('company');
+        //$company = $this->input->post('company');
         $password = $this->input->post('password');
 
         $additional_data = array(
             'first_name' => '',
             'last_name' => $username,
-            'company' => $company,
+            //'company' => $company,
 			'phone' => $phone,
 			'age' => $age
         );
@@ -48,7 +48,7 @@ class Client extends Public_Controller {
         $email = $this->input->post('email');
         $phone = $this->input->post('phone');
         $age = $this->input->post('age');
-        $company = $this->input->post('company');
+        //$company = $this->input->post('company');
         $courses_id = $this->input->post('courses_id');
 
         $data = array(
@@ -56,7 +56,7 @@ class Client extends Public_Controller {
             'email' => $email,
             'phone' => $phone,
             'age' => $age,
-            'office' => $company,
+            //'office' => $company,
             'courses_id' => $courses_id,
             'created_at' => date('Y-m-d H:i:s')
         );

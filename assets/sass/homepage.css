@@ -521,6 +521,14 @@ h1, h2, h3, h4, h5, h6, figure {
   #fh5co-footer p {
     color: rgba(255, 255, 255, 0.5);
     margin-bottom: 15px; }
+  #fh5co-footer table {
+    color: rgba(255, 255, 255, 0.5); }
+    #fh5co-footer table tr {
+      vertical-align: top; }
+    #fh5co-footer table a {
+      color: rgba(255, 255, 255, 0.5); }
+      #fh5co-footer table a:hover {
+        color: #EB3B2C; }
 
 #fh5co-content {
   border-bottom: 2px solid rgba(234, 39, 45, 0.1); }

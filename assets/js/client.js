@@ -14,13 +14,13 @@ $(document).ready(function(){
         	var email = $('#register_mail').val();
         	var phone = $('#register_phone').val();
         	var age = $('#register_age').val();
-        	var company = $('#register_workplace').val();
+        	//var company = $('#register_workplace').val();
         	var password = $('#register_password').val();
         	$.ajax({
                 method: "post",
                 url: url,
                 data: {
-                    name : name, email : email, phone : phone, age : age, company : company, password : password, csrf_myielts_token : csrf_hash
+                    name : name, email : email, phone : phone, age : age, password : password, csrf_myielts_token : csrf_hash
                 },
                 beforeSend: function() {
                 	$("#encypted_ppbtn").show();
@@ -103,13 +103,13 @@ $(document).ready(function(){
         	var email = $('#register-courses-mail').val();
         	var phone = $('#register-courses-phone').val();
         	var age = $('#register-courses-age').val();
-        	var company = $('#register-courses-workplace').val();
+        	//var company = $('#register-courses-workplace').val();
         	var courses_id = $('#courses-id').val();
         	$.ajax({
                 method: "post",
                 url: url,
                 data: {
-                    name : name, email : email, phone : phone, age : age, company : company, courses_id : courses_id, csrf_myielts_token : csrf_hash
+                    name : name, email : email, phone : phone, age : age, courses_id : courses_id, csrf_myielts_token : csrf_hash
                 },
                 beforeSend: function() {
                 	$("#encypted_ppbtn").show();
@@ -125,7 +125,7 @@ $(document).ready(function(){
                     		$('#register-courses-mail').val('');
                     		$('#register-courses-phone').val('');
                     		$('#register-courses-age').val('');
-                    		$('#register-courses-workplace').val('');
+                    		//$('#register-courses-workplace').val('');
                     		// window.location.href = HOSTNAME + "client/login";
                     	}else{
                     		alert('Vui lòng điển đầy đủ thông tin');

@@ -55,6 +55,7 @@
 								<input type="number" class="form-control" id="register-courses-age" name="register_courses_age" min="0" placeholder="<?php echo $this->lang->line('register-age'); ?>">
 							</div>
 						</div>
+						<!--
 						<div class="form-group col-xs-12">
 							<div class="input-group">
 								<span class="input-group-addon"><i class="fa fa-building" aria-hidden="true"></i> </span>
@@ -65,6 +66,7 @@
                                 ?>
 							</div>
 						</div>
+						-->
 						<div class="col-xs-12">
 							<small><?php echo $this->lang->line('register-info'); ?><br><br></small>
 						</div>

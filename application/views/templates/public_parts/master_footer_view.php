@@ -18,11 +18,13 @@
 					<li>
 						<a href="<?php echo base_url('about') ?>"><?php echo $this->lang->line('about'); ?></a>
 					</li>
+					<!--
 					<li>
 						<a href="<?php echo base_url('courses') ?>"><?php echo $this->lang->line('courses'); ?></a>
 					</li>
+					-->
 					<li>
-						<a href="<?php echo base_url('document') ?>"><?php echo $this->lang->line('document'); ?></a>
+						<a href="<?php echo base_url('opening') ?>"><?php echo $this->lang->line('opening-day'); ?></a>
 					</li>
 					<li>
 						<a href="<?php echo base_url('blogs') ?>"><?php echo $this->lang->line('blogs'); ?></a>
@@ -45,11 +47,27 @@
 
 			<div class="col-md-4 col-md-push-1 fh5co-widget">
 				<h4><?php echo $this->lang->line('contact'); ?></h4>
+				<!--
 				<ul class="fh5co-footer-links">
-					<li>Tầng 6, 66A Trần Thái Tông, <br> Dịch Vọng Hậu, Cầu Giấy, Hà Nội</li>
+					<li><i class="fa fa-home" aria-hidden="true"></i> Tầng 6, 66A Trần Thái Tông, <br> Dịch Vọng Hậu, Cầu Giấy, Hà Nội</li>
 					<li><a href="tel://0915355490">+ 0915.355.490</a></li>
 					<li><a href="mailto:myielts.edu.vn@gmail.com">myielts.edu.vn@gmail.com</a></li>
 				</ul>
+				-->
+				<table class="table">
+					<tr>
+						<td><i class="fa fa-home" aria-hidden="true"></i></td>
+						<td>Tầng 6, 66A Trần Thái Tông, <br> Dịch Vọng Hậu, Cầu Giấy, Hà Nội</td>
+					</tr>
+					<tr>
+						<td><i class="fa fa-phone" aria-hidden="true"></i></td>
+						<td><a href="tel://0915355490">+ 0915.355.490</a></td>
+					</tr>
+					<tr>
+						<td><i class="fa fa-envelope-o" aria-hidden="true"></i></td>
+						<td><a href="mailto:myielts.edu.vn@gmail.com">myielts.edu.vn@gmail.com</a></td>
+					</tr>
+				</table>
 			</div>
 
 		</div>
@@ -166,7 +184,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="registerCourseLabel">Register</h4>
+                <h4 class="modal-title" id="registerCourseLabel"><?php echo $this->lang->line('register-title'); ?></h4>
             </div>
             <div class="modal-body">
                 <div class="modal-cover">
@@ -200,10 +218,11 @@
                         echo form_input('register_courses_phone', set_value('register_courses_phone'), 'class="form-control" id="register-courses-phone"');
                         ?>
                     </div>
-                    <div class="form-group col-xs-12 col-sm-4">
+                    <div class="form-group col-xs-12">
                         <label><?php echo $this->lang->line('register-age'); ?></label>
                         <input type="number" class="form-control" id="register-courses-age" name="register_courses_age" min="0">
                     </div>
+                    <!--
                     <div class="form-group col-xs-12 col-sm-8">
                         <?php
                         echo form_label($this->lang->line('register-office'), 'register_courses_workplace');
@@ -211,9 +230,10 @@
                         echo form_input('register_courses_workplace', set_value('register_courses_workplace'), 'class="form-control" id="register-courses-workplace"');
                         ?>
                     </div>
+                    -->
                     <input type="hidden" name="courses_id" value="" id="courses-id">
                     <div class="col-xs-12">
-                        <?php echo form_submit(array('type' => 'submit', 'name' => 'submit'), 'Courses Register', 'class="btn btn-primary btn-register"'); ?>
+                        <?php echo form_submit(array('type' => 'submit', 'name' => 'submit'), $this->lang->line('register-submit'), 'class="btn btn-primary btn-register"'); ?>
                         <br>
                     </div>
 

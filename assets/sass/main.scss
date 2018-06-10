@@ -735,6 +735,22 @@ h1, h2, h3, h4, h5, h6, figure {
         color: rgba(255,255,255,.5);
         margin-bottom: 15px;
     }
+
+    table{
+        color: rgba(255,255,255,0.5);
+
+        tr{
+            vertical-align: top;
+        }
+
+        a{
+            color: rgba(255,255,255,0.5);
+
+            &:hover{
+                color: $primary-hover;
+            }
+        }
+    }
 }
 
 #fh5co-content {

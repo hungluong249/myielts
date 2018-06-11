@@ -107,7 +107,7 @@ $lang['blogs'] = 'Blogs';
 $lang['detail-blog'] = 'Detail Blog Post';
 
 // Contact form
-$lang['contact'] = 'Contact Us';
+
 $lang['contact-title'] = 'Get in Touch';
 $lang['contact-description'] = 'Feel Free to get in touch with us';
 $lang['contact-chat'] = "Don't be shy, let's chat.";

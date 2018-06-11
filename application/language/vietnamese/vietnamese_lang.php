@@ -116,7 +116,6 @@ $lang['elegant-recipes'] = 'Những công thức thanh lịch';
 /*
     Contact form
  */
-$lang['contact'] = 'Liên Hệ';
 $lang['contact-title'] = 'Liên Hệ';
 $lang['contact-description'] = 'Hãy thoải mái liên hệ với chúng tôi';
 $lang['contact-chat'] = 'Đừng ngại, hãy trò chuyện với chúng tôi.';

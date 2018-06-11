@@ -142,6 +142,22 @@ div.header{
                     .slide{
                         min-height: 400px;
 
+                        .carousel-inner{
+                            .item{
+                                .mask{
+                                    width: 100%;
+                                    height: 100%;
+                                    overflow: hidden;
+
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
+
                         .carousel-control{
                             background-image: none;
                         }

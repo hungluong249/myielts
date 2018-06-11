@@ -41,7 +41,7 @@ class Homepage extends Public_Controller {
     function courses(){
     	$this->load->model('courses_model');
     	//$courses = $this->courses_model->get_all_field('desc', array('title', 'description', 'content'), $this->data['lang'], 3, 0);
-        $courses = $this->courses_model->get_all_field('desc', array('title', 'description', 'content'), $this->data['lang'], 5, 0);
+        $courses = $this->courses_model->get_all_field('acs', array('title', 'description', 'content'), $this->data['lang'], 5, 0);
     	return $courses;
     }
 

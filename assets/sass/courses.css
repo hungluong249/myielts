@@ -95,6 +95,14 @@ div.header.container-fluid {
     font-size: 0.75em; }
   div.header.container-fluid .container .row .right .slide {
     min-height: 400px; }
+    div.header.container-fluid .container .row .right .slide .carousel-inner .item .mask {
+      width: 100%;
+      height: 100%;
+      overflow: hidden; }
+      div.header.container-fluid .container .row .right .slide .carousel-inner .item .mask img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
     div.header.container-fluid .container .row .right .slide .carousel-control {
       background-image: none; }
 

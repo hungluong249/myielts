@@ -9,22 +9,22 @@ $lang['description'] = 'Giới thiệu';
 $lang['content'] = 'Nội dung';
 
 $lang['homepage'] = 'Trang chủ';
-$lang['more-info'] = 'Xem Thêm';
-$lang['see-more'] = 'Chi Tiết';
-$lang['register'] = 'Đăng Ký';
-$lang['slogan'] = 'Tham gia với chúng tôi ngay bây giờ!';
-$lang['join-now'] = 'Tham Gia Ngay';
+$lang['more-info'] = 'Xem thêm';
+$lang['see-more'] = 'Chi tiết';
+$lang['register'] = 'Đăng ký';
+$lang['slogan'] = 'Đăng ký với chúng tôi ngay bây giờ!';
+$lang['join-now'] = 'Đăng ký học thử ngay';
 
 /*
     Main Header
  */
 
-$lang['about'] = 'Giới Thiệu';
-$lang['courses'] = 'Khóa Học';
-$lang['document'] = 'Tài Liệu';
-$lang['blogs'] = 'Bài Viết';
+$lang['about'] = 'Giới thiệu';
+$lang['courses'] = 'Khóa học';
+$lang['document'] = 'Tài liệu';
+$lang['blogs'] = 'Bài viết';
 $lang['opening-day'] = 'Khai giảng';
-$lang['contact'] = 'Liên Hệ';
+$lang['contact'] = 'Liên hệ';
 
 /*
     Home Page
@@ -42,6 +42,21 @@ $lang['testinomial'] = 'Cảm nhận của học viên về trung tâm';
 $lang['methods-head'] = 'Phương pháp giảng dạy';
 $lang['methods-intro'] = 'Giới Thiệu';
 
+$lang['method-1-head'] = 'HƯỚNG DẪN KHÁM PHÁ';
+$lang['method-1-content-1'] = 'Giúp học viên chủ động hơn trong việc học';
+$lang['method-1-content-2'] = 'Bài giảng truyền cảm hứng – không khô khan';
+
+$lang['method-2-head'] = 'HOẠT ĐỘNG ĐÁNH GIÁ';
+$lang['method-2-content-1'] = 'Kiến thức gắn với thực tế cuộc sống';
+$lang['method-2-content-2'] = 'Học từ vựng nhanh và hiệu quả hơn';
+
+$lang['method-3-head'] = 'ÔN TẬP ĐÁNH GIÁ BÀI BẢN ';
+$lang['method-3-content-1'] = 'Kế hoạch ôn tập chuyên nghiệp';
+$lang['method-3-content-2'] = 'Học viên hiểu rõ được điểm mạnh , điểm cần cải thiện trong quá trình học';
+
+$lang['method-4-head'] = 'KẾT HỢP HOÀN HẢO GIỮA CHIẾN LƯỢC VÀ NGÔN NGỮ';
+$lang['method-4-content-1'] = 'Bài giảng luôn gồm chiến lược cho bài thi kết hợp cùng phần ngôn ngữ';
+
 /*
     About
  */
@@ -58,17 +73,9 @@ $lang['team-head'] = 'Đội ngũ giảng viên';
 
 
 /*
-    Opening
- */
-
-
-
-
-
-/*
     courses
  */
-$lang['courses-head'] = 'Các khóa học tại myIELTS';
+$lang['courses-head'] = 'Các khóa học';
 $lang['courses-input'] = 'Đầu vào';
 $lang['courses-output'] = 'Đầu ra';
 
@@ -101,7 +108,6 @@ $lang['detail-document'] = 'Chi Tiết Tài Liệu';
     blogs
  */
 
-$lang['blogs'] = 'Bài Viết';
 $lang['detail-blog'] = 'Chi Tiết Bài Viết';
 
 $lang['perfect-blend'] = 'Sự kết hợp hoàn hảo';

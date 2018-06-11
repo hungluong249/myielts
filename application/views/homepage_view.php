@@ -20,8 +20,8 @@
 -->
 
 <div class="header container-fluid">
-	<div class="container">
-		<div class="row">
+
+	<div class="row">
 			<div class="left col-sm-3 col-xs-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">
@@ -86,7 +86,7 @@
 						</div>
 						-->
 						<div class="col-xs-12">
-							<small><?php echo $this->lang->line('register-info'); ?><br><br></small>
+							<!--<small><?php echo $this->lang->line('register-info'); ?><br><br></small>-->
 						</div>
 
 						<input type="hidden" name="courses_id" value="" id="courses-id">
@@ -144,7 +144,7 @@
 			</div>
 
 		</div>
-	</div>
+
 </div>
 
 <div id="fh5co-methods" class="fh5co-section">
@@ -154,21 +154,67 @@
 				<h2><?php echo $this->lang->line('methods-head'); ?></h2>
 				<div class="row">
 					<div class="col-sm-8 col-sm-offset-2 col-xs-12 img-wrap animate-box" data-animate-effect="fadeInUp">
-						<p><?php echo $this->lang->line('methods-intro'); ?></p> <!--Description cho phan phuong phap giang day-->
+						<p><?php echo $this->lang->line(''); ?></p> <!--Description cho phan phuong phap giang day-->
 					</div>
 				</div>
 			</div>
 
-			<?php for ( $i=0; $i < 4; $i++ ) { ?>
 			<div class="item col-sm-3 col-xs-6 img-wrap animate-box" data-animate-effect="fadeInUp">
 				<div class="icon">
 					<img src="<?php echo site_url('assets/img/') ?>method-1.png" alt="phuong phap so 1">
 				</div>
 				<div class="content">
-					<p>Noi dung cua phuong phap</p>
+					<h4><?php echo $this->lang->line('method-1-head'); ?></h4>
+					<ul>
+						<li><?php echo $this->lang->line('method-1-content-1'); ?></li>
+						<li><?php echo $this->lang->line('method-1-content-2'); ?></li>
+					</ul>
+
 				</div>
 			</div>
-			<?php } ?>
+
+			<div class="item col-sm-3 col-xs-6 img-wrap animate-box" data-animate-effect="fadeInUp">
+				<div class="icon">
+					<img src="<?php echo site_url('assets/img/') ?>method-2.png" alt="phuong phap so 1">
+				</div>
+				<div class="content">
+					<h4><?php echo $this->lang->line('method-2-head'); ?></h4>
+					<ul>
+						<li><?php echo $this->lang->line('method-2-content-1'); ?></li>
+						<li><?php echo $this->lang->line('method-2-content-2'); ?></li>
+					</ul>
+
+				</div>
+			</div>
+
+			<div class="item col-sm-3 col-xs-6 img-wrap animate-box" data-animate-effect="fadeInUp">
+				<div class="icon">
+					<img src="<?php echo site_url('assets/img/') ?>method-3.png" alt="phuong phap so 1">
+				</div>
+				<div class="content">
+					<h4><?php echo $this->lang->line('method-3-head'); ?></h4>
+					<ul>
+						<li><?php echo $this->lang->line('method-3-content-1'); ?></li>
+						<li><?php echo $this->lang->line('method-3-content-2'); ?></li>
+					</ul>
+
+				</div>
+			</div>
+
+			<div class="item col-sm-3 col-xs-6 img-wrap animate-box" data-animate-effect="fadeInUp">
+				<div class="icon">
+					<img src="<?php echo site_url('assets/img/') ?>method-4.png" alt="phuong phap so 1">
+				</div>
+				<div class="content">
+					<h4><?php echo $this->lang->line('method-4-head'); ?></h4>
+					<ul>
+						<li><?php echo $this->lang->line('method-4-content-1'); ?></li>
+
+					</ul>
+
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>
@@ -191,11 +237,10 @@
 						<h3><?php echo $value['title'] ?></h3>
 					</div>
 					<div class="content">
-						<span class="description"><?php echo $value['description'] ?></span>
-						<br>
 						<p><b><?php echo $this->lang->line('courses-input'); ?>: <?php echo $value['input'] ?></b></p>
 						<p><b><?php echo $this->lang->line('courses-output'); ?>: <?php echo $value['output'] ?></b></p>
-
+						<br>
+						<span class="description"><?php echo $value['description'] ?></span>
 					</div>
 					<div class="foot">
 						<a href="<?php echo base_url('courses/detail/'. $value['slug']) ?>" class="btn btn-default" role="button"><?php echo $this->lang->line('see-more'); ?></a>
@@ -304,6 +349,7 @@
 </div>
 -->
 
+<!--
 <div id="fh5co-slider" class="fh5co-section animate-box">
 	<div class="container">
 		<div class="row">
@@ -345,7 +391,7 @@
 		</div>
 	</div>
 </div>
-
+-->
 
 
 <div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url('https://www.bestcolleges.com/wp-content/uploads/African_American_Graduates.jpg');" data-stellar-background-ratio="0.5">

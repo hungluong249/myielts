@@ -26,8 +26,27 @@
             }
         }
 
+        h4{
+            font-weight: bold;
+            color: $primary;
+
+            line-height: 1.5em;
+        }
+
         .content{
             text-align: center;
+
+            padding: 15px;
+
+            ul{
+                padding-left: 0;
+
+                list-style: none;
+
+                li{
+                    padding-bottom: 7px;
+                }
+            }
         }
     }
 }
@@ -75,10 +94,7 @@
 
         .inner{
             padding: 15px;
-            background-color: $primary;
             color: #fff;
-
-            border-radius: 17px;
 
             position: relative;
 
@@ -103,6 +119,11 @@
             }
 
             .head{
+                padding: 15px;
+                background-color: $primary;
+                border-radius: 14px;
+                margin-bottom: 15px;
+
                 h3{
                     font-size: 1.5em;
                     height: 3em;
@@ -113,6 +134,10 @@
             }
 
             .content{
+                padding: 15px;
+                background-color: #eaeaea;
+                border-radius: 14px;
+
                 span.description{
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -124,7 +149,7 @@
                 }
 
                 p{
-                    color: #fff !important;
+                    color: #333 !important;
                 }
             }
 

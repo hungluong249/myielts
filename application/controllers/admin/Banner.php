@@ -34,7 +34,10 @@ class Banner extends Admin_Controller{
 
         $result = $this->banner_model->get_all_with_pagination($per_page, $this->data['page']);
         $this->data['result'] = $result;
-        // print_r($result);die;
+
+        //echo "<pre>";
+        //print_r($result);die;
+
 
 		$this->render('admin/banner/list_banner_view');
 	}

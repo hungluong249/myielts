@@ -33,6 +33,11 @@
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                     </a>
                 </li>
+				<li class="<?php echo ($this->uri->segment(2) == 'banner')? 'active' : '' ?>">
+					<a href="<?php echo base_url('admin/banner') ?>">
+						<i class="fa fa-picture-o" aria-hidden="true"></i> <span>Banners</span>
+					</a>
+				</li>
                 <li class="<?php echo ($this->uri->segment(2) == 'about' || $this->uri->segment(2) == 'our_message' || $this->uri->segment(2) == 'our_methods')? 'active' : 'treeview' ?>">
                     <a href="">
                         <i class="fa fa-user-circle-o"></i>
@@ -53,7 +58,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="<?php echo ($this->uri->segment(2) == 'courses')? 'active' : '' ?>">
+
+				<li class="<?php echo ($this->uri->segment(2) == 'courses')? 'active' : '' ?>">
                     <a href="<?php echo base_url('admin/courses') ?>">
                         <i class="fa fa-book" aria-hidden="true"></i> <span>Khóa Học</span>
                     </a>

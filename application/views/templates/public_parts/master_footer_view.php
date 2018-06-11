@@ -61,7 +61,11 @@
 					</tr>
 					<tr>
 						<td><i class="fa fa-phone" aria-hidden="true"></i></td>
-						<td><a href="tel://0915355490">+ 0915.355.490</a></td>
+						<td>Hotline: <a href="tel://02432011022">024 32 011 022</a></td>
+					</tr>
+					<tr>
+						<td><i class="fa fa-mobile-phone" aria-hidden="true"></i></td>
+						<td><a href="tel://0915355490">0915 355 490</a></td>
 					</tr>
 					<tr>
 						<td><i class="fa fa-envelope-o" aria-hidden="true"></i></td>

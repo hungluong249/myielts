@@ -525,6 +525,8 @@ h1, h2, h3, h4, h5, h6, figure {
     color: rgba(255, 255, 255, 0.5); }
     #fh5co-footer table tr {
       vertical-align: top; }
+      #fh5co-footer table tr td:first-of-type {
+        text-align: center; }
     #fh5co-footer table a {
       color: rgba(255, 255, 255, 0.5); }
       #fh5co-footer table a:hover {

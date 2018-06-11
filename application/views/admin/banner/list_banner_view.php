@@ -36,7 +36,7 @@
 		                            <td><?php echo $no++ ?></td>
 		                            <td style="width: 50%"><img src="<?php echo base_url('assets/upload/banners/'.$value['image']) ?>" width=100%></td>
 									<td class="row-active-<?php echo $value['id'] ?> btn-row-active">
-		                            <?php if ($value['is_activated'] == 0): ?>
+		                            <?php if ($value['is_actived'] == 0): ?>
                                         <button class="btn btn-warning btn-sm btn-active-admin" type="button" data-id="<?php echo $value['id'] ?>" data-controller="banner">Không Kích Hoạt</button>
                                     <?php else: ?>
                                         <button class="btn btn-success btn-sm btn-deactive-admin" type="button" data-id="<?php echo $value['id'] ?>" data-controller="banner">Đang Kích Hoạt</button>

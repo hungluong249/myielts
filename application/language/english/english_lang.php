@@ -12,7 +12,7 @@ $lang['more-info'] = 'More Info';
 $lang['see-more'] = 'See More';
 $lang['register'] = 'Register Now';
 $lang['slogan'] = 'Join Us now!';
-$lang['join-now'] = 'Join Now';
+$lang['join-now'] = 'Register Now';
 /*
     Main Header
  */
@@ -38,6 +38,28 @@ $lang['testinomial'] = 'Testinomial';
 $lang['about-us'] = 'About our Center';
 $lang['our-message'] = 'OUR MESSAGE';
 $lang['our-methods'] = 'OUR METHODS';
+
+/*
+    Methods
+ */
+
+$lang['methods-head'] = 'Teaching methods';
+$lang['methods-intro'] = 'Giới Thiệu';
+
+$lang['method-1-head'] = 'GUIDED DISCOVERY';
+$lang['method-1-content-1'] = 'Help students take more initiative in learning';
+$lang['method-1-content-2'] = 'Inspirational lecture - not boring';
+
+$lang['method-2-head'] = 'MEANINGFUL  ACTIVITY';
+$lang['method-2-content-1'] = 'Knowledge associated with real life';
+$lang['method-2-content-2'] = 'Learn vocabulary faster and more effectively';
+
+$lang['method-3-head'] = 'REVIEW THE ARTICLES';
+$lang['method-3-content-1'] = 'A professional review plan';
+$lang['method-3-content-2'] = 'Students understand the strengths and weaknesses of the learning process';
+
+$lang['method-4-head'] = 'PERFECT COMPLETION BETWEEN STRATEGY AND LANGUAGE';
+$lang['method-4-content-1'] = 'The lecture will consist of a combination of strategies for the test and the language';
 
 /*
     Team

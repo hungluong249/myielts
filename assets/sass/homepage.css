@@ -1222,8 +1222,8 @@ textarea {
       border-radius: 14px;
       margin-bottom: 15px; }
       #fh5co-courses .item .inner .head h3 {
-        font-size: 1.5em;
-        height: 3em;
+        font-size: 1em;
+        text-align: center;
         color: #fff;
         overflow: hidden; }
     #fh5co-courses .item .inner .content {
@@ -1234,10 +1234,11 @@ textarea {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        line-height: 2em;
-        height: 8em;
+        line-height: 1.5em;
+        height: 6em;
         -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical; }
+        -webkit-box-orient: vertical;
+        font-size: 0.875em; }
       #fh5co-courses .item .inner .content p {
         color: #333 !important; }
     #fh5co-courses .item .inner .foot {
@@ -1493,6 +1494,9 @@ textarea {
     #fh5co-started .fh5co-heading p {
       color: rgba(255, 255, 255, 0.8);
       font-size: 20px; }
+  #fh5co-started .container .btn-primary {
+    padding: 17px 30px;
+    margin-top: 15px; }
 
 #fh5co-blog .fh5co-heading, #fh5co-contact .fh5co-heading {
   margin-bottom: 100px; }

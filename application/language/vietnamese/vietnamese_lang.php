@@ -21,6 +21,7 @@ $lang['join-now'] = 'Đăng ký học thử ngay';
 
 $lang['about'] = 'Giới thiệu';
 $lang['courses'] = 'Khóa học';
+$lang['courses-overview'] = 'Tổng quan khóa học';
 $lang['document'] = 'Tài liệu';
 $lang['blogs'] = 'Bài viết';
 $lang['opening-day'] = 'Khai giảng';
@@ -42,11 +43,11 @@ $lang['testinomial'] = 'Cảm nhận của học viên về trung tâm';
 $lang['methods-head'] = 'Phương pháp giảng dạy';
 $lang['methods-intro'] = 'Giới Thiệu';
 
-$lang['method-1-head'] = 'HƯỚNG DẪN KHÁM PHÁ';
+$lang['method-1-head'] = 'GUIDED DISCOVERY';
 $lang['method-1-content-1'] = 'Giúp học viên chủ động hơn trong việc học';
 $lang['method-1-content-2'] = 'Bài giảng truyền cảm hứng – không khô khan';
 
-$lang['method-2-head'] = 'HOẠT ĐỘNG ĐÁNH GIÁ';
+$lang['method-2-head'] = 'MEANINGFUL  ACTIVITY';
 $lang['method-2-content-1'] = 'Kiến thức gắn với thực tế cuộc sống';
 $lang['method-2-content-2'] = 'Học từ vựng nhanh và hiệu quả hơn';
 

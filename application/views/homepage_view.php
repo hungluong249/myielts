@@ -239,7 +239,6 @@
 					<div class="content">
 						<p><b><?php echo $this->lang->line('courses-input'); ?>: <?php echo $value['input'] ?></b></p>
 						<p><b><?php echo $this->lang->line('courses-output'); ?>: <?php echo $value['output'] ?></b></p>
-						<br>
 						<span class="description"><?php echo $value['description'] ?></span>
 					</div>
 					<div class="foot">
@@ -399,8 +398,8 @@
 	<div class="container">
 		<div class="row animate-box">
 			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-				<h2><?php echo $this->lang->line('slogan'); ?></h2>
 				<!--
+				<h2><?php echo $this->lang->line('slogan'); ?></h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate, sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga maxime odio? Eaque!</p>
 				-->
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register-courses">

@@ -18,6 +18,7 @@ $lang['join-now'] = 'Register Now';
  */
 $lang['about'] = 'About';
 $lang['courses'] = 'Courses';
+$lang['courses-overview'] = 'Courses Overview';
 $lang['document'] = 'Document';
 $lang['blogs'] = 'Blogs';
 $lang['opening-day'] = 'Opening Day';

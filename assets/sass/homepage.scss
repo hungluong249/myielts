@@ -125,8 +125,8 @@
                 margin-bottom: 15px;
 
                 h3{
-                    font-size: 1.5em;
-                    height: 3em;
+                    font-size: 1em;
+                    text-align: center;
                     color: #fff;
 
                     overflow: hidden;
@@ -142,10 +142,11 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                     display: -webkit-box;
-                    line-height: 2em;
-                    height: 8em;
+                    line-height: 1.5em;
+                    height: 6em;
                     -webkit-line-clamp: 4;
                     -webkit-box-orient: vertical;
+                    font-size: 0.875em;
                 }
 
                 p{
@@ -517,6 +518,13 @@
         p {
             color: rgba(255, 255, 255, 0.8);
             font-size: 20px;
+        }
+    }
+
+    .container{
+        .btn-primary{
+            padding: 17px 30px;
+            margin-top: 15px;
         }
     }
 }

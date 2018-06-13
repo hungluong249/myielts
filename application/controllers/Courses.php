@@ -52,6 +52,11 @@ class Courses extends Public_Controller {
         $this->data['detail'] = $detail;
         $this->data['meta_keywords'] = $detail['meta_keywords'];
         $this->data['meta_description'] = $detail['meta_description'];
+
+        //echo '<pre>';
+        //print_r($detail);die;
+
+
         $this->render('detail_courses_view');
     }
 

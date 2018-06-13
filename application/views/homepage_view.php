@@ -20,8 +20,8 @@
 -->
 
 <div class="header container-fluid">
-
-	<div class="row">
+	<div class="container">
+		<div class="row">
 			<div class="left col-sm-3 col-xs-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">
@@ -78,10 +78,10 @@
 							<div class="input-group">
 								<span class="input-group-addon"><i class="fa fa-building" aria-hidden="true"></i> </span>
                                 <?php
-                                //echo form_label($this->lang->line('register-office'), 'register_courses_workplace');
-                                echo form_error('register_courses_workplace');
-                                echo form_input('register_courses_workplace', set_value('register_courses_workplace'), 'class="form-control" id="register-courses-workplace" placeholder="'. $this->lang->line('register-office') .'"');
-                                ?>
+                        //echo form_label($this->lang->line('register-office'), 'register_courses_workplace');
+                        echo form_error('register_courses_workplace');
+                        echo form_input('register_courses_workplace', set_value('register_courses_workplace'), 'class="form-control" id="register-courses-workplace" placeholder="'. $this->lang->line('register-office') .'"');
+                        ?>
 							</div>
 						</div>
 						-->
@@ -112,13 +112,13 @@
 
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
-						<?php foreach ($banners as $key => $value): ?>
+                        <?php foreach ($banners as $key => $value): ?>
 							<div class="item <?php echo ($key == 0)? 'active' : '' ?>">
 								<div class="mask">
 									<img src="<?php echo base_url('assets/upload/banners/'. $value['image']) ?>" alt="...">
 								</div>
 							</div>
-						<?php endforeach ?>
+                        <?php endforeach ?>
 
 						<!--
 						<?php foreach (json_decode($detail['image'])as $key => $value): ?>
@@ -144,6 +144,8 @@
 			</div>
 
 		</div>
+	</div>
+
 
 </div>
 
@@ -239,7 +241,7 @@
 					<div class="content">
 						<p><b><?php echo $this->lang->line('courses-input'); ?>: <?php echo $value['input'] ?></b></p>
 						<p><b><?php echo $this->lang->line('courses-output'); ?>: <?php echo $value['output'] ?></b></p>
-						<span class="description"><?php echo $value['description'] ?></span>
+						<span class="description"><p><?php echo $value['description'] ?></p></span>
 					</div>
 					<div class="foot">
 						<a href="<?php echo base_url('courses/detail/'. $value['slug']) ?>" class="btn btn-default" role="button"><?php echo $this->lang->line('see-more'); ?></a>

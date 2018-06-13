@@ -35,7 +35,7 @@ body {
   font-size: 18px;
   line-height: 1.7;
   color: #666;
-  background-color: #fafafa;
+  background-color: #fff;
   /*background: #000 url(../img/broken_noise.png) repeat;*/ }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -80,36 +80,36 @@ div.header.container-fluid {
   padding-top: 30px;
   padding-bottom: 50px;
   min-height: 70vh; }
-  div.header.container-fluid .row .left .panel .panel-heading {
+  div.header.container-fluid .container .row .left .panel .panel-heading {
     text-align: center;
     padding: 15px 25px; }
-    div.header.container-fluid .row .left .panel .panel-heading .panel-title {
+    div.header.container-fluid .container .row .left .panel .panel-heading .panel-title {
       font-size: 1.25em; }
-  div.header.container-fluid .row .left .panel .panel-body .input-group {
+  div.header.container-fluid .container .row .left .panel .panel-body .input-group {
     width: 100%; }
-    div.header.container-fluid .row .left .panel .panel-body .input-group .form-control {
+    div.header.container-fluid .container .row .left .panel .panel-body .input-group .form-control {
       width: 100%;
       height: 35px;
       font-size: 0.75em;
       border: 1px solid #ccc; }
-  div.header.container-fluid .row .left .panel .panel-body .btn-primary {
+  div.header.container-fluid .container .row .left .panel .panel-body .btn-primary {
     width: 100%; }
-  div.header.container-fluid .row .left .panel .input-group-addon {
+  div.header.container-fluid .container .row .left .panel .input-group-addon {
     padding: 0px;
     width: 40px; }
-  div.header.container-fluid .row .left .panel small {
+  div.header.container-fluid .container .row .left .panel small {
     font-size: 0.75em; }
-  div.header.container-fluid .row .right .slide {
+  div.header.container-fluid .container .row .right .slide {
     min-height: 400px; }
-    div.header.container-fluid .row .right .slide .carousel-inner .item .mask {
+    div.header.container-fluid .container .row .right .slide .carousel-inner .item .mask {
       width: 100%;
       height: 100%;
       overflow: hidden; }
-      div.header.container-fluid .row .right .slide .carousel-inner .item .mask img {
+      div.header.container-fluid .container .row .right .slide .carousel-inner .item .mask img {
         width: 100%;
         height: 100%;
         object-fit: cover; }
-    div.header.container-fluid .row .right .slide .carousel-control {
+    div.header.container-fluid .container .row .right .slide .carousel-control {
       background-image: none; }
 
 @media (min-width: 1200px) {
@@ -1252,6 +1252,20 @@ textarea {
   margin: 15px auto; }
 #fh5co-detail .content .section-body .promise {
   color: #B61E2D; }
+#fh5co-detail .content .section-body table thead tr th:first-of-type {
+  width: 10%; }
+#fh5co-detail .content .section-body table thead tr th:nth-of-type(2) {
+  width: 15%; }
+#fh5co-detail .content .section-body table thead tr th:nth-of-type(3) {
+  width: 25%; }
+#fh5co-detail .content .section-body table thead tr th:nth-of-type(4) {
+  width: 10%; }
+#fh5co-detail .content .section-body table thead tr th:nth-of-type(5) {
+  width: 15%; }
+#fh5co-detail .content .section-body table thead tr th:nth-of-type(6) {
+  width: 15%; }
+#fh5co-detail .content .section-body table tbody tr td {
+  font-size: 1em; }
 #fh5co-detail .right .panel-default .panel-body form label {
   font-size: .875em; }
 #fh5co-detail .right .panel-default .btn {

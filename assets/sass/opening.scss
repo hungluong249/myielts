@@ -16,12 +16,42 @@
 #fh5co-opening{
     .content{
         table{
+            margin-bottom: 30px;
+            
             thead{
                 tr{
                     th{
                         &:first-of-type{
+                            width: 10%;
+                        }
+
+                        &:nth-of-type(2){
                             width: 15%;
                         }
+
+                        &:nth-of-type(3){
+                            width: 25%;
+                        }
+
+                        &:nth-of-type(4){
+                            width: 10%;
+                        }
+
+                        &:nth-of-type(5){
+                            width: 15%;
+                        }
+
+                        &:nth-of-type(6){
+                            width: 15%;
+                        }
+                    }
+                }
+            }
+
+            tbody{
+                tr{
+                    td{
+                        font-size: 0.875em;
                     }
                 }
             }

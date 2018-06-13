@@ -68,7 +68,7 @@
 						</div>
 						-->
 						<div class="col-xs-12">
-							<small><?php echo $this->lang->line('register-info'); ?><br><br></small>
+							<!--<small><?php echo $this->lang->line('register-info'); ?><br><br></small>-->
 						</div>
 
 						<input type="hidden" name="courses_id" value="" id="courses-id">
@@ -88,8 +88,12 @@
 				<div id="header-slider" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
-						<li data-target="#header-slider" data-slide-to="0" class="active"></li>
-						<li data-target="#header-slider" data-slide-to="1"></li>
+
+                        <?php if ($detail['image'] != '' && $detail['image'] != null): ?>
+                        	<?php foreach (json_decode($detail['image']) as $key => $value): ?>
+								<li data-target="#header-slider" data-slide-to="<?php echo $key ?>" class="<?php echo ($key == 0)? 'active' : '' ?>"></li>
+                            <?php endforeach ?>
+                        <?php endif ?>
 					</ol>
 
 					<!-- Wrapper for slides -->
@@ -162,6 +166,8 @@
 							<h2><?php echo $this->lang->line('courses-description'); ?></h2>
 						</div>
 						<div class="section-body">
+							<img src="<?php echo site_url('assets/upload/courses/' . $detail['image_top'] )?>" alt="">
+							<img src="<?php echo site_url('assets/upload/courses/' . $detail['image_bottom'] )?>" alt="">
 							<?php echo $detail['courses_description'] ?>
                             <h3 class="promise"><?php echo $this->lang->line('courses-promise'); ?>: <?php echo $detail['promise'] ?></h3>
 						</div>
@@ -169,6 +175,7 @@
 					</div>
 					<div role="tabpanel" class="tab-pane" id="detail">
 						<div class="section-heading">
+							<?php echo $detail['courses_content'] ?>
 							<h2><?php echo $this->lang->line('courses-detail'); ?></h2>
 						</div>
 						<div class="section-body">
@@ -202,7 +209,7 @@
 									<td><?php echo $detail['courses_time'] ?></td>
 									<td><?php echo $detail['opening'] ?></td>
 									<td><?php echo number_format($detail['price']) ?></td>
-									<td><?php echo ($detail['discount'] == null)? number_format($detail['discount']) : number_format($detail['price']) ?></td>
+									<td><?php echo ($detail['discount'] != 0 )? number_format($detail['discount']) : number_format($detail['price']) ?></td>
 									<td>
 										<button class="btn btn-primary" data-toggle="modal" data-target="#register-courses">
                                             <?php echo $this->lang->line('timetable-register'); ?>

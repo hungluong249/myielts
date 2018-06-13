@@ -214,7 +214,7 @@ class Public_Controller extends MY_Controller {
 
     protected function courses_menu(){
         $this->load->model('courses_model');
-        $result = $this->courses_model->get_all_field_for_menu('desc', array('title'), $this->session->userdata('langAbbreviation'));
+        $result = $this->courses_model->get_all_field_for_menu('asc', array('title'), $this->session->userdata('langAbbreviation'));
 
         return $result;
     }

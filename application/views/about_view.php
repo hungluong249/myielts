@@ -119,7 +119,7 @@
 		<div class="row animate-box">
 			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 				<h2><?php echo $this->lang->line('team-head'); ?></h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, consequatur. Aliquam quaerat pariatur repellendus veniam nemo, saepe, culpa eius aspernatur cumque suscipit quae nobis illo tempora. Eum veniam necessitatibus, blanditiis facilis quidem dolore! Dolorem, molestiae.</p>
+				<p><?php echo $this->lang->line('teacher-intro'); ?></p>
 
 			</div>
 		</div>

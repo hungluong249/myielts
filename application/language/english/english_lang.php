@@ -40,6 +40,8 @@ $lang['about-us'] = 'About our Center';
 $lang['our-message'] = 'OUR MESSAGE';
 $lang['our-methods'] = 'OUR METHODS';
 
+$lang['teacher-intro'] = 'The trainers are trained in pedagogical training at famous teaching colleges such as University of Foreign Languages, Hanoi University, Foreign Trade University. IELTS score 8.0 or higher';
+
 /*
     Methods
  */

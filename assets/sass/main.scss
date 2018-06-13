@@ -27,7 +27,7 @@ body {
     font-size: 18px;
     line-height: 1.7;
     color: $text-color;
-    background-color: #fafafa;
+    background-color: #fff;
     /*background: #000 url(../img/broken_noise.png) repeat;*/
 }
 
@@ -108,7 +108,8 @@ div.header{
 
         min-height: 70vh;
 
-        .row{
+        .container{
+            .row{
                 .left{
                     .panel{
                         .panel-heading{
@@ -174,6 +175,7 @@ div.header{
                     }
                 }
             }
+        }
 
     }
 }

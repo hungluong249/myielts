@@ -33,7 +33,7 @@
 						<td><?php echo $value['time'] ?></td>
 						<td><?php echo $value['opening'] ?></td>
 						<td><?php echo number_format($value['price']) ?></td>
-						<td><?php echo ($value['discount'] == null)? number_format($value['discount']) : number_format($value['price']) ?></td>
+						<td><?php echo ($value['discount'] != 0 )? number_format($value['discount']) : number_format($value['price']) ?></td>
 						<td>
 							<button class="btn btn-primary" data-toggle="modal" data-target="#register-courses">
                                 <?php echo $this->lang->line('timetable-register'); ?>

@@ -66,6 +66,8 @@ $lang['about-us'] = 'Giới Thiệu';
 $lang['our-message'] = 'THÔNG ĐIỆP';
 $lang['our-methods'] = 'PHƯƠNG PHÁP';
 
+$lang['teacher-intro'] = 'Các giảng viên được đào tạo chuyên về sư phạm tại các trường sư phạm nổi tiếng như ĐH ngoại ngữ, ĐH Hà nội, ĐH ngoại thương. Điểm IELTS từ 8.0 trở lên';
+
 /*
     Team
  */

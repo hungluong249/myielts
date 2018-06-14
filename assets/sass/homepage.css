@@ -74,7 +74,7 @@ nav.navbar {
       margin-bottom: 15px; } }
 div.header.container-fluid {
   background-image: url("../img/slide-bg.png");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
   padding-top: 30px;

@@ -1157,7 +1157,11 @@ textarea {
 *
 * ======================================================= */
 #fh5co-header {
-  height: 40vh; }
+  height: 40vh;
+  background-size: 25%;
+  background-position: center 25%; }
+  #fh5co-header .overlay {
+    background: none; }
 
 #fh5co-about .img-wrap img {
   margin-bottom: 30px; }

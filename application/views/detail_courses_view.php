@@ -169,7 +169,7 @@
 							<img src="<?php echo site_url('assets/upload/courses/' . $detail['image_top'] )?>" alt="">
 							<img src="<?php echo site_url('assets/upload/courses/' . $detail['image_bottom'] )?>" alt="">
 							<?php echo $detail['courses_description'] ?>
-                            <h3 class="promise"><?php echo $this->lang->line('courses-promise'); ?>: <?php echo $detail['promise'] ?></h3>
+                            <!--<h3 class="promise"><?php echo $this->lang->line('courses-promise'); ?>: <?php echo $detail['promise'] ?></h3>-->
 						</div>
 
 					</div>

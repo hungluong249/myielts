@@ -37,7 +37,7 @@ class Opening extends Public_Controller {
         $this->data['page'] = ($this->uri->segment($uri_segment)) ? $this->uri->segment($uri_segment) : 0;
 
 
-        $result = $this->courses_model->get_all_field('desc', array('title', 'description', 'content', 'time', 'introduce'), $this->data['lang'], $per_page, $this->data['page']);
+        $result = $this->courses_model->get_all_field('asc', array('title', 'description', 'content', 'time', 'introduce'), $this->data['lang'], $per_page, $this->data['page']);
         $this->data['result'] = $result;
 
 

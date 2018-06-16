@@ -141,7 +141,7 @@ $lang['register-phone'] = 'Số điện thoại của bạn';
 $lang['register-age'] = 'Tuổi của bạn';
 $lang['register-office'] = 'Nơi Làm Việc/ Trường Học';
 $lang['register-email'] = 'Email của bạn';
-$lang['register-submit'] = 'Đăng ký';
+$lang['register-submit'] = 'Đăng ký học thử';
 $lang['register-info'] = '(Thông tin của bạn được bảo mật và chỉ sử dụng trong hoạt động tư vấn của myIELTS. Tư vấn viên sẽ gọi điện cho bạn trong 24h tới)';
 
 /*

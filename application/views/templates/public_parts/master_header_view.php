@@ -150,6 +150,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<ul class="dropdown-menu">
 						<li><a href="<?php echo base_url('') ?>#fh5co-courses"><?php echo $this->lang->line('courses-overview'); ?></a></li>
 						<?php foreach ($courses_menu as $key => $value): ?>
+							<li role="separator" class="divider"></li>
 							<li><a href="<?php echo base_url('courses/detail/'. $value['slug']) ?>"><?php echo $value['title'] ?></a></li>
 						<?php endforeach ?>
 					</ul>
@@ -166,9 +167,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<ul class="dropdown-menu">
 						<?php foreach ($posts_menu as $key => $value): ?>
 							<li><a href="<?php echo base_url('blogs/'. $value['slug']) ?>"><?php echo $value['title'] ?></a></li>
+							<li role="separator" class="divider"></li>
 						<?php endforeach ?>
 						
-						<li role="separator" class="divider"></li>
+
 						<li><a href="<?php echo base_url('document') ?>"><?php echo $this->lang->line('document'); ?></a></li>
 					</ul>
 				</li>
